@@ -1,7 +1,7 @@
 # Site settings
 title: Teleported 
 email: me DOT anandsaha AT gmail.com
-description: "Brain dumps of myself."
+description: "Brain dumps of myself. Mostly computer science and maths stuff."
 baseurl: ""
 url: "http://teleported.in"
 twitter_username: the_teleported
@@ -12,3 +12,5 @@ markdown: kramdown
 permalink: pretty
 
 exclude: ['README.md']
+timezone: Asia/Calcutta
+include: ['.htaccess']
