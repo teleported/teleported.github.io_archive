@@ -2,12 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Teleported</title>
-    <description>Brain dumps of myself. Mostly computer science and maths stuff.</description>
+    <description>Brain dumps of myself. Mostly computer science and maths stuff. And a little bit of distributed systems.</description>
     <link>http://teleported.in/</link>
     <atom:link href="http://teleported.in/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 24 Aug 2015 12:56:38 +0530</pubDate>
-    <lastBuildDate>Mon, 24 Aug 2015 12:56:38 +0530</lastBuildDate>
+    <pubDate>Mon, 24 Aug 2015 14:45:42 +0530</pubDate>
+    <lastBuildDate>Mon, 24 Aug 2015 14:45:42 +0530</lastBuildDate>
     <generator>Jekyll v2.2.0</generator>
+    
+      <item>
+        <title>First post</title>
+        <description>&lt;p&gt;First post. This is the image I wanted to talk about:
+&lt;img src=&quot;http://teleported.in/assets/plot001.png&quot; alt=&quot;The graph&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 24 Aug 2015 18:30:00 +0530</pubDate>
+        <link>http://teleported.in/jekyll/update/2015/08/24/first-post/</link>
+        <guid isPermaLink="true">http://teleported.in/jekyll/update/2015/08/24/first-post/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>Welcome to Jekyll!</title>
