@@ -1,0 +1,14 @@
+# Site settings
+title: Teleported 
+email: me DOT anandsaha AT gmail.com
+description: "Brain dumps of myself."
+baseurl: ""
+url: "http://teleported.in"
+twitter_username: the_teleported
+github_username:  teleported
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+exclude: ['README.md']
