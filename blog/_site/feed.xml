@@ -5,12 +5,12 @@
     <description>Brain dumps of myself. Mostly computer science and maths stuff. And a little bit of distributed systems.</description>
     <link>http://teleported.in/</link>
     <atom:link href="http://teleported.in/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 24 Aug 2015 15:04:52 +0530</pubDate>
-    <lastBuildDate>Mon, 24 Aug 2015 15:04:52 +0530</lastBuildDate>
+    <pubDate>Mon, 24 Aug 2015 15:06:58 +0530</pubDate>
+    <lastBuildDate>Mon, 24 Aug 2015 15:06:58 +0530</lastBuildDate>
     <generator>Jekyll v2.2.0</generator>
     
       <item>
-        <title>First post</title>
+        <title>Growth of log with various bases</title>
         <description>&lt;p&gt;First post. This is the image I wanted to talk about:
 &lt;img src=&quot;http://teleported.in/assets/plot001.png&quot; alt=&quot;The graph&quot; /&gt;&lt;/p&gt;
 </description>

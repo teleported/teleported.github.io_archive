@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "First post"
+title:  "Growth of log with various bases"
 date:   2015-08-24 13:00:00
 categories: jekyll update
 ---
