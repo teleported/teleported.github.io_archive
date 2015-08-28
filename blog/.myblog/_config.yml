@@ -1,12 +1,17 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-baseurl: ""
-url: "http://yourdomain.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+title: Teleported 
+email: me DOT anandsaha AT gmail.com
+description: "Brain dumps of myself. Mostly computer science and maths stuff. And a little bit of distributed systems."
+baseurl: "/blog"
+url: "http://teleported.in"
+twitter_username: the_teleported
+github_username:  teleported
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+exclude: ['README.md']
+timezone: Asia/Calcutta
+include: ['.htaccess','assets']
+keep_files: ['assets']
