@@ -2,6 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2015-08-28 21:26:18
+previewimgurl: preview.jpg 
 categories: jekyll update
 ---
 
