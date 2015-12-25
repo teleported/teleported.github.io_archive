@@ -303,17 +303,17 @@ pre {
     font-size: 32px; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
-        font-size: 28px; } }
+        font-size: 32px; } }
   .post-content h3 {
-    font-size: 26px; }
+    font-size: 32px; }
     @media screen and (max-width: 800px) {
       .post-content h3 {
-        font-size: 28px; } }
+        font-size: 32px; } }
   .post-content h4 {
-    font-size: 20px; }
+    font-size: 32px; }
     @media screen and (max-width: 800px) {
       .post-content h4 {
-        font-size: 28px; } }
+        font-size: 32px; } }
 
 /**
  * Syntax highlighting styles
