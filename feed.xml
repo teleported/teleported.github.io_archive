@@ -6,12 +6,12 @@
 </description>
     <link>http://teleported.in/</link>
     <atom:link href="http://teleported.in/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Dec 2015 01:40:09 +0530</pubDate>
-    <lastBuildDate>Sat, 26 Dec 2015 01:40:09 +0530</lastBuildDate>
+    <pubDate>Sat, 26 Dec 2015 01:41:10 +0530</pubDate>
+    <lastBuildDate>Sat, 26 Dec 2015 01:41:10 +0530</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
-        <title>Bootstrapping Jekyll/octopress</title>
+        <title>Bootstrapping your blog with Jekyll and Octopress</title>
         <description>&lt;p&gt;Jekyll is a static site generator written in ruby. Octopress is a wrapper around Jekyll with nifty features to make it easy to manage your blog. I have used them for my blog &lt;a href=&quot;http://teleported.in&quot;&gt;teleported.in&lt;/a&gt;. Here I have documented the steps to initialize your blog, customize it, and write your first post.&lt;/p&gt;
 
 &lt;p&gt;I assume that you have Jekyll and Octopress installed. It is well documented in their respective documentation.&lt;/p&gt;
