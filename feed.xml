@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your awesome title</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    <title>Teleported</title>
+    <description>My learnings and thoughts on IoT, Machine Learning and Big Data, and how they come together 
 </description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Dec 2015 01:25:14 +0530</pubDate>
-    <lastBuildDate>Sat, 26 Dec 2015 01:25:14 +0530</lastBuildDate>
+    <link>http://teleported.in/</link>
+    <atom:link href="http://teleported.in/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 26 Dec 2015 01:27:17 +0530</pubDate>
+    <lastBuildDate>Sat, 26 Dec 2015 01:27:17 +0530</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -23,8 +23,8 @@
 &lt;p&gt;Sed et turpis quis sem pretium pellentesque. Vivamus volutpat mi non sapien bibendum, id viverra lectus suscipit. Nunc vehicula ante laoreet nibh lobortis fermentum. Etiam id nunc eu lectus efficitur convallis eu ut tortor. Integer ac orci quam. Mauris nec laoreet tellus. Praesent efficitur maximus metus, eu molestie libero maximus eget. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse suscipit sit amet lectus ut semper. Cras lacinia suscipit dui at varius. Maecenas pellentesque diam eu metus lacinia, at mattis eros scelerisque. Vestibulum placerat nisi eros, in cursus nisl rutrum ac. Fusce id auctor lacus. Maecenas sed sapien aliquam metus volutpat sollicitudin at sit amet ipsum.&lt;/p&gt;
 </description>
         <pubDate>Sat, 26 Dec 2015 01:03:55 +0530</pubDate>
-        <link>http://yourdomain.com/2015/12/26/the-thought.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/12/26/the-thought.html</guid>
+        <link>http://teleported.in/2015/12/26/the-thought.html</link>
+        <guid isPermaLink="true">http://teleported.in/2015/12/26/the-thought.html</guid>
         
         
       </item>
@@ -34,8 +34,8 @@
         <description>&lt;p&gt;This is a sample line.&lt;/p&gt;
 </description>
         <pubDate>Sat, 26 Dec 2015 00:34:12 +0530</pubDate>
-        <link>http://yourdomain.com/2015/12/26/my-blogpost.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/12/26/my-blogpost.html</guid>
+        <link>http://teleported.in/2015/12/26/my-blogpost.html</link>
+        <guid isPermaLink="true">http://teleported.in/2015/12/26/my-blogpost.html</guid>
         
         
       </item>
@@ -58,8 +58,8 @@
 
 </description>
         <pubDate>Sat, 26 Dec 2015 00:30:48 +0530</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/12/26/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/26/welcome-to-jekyll.html</guid>
+        <link>http://teleported.in/jekyll/update/2015/12/26/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://teleported.in/jekyll/update/2015/12/26/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
