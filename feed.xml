@@ -6,65 +6,21 @@
 </description>
     <link>http://teleported.in/</link>
     <atom:link href="http://teleported.in/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Dec 2015 01:28:08 +0530</pubDate>
-    <lastBuildDate>Sat, 26 Dec 2015 01:28:08 +0530</lastBuildDate>
+    <pubDate>Sat, 26 Dec 2015 01:40:09 +0530</pubDate>
+    <lastBuildDate>Sat, 26 Dec 2015 01:40:09 +0530</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
-        <title>The Thought</title>
-        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus cursus dapibus tortor eget congue. Nulla sagittis venenatis erat vitae porta. Maecenas ultricies leo est, a cursus libero volutpat eget. Nullam ac turpis sed augue tempus hendrerit ut vel nunc. Pellentesque ac auctor ex. Curabitur imperdiet a lectus vel fermentum. Mauris sit amet volutpat nisi, non consectetur lectus. Integer et interdum lacus, et lobortis tortor. Ut cursus vestibulum ullamcorper. Sed elementum hendrerit purus id commodo. Praesent rutrum suscipit ultricies. Fusce quam ante, gravida eu luctus eu, eleifend blandit nulla.&lt;/p&gt;
+        <title>Bootstrapping Jekyll/octopress</title>
+        <description>&lt;p&gt;Jekyll is a static site generator written in ruby. Octopress is a wrapper around Jekyll with nifty features to make it easy to manage your blog. I have used them for my blog &lt;a href=&quot;http://teleported.in&quot;&gt;teleported.in&lt;/a&gt;. Here I have documented the steps to initialize your blog, customize it, and write your first post.&lt;/p&gt;
 
-&lt;p&gt;Nullam id lacinia lacus. Aenean tincidunt quam nibh, et blandit ipsum dignissim eget. Nullam porta vulputate purus consectetur rutrum. Nulla feugiat risus ac elit condimentum dignissim. Fusce vestibulum sed ante et condimentum. Integer eu laoreet leo. Fusce a orci a odio dignissim lobortis. Nulla vel pulvinar est. Suspendisse elementum non eros at accumsan. Fusce et turpis vitae nisi porttitor ullamcorper eget ut quam. Integer dapibus molestie eros, eget malesuada metus elementum a. Donec vestibulum urna in tempor porta.&lt;/p&gt;
-
-&lt;p&gt;Ut sed ante at metus pretium aliquam at et nulla. Praesent placerat justo non tellus lobortis, ac tincidunt sem dignissim. Nunc turpis lacus, maximus quis faucibus non, vehicula et magna. Mauris in sem ut justo vehicula cursus. Etiam rutrum est libero, efficitur ultrices nisi pulvinar quis. Vestibulum sit amet sodales nunc. Curabitur dui urna, egestas et nibh a, lacinia facilisis diam. Etiam ut orci elementum, volutpat risus lobortis, ullamcorper lorem. Aenean ut magna efficitur risus vulputate semper. Nunc maximus ultrices orci eget pellentesque. Phasellus fringilla feugiat convallis. Cras malesuada lacus non arcu tincidunt pulvinar. Nunc euismod dolor diam, non commodo urna tristique a. Maecenas dignissim erat ut purus ultricies ultricies. Nullam pharetra risus eu velit ornare fermentum. Vivamus eu mauris et leo tempor luctus.&lt;/p&gt;
-
-&lt;p&gt;In hac habitasse platea dictumst. Maecenas urna erat, ultrices ut mi quis, finibus faucibus lacus. Sed non porta massa, vel tempus purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam iaculis tellus vel sapien hendrerit blandit. Phasellus blandit, lacus nec molestie finibus, enim massa fermentum felis, et maximus libero lectus in diam. Morbi consectetur massa orci, et porta mauris eleifend ut. Ut gravida sapien est, non vulputate odio blandit id. Cras dapibus tortor sem, quis pulvinar velit finibus quis. Aliquam venenatis tempor nibh, vel ultricies magna pulvinar eget.&lt;/p&gt;
-
-&lt;p&gt;Sed et turpis quis sem pretium pellentesque. Vivamus volutpat mi non sapien bibendum, id viverra lectus suscipit. Nunc vehicula ante laoreet nibh lobortis fermentum. Etiam id nunc eu lectus efficitur convallis eu ut tortor. Integer ac orci quam. Mauris nec laoreet tellus. Praesent efficitur maximus metus, eu molestie libero maximus eget. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse suscipit sit amet lectus ut semper. Cras lacinia suscipit dui at varius. Maecenas pellentesque diam eu metus lacinia, at mattis eros scelerisque. Vestibulum placerat nisi eros, in cursus nisl rutrum ac. Fusce id auctor lacus. Maecenas sed sapien aliquam metus volutpat sollicitudin at sit amet ipsum.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 26 Dec 2015 01:03:55 +0530</pubDate>
-        <link>http://teleported.in/2015/12/26/the-thought.html</link>
-        <guid isPermaLink="true">http://teleported.in/2015/12/26/the-thought.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>My Blogpost</title>
-        <description>&lt;p&gt;This is a sample line.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 26 Dec 2015 00:34:12 +0530</pubDate>
-        <link>http://teleported.in/2015/12/26/my-blogpost.html</link>
-        <guid isPermaLink="true">http://teleported.in/2015/12/26/my-blogpost.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I assume that you have Jekyll and Octopress installed. It is well documented in their respective documentation.&lt;/p&gt;
 
 </description>
-        <pubDate>Sat, 26 Dec 2015 00:30:48 +0530</pubDate>
-        <link>http://teleported.in/jekyll/update/2015/12/26/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://teleported.in/jekyll/update/2015/12/26/welcome-to-jekyll.html</guid>
+        <pubDate>Sat, 26 Dec 2015 01:37:13 +0530</pubDate>
+        <link>http://teleported.in/2015/12/26/bootstrapping-jekyll-octopress.html</link>
+        <guid isPermaLink="true">http://teleported.in/2015/12/26/bootstrapping-jekyll-octopress.html</guid>
         
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     
