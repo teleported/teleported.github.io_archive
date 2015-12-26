@@ -6,9 +6,30 @@
 </description>
     <link>http://teleported.in/</link>
     <atom:link href="http://teleported.in/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Dec 2015 10:50:51 +0530</pubDate>
-    <lastBuildDate>Sat, 26 Dec 2015 10:50:51 +0530</lastBuildDate>
+    <pubDate>Sat, 26 Dec 2015 10:55:04 +0530</pubDate>
+    <lastBuildDate>Sat, 26 Dec 2015 10:55:04 +0530</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>Understanding Gradient Descent</title>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nibh ipsum, venenatis id rutrum eget, laoreet a lacus. Donec vitae hendrerit leo. Aliquam at ultrices orci. Fusce non sem urna. Nulla a eleifend nibh. Nullam et venenatis est. Cras eget lectus commodo, commodo arcu et, ornare nibh. Nullam varius libero metus, vel ornare velit dapibus nec. Suspendisse bibendum, odio sit amet bibendum consequat, ipsum tortor auctor arcu, ut lobortis dui ligula sed elit. Cras id porttitor sapien. Aliquam efficitur ex vel dictum vulputate. Nulla ac metus non ante convallis ultrices. Fusce in orci nec augue ultrices dictum. Sed pellentesque eros a erat dictum ultricies. Donec eget venenatis ipsum. Curabitur iaculis arcu vel nisl sagittis auctor.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/asset/gd.png&quot; alt=&quot;Gradient Descent&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Phasellus posuere lorem elit, at pharetra sapien viverra et. Proin bibendum aliquet imperdiet. Donec libero tortor, accumsan vitae augue ut, ultrices sollicitudin lorem. Etiam convallis ultrices erat eu bibendum. Duis interdum risus augue, in eleifend mauris vehicula in. Nullam id mollis est. Proin et erat et ligula porttitor commodo vel non dolor. Vivamus nec mi laoreet erat tempor tristique. Curabitur laoreet fermentum tortor a fermentum. Sed aliquam blandit tellus, ac dignissim justo vulputate nec. Suspendisse purus mauris, tincidunt et congue in, molestie vel purus. Donec vehicula mi nunc, porta varius mi aliquam at. In et feugiat nunc.&lt;/p&gt;
+
+&lt;p&gt;Vestibulum vitae magna ut ex auctor tempor sed in metus. Curabitur eleifend quam at justo elementum, a blandit massa rutrum. Morbi consectetur odio id rhoncus efficitur. Fusce euismod justo ut metus rutrum, pretium volutpat mi cursus. Pellentesque blandit risus vitae tincidunt lacinia. Suspendisse molestie nibh non mauris scelerisque tempus. Proin rutrum tristique sapien non eleifend. Nulla imperdiet diam dolor, fringilla mollis magna porta in. Nulla et lorem tellus. In hac habitasse platea dictumst. Nam aliquam tortor magna, vel vestibulum massa varius ut. Sed a gravida sem. Nullam et nisi vehicula nulla porttitor bibendum. Nulla tempor maximus leo eget congue.&lt;/p&gt;
+
+&lt;p&gt;Morbi nec augue arcu. Integer at volutpat arcu. Praesent nec placerat risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam mattis ultrices elementum. Suspendisse dapibus aliquet tellus. Pellentesque tincidunt quam tempor quam vehicula, ac iaculis augue euismod. Pellentesque euismod blandit viverra. Nunc tortor tellus, laoreet eu massa non, dignissim luctus lectus. Morbi a est varius, hendrerit nunc ac, lobortis tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam congue turpis lectus, a dapibus risus tempor porta. Donec in diam turpis.&lt;/p&gt;
+
+&lt;p&gt;Morbi varius, ligula sed pulvinar malesuada, leo nibh pellentesque dolor, id tempus leo elit ut neque. Ut consequat nulla vulputate lorem fermentum, in consequat urna malesuada. Proin a sagittis lorem, vel posuere velit. Pellentesque eleifend hendrerit enim, eu ultricies massa viverra sed. Praesent velit ligula, malesuada non efficitur in, finibus rhoncus nibh. Pellentesque at ipsum lacus. Donec ligula ex, varius ac augue ac, pharetra feugiat nunc. Phasellus lacinia odio sed erat scelerisque blandit. Suspendisse posuere augue nec tempus viverra. Nulla facilisi. Nulla vitae blandit nibh, et ullamcorper sem. Nam gravida eu nisl eu sollicitudin. Sed aliquet mauris nec maximus mattis.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 26 Dec 2015 10:52:33 +0530</pubDate>
+        <link>http://teleported.in/2015/12/26/understanding-gradient-descent.html</link>
+        <guid isPermaLink="true">http://teleported.in/2015/12/26/understanding-gradient-descent.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Bootstrapping your blog with Jekyll and Octopress</title>
