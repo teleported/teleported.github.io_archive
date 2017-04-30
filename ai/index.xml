@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ais on Teleported.in</title>
+    <link>http://example.org/ai/</link>
+    <description>Recent content in Ais on Teleported.in</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Apr 2017 13:50:26 +0530</lastBuildDate>
+    
+	<atom:link href="http://example.org/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>intutions</title>
+      <link>http://example.org/ai/intutions/</link>
+      <pubDate>Sun, 30 Apr 2017 13:50:26 +0530</pubDate>
+      
+      <guid>http://example.org/ai/intutions/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta leo sit amet feugiat tempor. Nam sed facilisis libero, vitae consequat quam. Praesent aliquet metus sed tellus hendrerit porttitor. Donec eros elit, facilisis sit amet arcu non, sollicitudin fermentum ante. Fusce scelerisque erat eu lacus sollicitudin rhoncus. Sed eget purus feugiat, tincidunt nibh eu, bibendum felis. Quisque lorem lacus, tincidunt sed tristique ac, aliquet nec augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</description>
+    </item>
+    
+  </channel>
+</rss>

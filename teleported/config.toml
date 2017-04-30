@@ -1,0 +1,4 @@
+baseURL = "http://example.org/"
+theme = "hugo-theme-minos"
+languageCode = "en-us"
+title = "Teleported.in"
