@@ -6,9 +6,19 @@
     <description>Recent content in Categories on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 30 Apr 2017 23:27:27 -0400</lastBuildDate>
     
 	<atom:link href="http://teleported.in/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Artificial Intelligence</title>
+      <link>http://teleported.in/categories/artificial-intelligence/</link>
+      <pubDate>Sun, 30 Apr 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/categories/artificial-intelligence/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
