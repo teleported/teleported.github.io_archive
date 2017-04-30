@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Teleported.in</title>
+    <title>teleported.in</title>
     <link>http://teleported.in/</link>
-    <description>Recent content on Teleported.in</description>
+    <description>Recent content on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Apr 2017 13:50:26 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 30 Apr 2017 14:49:36 +0530</lastBuildDate>
     
 	<atom:link href="http://teleported.in/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>naive bayes</title>
+      <link>http://teleported.in/machine-learning/naive-bayes/</link>
+      <pubDate>Sun, 30 Apr 2017 14:49:36 +0530</pubDate>
+      
+      <guid>http://teleported.in/machine-learning/naive-bayes/</guid>
+      <description>Pellentesque ut sem finibus, rutrum tortor vehicula, ornare nisl. Vivamus at tortor libero. Phasellus ut orci faucibus, sagittis risus id, facilisis purus. Nam accumsan bibendum tellus. Vestibulum gravida, tellus sed lacinia rutrum, est nunc pharetra justo, non maximus dui mauris at lorem. Nulla eu lorem vestibulum, tincidunt nunc id, vehicula ipsum. Mauris ullamcorper elit ut dui gravida, eu vulputate ipsum tempor. Maecenas risus turpis, vehicula vitae orci ut, tempor auctor metus.</description>
+    </item>
     
     <item>
       <title>intutions</title>

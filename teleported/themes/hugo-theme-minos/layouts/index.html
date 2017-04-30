@@ -22,7 +22,7 @@
                         <div class="article-category">
                             {{ range $i, $e := .Params.categories }}
                             {{ if gt $i 0 }}
-                            <span>&gt;</span>
+                            <span>1&gt;</span>
                             {{ end }}
                             <a class="article-category-link" href="{{ $Site.BaseURL }}/categories/{{ $e | urlize }}">{{ $e }}</a>
                             {{ end }}

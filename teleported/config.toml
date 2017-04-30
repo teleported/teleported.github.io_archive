@@ -1,4 +1,10 @@
 baseURL = "http://teleported.in/"
 theme = "hugo-theme-minos"
 languageCode = "en-us"
-title = "Teleported.in"
+title = "teleported.in"
+
+
+[params]
+    smartToc = true
+    disqusShortname = "xxxxxx"
+    googleAnalytics = "UA-98287631-1"
