@@ -168,6 +168,16 @@ body {
   text-decoration: none;
   background-image: none;
 }
+.menu-text {
+  width: auto;
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 57px;
+  margin-right: 25px;
+  text-decoration: none;
+  background-image: none;
+}
 .article-meta a,
 a.article-title,
 .article-entry a,

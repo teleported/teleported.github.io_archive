@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Machine-learnings on teleported.in</title>
-    <link>http://teleported.in/machine-learning/</link>
-    <description>Recent content in Machine-learnings on teleported.in</description>
+    <title>Abouts on teleported.in</title>
+    <link>http://teleported.in/about/</link>
+    <description>Recent content in Abouts on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Apr 2017 14:49:36 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 30 Apr 2017 01:49:36 +0530</lastBuildDate>
     
-	<atom:link href="http://teleported.in/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://teleported.in/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>naive bayes</title>
-      <link>http://teleported.in/machine-learning/naive-bayes/</link>
-      <pubDate>Sun, 30 Apr 2017 14:49:36 +0530</pubDate>
+      <title>About</title>
+      <link>http://teleported.in/about/about/</link>
+      <pubDate>Sun, 30 Apr 2017 01:49:36 +0530</pubDate>
       
-      <guid>http://teleported.in/machine-learning/naive-bayes/</guid>
+      <guid>http://teleported.in/about/about/</guid>
       <description>Pellentesque ut sem finibus, rutrum tortor vehicula, ornare nisl. Vivamus at tortor libero. Phasellus ut orci faucibus, sagittis risus id, facilisis purus. Nam accumsan bibendum tellus. Vestibulum gravida, tellus sed lacinia rutrum, est nunc pharetra justo, non maximus dui mauris at lorem. Nulla eu lorem vestibulum, tincidunt nunc id, vehicula ipsum. Mauris ullamcorper elit ut dui gravida, eu vulputate ipsum tempor. Maecenas risus turpis, vehicula vitae orci ut, tempor auctor metus.</description>
     </item>
     

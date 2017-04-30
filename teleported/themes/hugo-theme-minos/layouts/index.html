@@ -22,7 +22,7 @@
                         <div class="article-category">
                             {{ range $i, $e := .Params.categories }}
                             {{ if gt $i 0 }}
-                            <span>1&gt;</span>
+                            <span>|</span>
                             {{ end }}
                             <a class="article-category-link" href="{{ $Site.BaseURL }}/categories/{{ $e | urlize }}">{{ $e }}</a>
                             {{ end }}
@@ -65,5 +65,6 @@
     </section>
     {{ partial "footer.html" . }}
 </div>
+<script id="dsq-count-scr" src="//teleported-in.disqus.com/count.js" async></script>
 </body>
 </html>

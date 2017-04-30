@@ -2,9 +2,18 @@ baseURL = "http://teleported.in/"
 theme = "hugo-theme-minos"
 languageCode = "en-us"
 title = "teleported.in"
+author = "Anand Saha"
 
+SectionPagesMenu = "main"
+[[menu.main]]
+    name = "About"
+    weight = -110
+    identifier = "about"
+    url = "/about/about"
 
 [params]
     smartToc = true
     disqusShortname = "teleported-in"
     googleAnalytics = "UA-98287631-1"
+    featuredImage = "unnamed.png"
+
