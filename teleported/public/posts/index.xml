@@ -6,10 +6,19 @@
     <description>Recent content in Posts on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Apr 2017 23:27:27 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 04 May 2017 03:00:49 +0530</lastBuildDate>
     
 	<atom:link href="http://teleported.in/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My Deep Learning Rig</title>
+      <link>http://teleported.in/posts/my-deep-learning-rig/</link>
+      <pubDate>Thu, 04 May 2017 03:00:49 +0530</pubDate>
+      
+      <guid>http://teleported.in/posts/my-deep-learning-rig/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Visualising AI Search algorithms</title>
