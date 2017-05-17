@@ -21,9 +21,9 @@
     <!-- Enable responsiveness on mobile devices-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-    <meta name="description" content="A blog where I share my intuitions about artificial intelligence, machine learning, deep learning.">
-    <meta name="keywords" content="ai ml artificial intelligence programming c++ python intuitions papers">
-    <meta name="author" content="Anand Saha <anandsaha gmail com">
+    <meta name="description" content="{{ .Description }}">
+    <meta name="keywords" content="{{ range .Keywords }}{{ . }},{{ end }}">
+    <meta name="author" content="{{ .Params.author }}">
 
     {{ .Hugo.Generator }}
 </head>
