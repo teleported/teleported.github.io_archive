@@ -6,7 +6,7 @@
     <description>Recent content in Tags on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Apr 2017 23:27:27 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 17 May 2017 23:27:27 -0400</lastBuildDate>
     
 	<atom:link href="http://teleported.in/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,16 +14,25 @@
     <item>
       <title>Ai</title>
       <link>http://teleported.in/tags/ai/</link>
-      <pubDate>Sun, 30 Apr 2017 23:27:27 -0400</pubDate>
+      <pubDate>Wed, 17 May 2017 23:27:27 -0400</pubDate>
       
       <guid>http://teleported.in/tags/ai/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Intuitions</title>
+      <link>http://teleported.in/tags/intuitions/</link>
+      <pubDate>Wed, 17 May 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/tags/intuitions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Search</title>
       <link>http://teleported.in/tags/search/</link>
-      <pubDate>Sun, 30 Apr 2017 23:27:27 -0400</pubDate>
+      <pubDate>Wed, 17 May 2017 23:27:27 -0400</pubDate>
       
       <guid>http://teleported.in/tags/search/</guid>
       <description></description>
@@ -32,7 +41,7 @@
     <item>
       <title>Visualising</title>
       <link>http://teleported.in/tags/visualising/</link>
-      <pubDate>Sun, 30 Apr 2017 23:27:27 -0400</pubDate>
+      <pubDate>Wed, 17 May 2017 23:27:27 -0400</pubDate>
       
       <guid>http://teleported.in/tags/visualising/</guid>
       <description></description>

@@ -6,18 +6,18 @@
     <description>Recent content in Search on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Apr 2017 23:27:27 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 17 May 2017 23:27:27 -0400</lastBuildDate>
     
 	<atom:link href="http://teleported.in/tags/search/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Visualising AI Search algorithms</title>
-      <link>http://teleported.in/posts/visualising-ai-search-algorithms/</link>
-      <pubDate>Sun, 30 Apr 2017 23:27:27 -0400</pubDate>
+      <title>AI Search Algorithms</title>
+      <link>http://teleported.in/posts/ai-search-algorithms/</link>
+      <pubDate>Wed, 17 May 2017 23:27:27 -0400</pubDate>
       
-      <guid>http://teleported.in/posts/visualising-ai-search-algorithms/</guid>
-      <description></description>
+      <guid>http://teleported.in/posts/ai-search-algorithms/</guid>
+      <description>Search Algorithms Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</description>
     </item>
     
   </channel>

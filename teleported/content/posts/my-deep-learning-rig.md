@@ -5,6 +5,7 @@ title = "My Deep Learning Rig"
 description = ""
 menu = ""
 tags = []
+draft = true
 
 +++
 
