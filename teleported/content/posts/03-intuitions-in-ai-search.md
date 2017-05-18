@@ -1,24 +1,24 @@
 +++
-date        = "2017-05-17T23:27:27-04:00"
-title       = "AI Search Algorithms"
+date        = "2017-05-05T23:27:27-04:00"
+title       = "Visualising AI Search Algorithms"
 description = "Visualising various AI Search algorithms and developing an intuition about how they work."
 tags        = ["intuitions", "visualising", "ai", "search"]
-categories  = [ "artificial intelligence" ]
+categories  = [ "artificial intelligence", "search" ]
 slug        = "ai-search-algorithms"
 featuredImage="/post_imgs/03-icon.png"
 +++
 Search algorithms help find the correct sequence of actions in a search space, to reach a goal state. The sequence of actions might be:
 
-* Sequence in which citis are to be visited to travel from a source to a detination under a given cost function (shortest path, cheapest fare etc.) 
+* Sequence in which cities are to be visited to travel from a source to a destination under a given cost function (shortest path, cheapest fare etc.) 
 * Sequence in which an agent should play moves in a game (chess, tic tac toe, pacman etc.) to win a board game
 * Sequence in which a robot arm should solder components on a PCB under a given cost function (e.g. shortest time)
 
-They are mostly implemented as graphs, where the node once visited is not expanded again if revisited during traversal (as against tree, where there is a possibility of a node getting expanded repeateadly if revisited during traversal - leading to recurssion). This blog post explores the intuitions behind how these algorithms work.
+They are mostly implemented as graphs, where the node once visited is not expanded again if revisited during traversal (as against tree, where there is a possibility of a node getting expanded repeatedly if revisited during traversal - leading to recursion). This blog post explores the intuitions behind how these algorithms work.
 
-There are two broad categories of serach algorithms:
+There are two broad categories of search algorithms:
 
 * **Uninformed**: In which the algorithm does not have any additional information about the search space other than what has been provided in the problem statement (e.g. start node, end node, nodes and edges of the graph, weights etc.)
-* **Informed**: In which the algorithm has additional information other than the problem statement (e.g. euclidian distance between any node and the destination node)
+* **Informed**: In which the algorithm has additional information other than the problem statement (e.g. euclidean distance between any node and the destination node)
 
 <img style="float: center" src="/post_imgs/03-search-algorithms.png">
 
@@ -45,14 +45,14 @@ Depth First Search can be a hit or a miss. DFS always expands the deepest path f
 ### Depth Limiting Search
 <img style="float: center" src="/post_imgs/03_dls_graph_search.gif">
 
-DFS can go horribly wrong if the state space is infinite. It is also non-optimal, in that it goes to depth of the graph even if the destination happends to be near to the root but in a path which is expanded _later_. Depth limit search allows us to instruct DFS to search only till a certain depth. It can be applied to cases where we are confident of the depth at which a solution can be found.
+DFS can go horribly wrong if the state space is infinite. It is also non-optimal, in that it goes to depth of the graph even if the destination happens to be near to the root but in a path which is expanded _later_. Depth limit search allows us to instruct DFS to search only till a certain depth. It can be applied to cases where we are confident of the depth at which a solution can be found.
 
 In the above animation, we instructed the algorithm to go to a depth of 4, and abort if the destination is not found with this range.
 
 ### Iterative Deepening Search
 <img style="float: center" src="/post_imgs/03_ids_graph_search.gif">
 
-Iterative Deepening Search is a type of Depth Limiting Search where we keep increasing the depth iteratively. This is helpful in situations where we are time bound. In this case, we first search for the solution to a depth of 1, then we start over again and search for a solution to a depth of 2 and so on. We keed doing this till we have time. This is useful when the search has a timeout associated - this allows us to find the best possible move within the given time.
+Iterative Deepening Search is a type of Depth Limiting Search where we keep increasing the depth iteratively. This is helpful in situations where we are time bound. In this case, we first search for the solution to a depth of 1, then we start over again and search for a solution to a depth of 2 and so on. We keep doing this till we have time. This is useful when the search has a timeout associated - this allows us to find the best possible move within the given time.
 
 ### Uniform Cost Search (informed search)
 <img style="float: center" src="/post_imgs/03_ucs_graph_search.gif">

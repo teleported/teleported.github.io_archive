@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>AI Search Algorithms // teleported.in</title>
+    <title>Visualising AI Search Algorithms // teleported.in</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:title" content="Teleported.in" />
@@ -62,12 +62,12 @@
     <div class="article-inner">
         
         <header class="article-header">
-            <h1 class="article-title" itemprop="name">AI Search Algorithms</h1>
+            <h1 class="article-title" itemprop="name">Visualising AI Search Algorithms</h1>
         </header>
         
         <div class="article-meta">
             <a href="/posts/ai-search-algorithms/" class="article-date">
-                <time datetime='2017-05-17T23:27:27.000-04:00' itemprop="datePublished">2017-05-17</time>
+                <time datetime='2017-05-05T23:27:27.000-04:00' itemprop="datePublished">2017-05-05</time>
             </a>
             
             
@@ -77,8 +77,14 @@
                     
                     <a class="article-category-link" href="http://teleported.in//categories/artificial-intelligence">artificial intelligence</a>
                     
+                    
+                    <span>|</span>
+                    
+                    <a class="article-category-link" href="http://teleported.in//categories/search">search</a>
+                    
                 </div>
             </div>
+            
             
             
             <div class="article-comment-link-wrap">
@@ -86,24 +92,27 @@
             </div>
             
         </div>
+        <div style="color:#999999;">
+        By <a style="text-decoration: none;color:#999999; border-bottom: 1px dotted #000;" href="/about/about">Anand Saha</a>
+        </div>
         <div class="article-entry" itemprop="articleBody">
             
 
 <p>Search algorithms help find the correct sequence of actions in a search space, to reach a goal state. The sequence of actions might be:</p>
 
 <ul>
-<li>Sequence in which citis are to be visited to travel from a source to a detination under a given cost function (shortest path, cheapest fare etc.)</li>
+<li>Sequence in which cities are to be visited to travel from a source to a destination under a given cost function (shortest path, cheapest fare etc.)</li>
 <li>Sequence in which an agent should play moves in a game (chess, tic tac toe, pacman etc.) to win a board game</li>
 <li>Sequence in which a robot arm should solder components on a PCB under a given cost function (e.g. shortest time)</li>
 </ul>
 
-<p>They are mostly implemented as graphs, where the node once visited is not expanded again if revisited during traversal (as against tree, where there is a possibility of a node getting expanded repeateadly if revisited during traversal - leading to recurssion). This blog post explores the intuitions behind how these algorithms work.</p>
+<p>They are mostly implemented as graphs, where the node once visited is not expanded again if revisited during traversal (as against tree, where there is a possibility of a node getting expanded repeatedly if revisited during traversal - leading to recursion). This blog post explores the intuitions behind how these algorithms work.</p>
 
-<p>There are two broad categories of serach algorithms:</p>
+<p>There are two broad categories of search algorithms:</p>
 
 <ul>
 <li><strong>Uninformed</strong>: In which the algorithm does not have any additional information about the search space other than what has been provided in the problem statement (e.g. start node, end node, nodes and edges of the graph, weights etc.)</li>
-<li><strong>Informed</strong>: In which the algorithm has additional information other than the problem statement (e.g. euclidian distance between any node and the destination node)</li>
+<li><strong>Informed</strong>: In which the algorithm has additional information other than the problem statement (e.g. euclidean distance between any node and the destination node)</li>
 </ul>
 
 <p><img style="float: center" src="/post_imgs/03-search-algorithms.png"></p>
@@ -134,7 +143,7 @@
 
 <p><img style="float: center" src="/post_imgs/03_dls_graph_search.gif"></p>
 
-<p>DFS can go horribly wrong if the state space is infinite. It is also non-optimal, in that it goes to depth of the graph even if the destination happends to be near to the root but in a path which is expanded <em>later</em>. Depth limit search allows us to instruct DFS to search only till a certain depth. It can be applied to cases where we are confident of the depth at which a solution can be found.</p>
+<p>DFS can go horribly wrong if the state space is infinite. It is also non-optimal, in that it goes to depth of the graph even if the destination happens to be near to the root but in a path which is expanded <em>later</em>. Depth limit search allows us to instruct DFS to search only till a certain depth. It can be applied to cases where we are confident of the depth at which a solution can be found.</p>
 
 <p>In the above animation, we instructed the algorithm to go to a depth of 4, and abort if the destination is not found with this range.</p>
 
@@ -142,7 +151,7 @@
 
 <p><img style="float: center" src="/post_imgs/03_ids_graph_search.gif"></p>
 
-<p>Iterative Deepening Search is a type of Depth Limiting Search where we keep increasing the depth iteratively. This is helpful in situations where we are time bound. In this case, we first search for the solution to a depth of 1, then we start over again and search for a solution to a depth of 2 and so on. We keed doing this till we have time. This is useful when the search has a timeout associated - this allows us to find the best possible move within the given time.</p>
+<p>Iterative Deepening Search is a type of Depth Limiting Search where we keep increasing the depth iteratively. This is helpful in situations where we are time bound. In this case, we first search for the solution to a depth of 1, then we start over again and search for a solution to a depth of 2 and so on. We keep doing this till we have time. This is useful when the search has a timeout associated - this allows us to find the best possible move within the given time.</p>
 
 <h3 id="uniform-cost-search-informed-search">Uniform Cost Search (informed search)</h3>
 
@@ -249,6 +258,12 @@
     </div>
     <nav id="article-nav">
     
+    <a href="/posts/analysing-alphago/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            Analysing AlphaGo
+        </div>
+    </a>
+    
     
     <a href="/about/about/" id="article-nav-older" class="article-nav-link-wrap">
         <div class="article-nav-title">About&nbsp;<span>&gt;</span></div>
@@ -262,7 +277,7 @@
 <script type="text/javascript">
     var disqus_shortname = 'teleported-in';
     var disqus_identifier = 'http:\/\/teleported.in\/posts\/ai-search-algorithms\/';
-    var disqus_title = 'AI Search Algorithms';
+    var disqus_title = 'Visualising AI Search Algorithms';
     var disqus_url = 'http:\/\/teleported.in\/posts\/ai-search-algorithms\/';
 
     (function() {

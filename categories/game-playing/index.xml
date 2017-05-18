@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game Playing on teleported.in</title>
+    <link>http://teleported.in/categories/game-playing/</link>
+    <description>Recent content in Game Playing on teleported.in</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 May 2017 23:27:27 -0400</lastBuildDate>
+    
+	<atom:link href="http://teleported.in/categories/game-playing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Analysing AlphaGo</title>
+      <link>http://teleported.in/posts/analysing-alphago/</link>
+      <pubDate>Fri, 12 May 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/analysing-alphago/</guid>
+      <description>(I wrote this piece as part of an assignment for Udacity&amp;rsquo;s AI Nanodegree program)
+&amp;lsquo;Go&amp;rsquo; is typically an adversarial search problem where the objective is to find the best move for the AI Agent to defeat it&amp;rsquo;s opponent, given a board position. Go is a two player, deterministic game of perfect information.
+Two main factors make Go very complex to solve:
+ Go has an average branching factor b of ~250 options per node (chess ~35) Go has an average depth d of ~150 moves (chess ~80)  These factos make the state space of Go (bd) enormous to search end to end.</description>
+    </item>
+    
+  </channel>
+</rss>
