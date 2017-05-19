@@ -18,9 +18,9 @@
       
       <guid>http://teleported.in/posts/analysing-alphago/</guid>
       <description>(I wrote this piece as part of an assignment for Udacity&amp;rsquo;s AI Nanodegree program)
-&amp;lsquo;Go&amp;rsquo; is typically an adversarial search problem where the objective is to find the best move for the AI Agent to defeat it&amp;rsquo;s opponent, given a board position. Go is a two player, deterministic game of perfect information.
+Introduction &amp;lsquo;Go&amp;rsquo; is typically an adversarial search problem where the objective is to find the best move for the AI Agent to defeat it&amp;rsquo;s opponent, given a board position. Go is a two player, turn taking, deterministic game of perfect information.
 Two main factors make Go very complex to solve:
- Go has an average branching factor b of ~250 options per node (chess ~35) Go has an average depth d of ~150 moves (chess ~80)  These factos make the state space of Go (bd) enormous to search end to end.</description>
+ Go has an average branching factor &amp;lsquo;b&amp;rsquo; of ~250 options per node (chess ~35) Go has an average depth &amp;lsquo;d&amp;rsquo; of ~150 moves (chess ~80)  These factos make the state space of Go (bd) enormous to search end to end using traditional techniques.</description>
     </item>
     
   </channel>

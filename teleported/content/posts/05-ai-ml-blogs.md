@@ -11,11 +11,12 @@ featuredImage="/post_imgs/05-bw-blog-icon.png"
 This is a (living) list of AI/ML Blogs that I visit.
 
 ### Personal Blogs
-
+* [Andrej Karpathy](http://karpathy.github.io), also his [blog at stanford](http://cs.stanford.edu/people/karpathy/).
 
 ### Company Blogs
-* <a href="https://www.tastehit.com/blog">TasteHit</a> - Full of intuitions and the big picture.
+* [Google Research](https://research.googleblog.com)
+* [TasteHit](https://www.tastehit.com/blog) - Full of intuitions and the big picture.
 
 ### Forums
-* <a href="https://www.reddit.com/r/MachineLearning/">Reddit Machine Learning</a> - Remain upto date with what's happening in Machine Learning
-* <a href="https://www.reddit.com/r/artificial/">Reddit Artificial Intelligence</a> - Same for AI
+* [Reddit Machine Learning](https://www.reddit.com/r/MachineLearning/) - Remain upto date with what's happening in Machine Learning
+* [Reddit Artificial Intelligence](https://www.reddit.com/r/artificial/) - Same for AI

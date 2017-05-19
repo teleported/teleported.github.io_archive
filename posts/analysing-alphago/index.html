@@ -54,6 +54,10 @@
                 </div>
             </nav>
         </div>
+        <div style="margin-top:-10px; padding-bottom:5px">
+        <label style="font-family: Arial, Georgia;color:#555555">
+            My notes on AI and ML. Mostly intuitions and concepts.</label>
+        </div>
     </div>
 </header>
 
@@ -96,51 +100,122 @@
         By <a style="text-decoration: none;color:#999999; border-bottom: 1px dotted #000;" href="/about/about">Anand Saha</a>
         </div>
         <div class="article-entry" itemprop="articleBody">
-            <p>(<em>I wrote this piece as part of an assignment for Udacity&rsquo;s AI Nanodegree program</em>)</p>
+            
 
-<p>&lsquo;Go&rsquo; is typically an adversarial <a href="/posts/ai-search-algorithms/">search problem</a> where the objective is to find the best move for the AI Agent to defeat it&rsquo;s opponent, given a board position. Go is a two player, deterministic game of perfect information.</p>
+<p>(<em>I wrote this piece as part of an assignment for Udacity&rsquo;s <a href="https://in.udacity.com/course/artificial-intelligence-nanodegree--nd889/">AI Nanodegree program</a></em>)</p>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>&lsquo;Go&rsquo; is typically an adversarial <a href="/posts/ai-search-algorithms/">search problem</a> where the objective is to find the best move for the AI Agent to defeat it&rsquo;s opponent, given a board position. Go is a two player, turn taking, deterministic game of perfect information.</p>
 
 <p><img style="width: 300px; padding:10px 30px 10px 10px" src="/post_imgs/04-alphago.jpg"></p>
 
 <p>Two main factors make Go very complex to solve:</p>
 
 <ul>
-<li>Go has an average branching factor <em>b</em> of ~250 options per node (chess ~35)</li>
-<li>Go has an average depth <em>d</em> of ~150 moves (chess ~80)</li>
+<li>Go has an average branching factor &lsquo;<em>b</em>&rsquo; of ~250 options per node (chess ~35)</li>
+<li>Go has an average depth &lsquo;<em>d</em>&rsquo; of ~150 moves (chess ~80)</li>
 </ul>
 
-<p>These factos make the state space of Go (<em>b<sup>d</sup></em>) enormous to search end to end.</p>
+<p>These factos make the state space of Go (<em>b<sup>d</sup></em>) enormous to search end to end using traditional techniques.</p>
 
-<p><strong>What did AlphaGo achieve?</strong></p>
+<h3 id="what-did-alphago-achieve">What did AlphaGo achieve?</h3>
 
 <p><a href="https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf">AlphaGo</a> became the first computer Go program in the world <a href= "https://en.wikipedia.org/wiki/AlphaGo" >to have beaten a human professional Go player without handicaps on a full-sized 19x19 board.</a></p>
 
 <p>AlphaGo achieved this at a time when the community had estimated another decade for this to be a reality.</p>
 
-<p><strong>How did it achieve this feat?</strong></p>
+<h3 id="how-did-it-achieve-this-feat">How did it achieve this feat?</h3>
 
-<p>In general, there are three main ways in which the search space of a game tree may be traversed intelligently, keeping time and memory constraints in mind:</p>
+<p>The solution to solving a game problem of this magnitude is to be able to reduce the enormous search space to something more managable<sup>3</sup>. Additionally, the system is trained to learn how successfull moves look like, by exposing it to results of actual games played in the past.</p>
+
+<p>Theoretically, there are (mainly) two ways in which the search space of a game tree may be traversed intelligently, keeping time and memory constraints in mind:</p>
 
 <ul>
-<li><em>Limiting the branching factor b</em> by pruning away branches which are guarenteed not to have the best moves (e.g. using alpha beta pruning)</li>
-<li><em>Limiting the search depth d</em> by using evaluation functions, which gives an estimation of a board position at a certain game state, without expanding the board further (e.g. using heuristics)</li>
-<li><em>Converting Tree data structure to Graph</em> so as to avoid expanding already visited nodes</li>
+<li><em>Limiting the <a href="https://en.wikipedia.org/wiki/Branching%5ffactor">branching factor</a> b</em> by pruning away branches which are guarenteed not to have the best moves (e.g. using alpha beta pruning)</li>
+<li><em>Limiting the <a href="https://en.wikipedia.org/wiki/Tree-depth">game tree depth</a> d</em> by using evaluation functions, which gives an estimation of a board position at a certain depth, without expanding the board further (e.g. using heuristics)</li>
 </ul>
 
-<p>AlphaGo makes use of these techniques in a very sophisticated way to achieve wins.</p>
+<p>AlphaGo makes use of these techniques in a very sophisticated (and deviated) way to achieve wins. <em>Deviated</em> because it doesn&rsquo;t make use of traditional search trees directly, but uses MCTS, which works very well on huge search spaces.</p>
 
-<p>Simply put, AlphaGo uses computer vision to detect the board position, and uses deep learning and tree searching to find the best move.</p>
+<p>There are 3 important pieces to the AlphaGo&rsquo;s algorithm:</p>
 
-<p>Reference:</p>
+<ol>
+<li>It uses a deep neural network, called the &ldquo;policy network&rdquo;, to <em>predict</em> the next set of moves which are likely to win (thereby reducing the branching factor)</li>
+<li>It uses a deep neural network, called the &ldquo;value network&rdquo;, to <em>estimate</em> the outcome (win/loss) of a board position without actually traversing till the end (thereby reducing the depth)</li>
+<li>It uses Monte Carlo tree search (MCTS) which makes use of (1) and (2) to determine the best move given a board state</li>
+</ol>
+
+<p>The best way to start understanding AlphaGo&rsquo;s algorithm is to understand what MCTS is and what problem it solves. Once that is understood, it becomes easy to understand how <em>Policy networks</em> and <em>Value networks</em> fit in.</p>
+
+<h4 id="monte-carlo-tree-search">Monte Carlo Tree Search</h4>
+
+<p>The usual approach to solving a game problem is to create a search tree and apply one of the many search algorithms to find the next move. However, Go&rsquo;s search space being enormous, this approach would fall dramatically short in performance.</p>
+
+<p>MCTS is a technique to search huge (game) trees with arbitrary branching factor. It also allows you to time limit your search so that you come out with the best move that was possible to find within the given time (usually needed in competitive games).</p>
+
+<p><img src="/post_imgs/04-mcts.png" alt="MCTS" />
+Steps in MCTS <em>Source: researchgate.net</em></p>
+
+<p>The intuition behind MCTS is that:</p>
 
 <ul>
+<li>When you are at a certain state, you have knowledge of the tree only to a certain depth beyond which you haven&rsquo;t expanded the tree yet. (Remember, this is an enormous tree.)</li>
+<li><strong>Selection</strong>: When you are at a state (node) in the tree, you try to select an action to traverse to the next state, which has high probability of winning. But which one will you select? This is given by the policy function. The policy function takes in a state and gives back an action which has high probability of winning. That&rsquo;s where the policy network comes into picture. You keep selecting subsequent actions until you come to a leaf state (this is not leaf of the <em>actual</em> tree, this is leaf of the <em>known</em> tree)</li>
+<li><strong>Expansion</strong>: Once you have reached a leaf state, it might have many different possibilities. It is possible that at this state, there are very many possible actions to take to reach various states. You randomly take a few actions to create a few different child states.<br /></li>
+<li><strong>Simulation</strong>: In this step, take the child states created above and simulate a game by taking actions choosen based on a policy. This is called a rollout policy. A simple policy can be the random policy. Each of these simulations will eventually converge to a win or lose state.</li>
+<li><strong>Back Propagation</strong>: In this state, the win or lose evaluation is propagated up through the path up to root. The statistics of various wins or loses due to such simulations is recorded in each node. Eventually, a winning path emerges.</li>
+</ul>
+
+<h4 id="the-policy-network">The Policy Network</h4>
+
+<p>As stated earlier, the policy network helps AlphaGo predict the set of next winning moves. The policy network was trained on 30 million moves collected from previously played games by humans. This is a form of supervised learning. Post this the network was made to play itself thousands of times via reinforcement learning. Reinforecement learning helped policy network to discover new strategies apart from what humans have used.</p>
+
+<h4 id="the-value-network">The Value Network</h4>
+
+<p>The value network is training using the policy network via reinforcement learning.</p>
+
+<h4 id="so-putting-it-together">So, putting it together</h4>
+
+<h4 id="conclusion">Conclusion</h4>
+
+<p>References:</p>
+
+<ol>
 <li><a href="https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf">AlphaGo Paper</a></li>
-<li><a href="https://www.tastehit.com/blog/google-deepmind-alphago-how-it-works/">https://www.tastehit.com/blog/google-deepmind-alphago-how-it-works/</a></li>
-</ul>
+<li><a href="https://www.tastehit.com/blog/google-deepmind-alphago-how-it-works/">TasteHit blog post</a></li>
+<li><a href="https://research.googleblog.com/2016/01/alphago-mastering-ancient-game-of-go.html">Google blog post</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Monte_Carlo_tree_search">Monte Carlo Tree Search</a></li>
+<li><a href="https://datascience.stackexchange.com/questions/10932/difference-between-alphagos-policy-network-and-value-network">StackExchange discussion</a></li>
+</ol>
 
         </div>
 
         
+        
+        <div class="article-toc" style="display:none;">
+            <h3>Contents</h3>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#what-did-alphago-achieve">What did AlphaGo achieve?</a></li>
+<li><a href="#how-did-it-achieve-this-feat">How did it achieve this feat?</a>
+<ul>
+<li><a href="#monte-carlo-tree-search">Monte Carlo Tree Search</a></li>
+<li><a href="#the-policy-network">The Policy Network</a></li>
+<li><a href="#the-value-network">The Value Network</a></li>
+<li><a href="#so-putting-it-together">So, putting it together</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
         
         
 
