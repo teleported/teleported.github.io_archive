@@ -106,78 +106,85 @@
 
 <h3 id="introduction">Introduction</h3>
 
-<p>&lsquo;Go&rsquo; is typically an adversarial <a href="/posts/ai-search-algorithms/">search problem</a> where the objective is to find the best move for the AI Agent to defeat it&rsquo;s opponent, given a board position. Go is a two player, turn taking, deterministic game of perfect information.</p>
-
-<p><img style="width: 300px; padding:10px 30px 10px 10px" src="/post_imgs/04-alphago.jpg"></p>
-
-<p>Two main factors make Go very complex to solve:</p>
+<p>Go is a two player, turn taking, deterministic game of perfect information.
+<img style="width: 300px; padding:10px 30px 10px 10px" src="/post_imgs/04-alphago.jpg">
+Two main factors make Go very complex to solve:</p>
 
 <ul>
-<li>Go has an average branching factor &lsquo;<em>b</em>&rsquo; of ~250 options per node (chess ~35)</li>
-<li>Go has an average depth &lsquo;<em>d</em>&rsquo; of ~150 moves (chess ~80)</li>
+<li>Go has an average branching factor ‘b’ of ~250 options per node (chess ~35)</li>
+<li>Go has an average depth ‘d’ of ~150 moves (chess ~80)</li>
 </ul>
 
-<p>These factos make the state space of Go (<em>b<sup>d</sup></em>) enormous to search end to end using traditional techniques.</p>
+<p>These factos make the state space of Go (b<sup>d</sup>) enormous to search end to end using traditional techniques.</p>
 
-<h3 id="what-did-alphago-achieve">What did AlphaGo achieve?</h3>
+<p>AlphaGo&rsquo;s goal was to create a computer Go program to beat world class Go professional players, without any handicaps on a 19x19 board, given that:
+* The search space of Go is just enormous
+* The evaluation of board positions and moves is challenging
+* Go combines game playing with human intuition, which is challening to imitate by a computer program</p>
 
-<p><a href="https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf">AlphaGo</a> became the first computer Go program in the world <a href= "https://en.wikipedia.org/wiki/AlphaGo" >to have beaten a human professional Go player without handicaps on a full-sized 19x19 board.</a></p>
+<h3 id="techniques-used">Techniques used</h3>
 
-<p>AlphaGo achieved this at a time when the community had estimated another decade for this to be a reality.</p>
-
-<h3 id="how-did-it-achieve-this-feat">How did it achieve this feat?</h3>
-
-<p>The solution to solving a game problem of this magnitude is to be able to reduce the enormous search space to something more managable<sup>3</sup>. Additionally, the system is trained to learn how successfull moves look like, by exposing it to results of actual games played in the past.</p>
-
-<p>Theoretically, there are (mainly) two ways in which the search space of a game tree may be traversed intelligently, keeping time and memory constraints in mind:</p>
-
-<ul>
-<li><em>Limiting the <a href="https://en.wikipedia.org/wiki/Branching%5ffactor">branching factor</a> b</em> by pruning away branches which are guarenteed not to have the best moves (e.g. using alpha beta pruning)</li>
-<li><em>Limiting the <a href="https://en.wikipedia.org/wiki/Tree-depth">game tree depth</a> d</em> by using evaluation functions, which gives an estimation of a board position at a certain depth, without expanding the board further (e.g. using heuristics)</li>
-</ul>
-
-<p>AlphaGo makes use of these techniques in a very sophisticated (and deviated) way to achieve wins. <em>Deviated</em> because it doesn&rsquo;t make use of traditional search trees directly, but uses MCTS, which works very well on huge search spaces.</p>
-
-<p>There are 3 important pieces to the AlphaGo&rsquo;s algorithm:</p>
+<p>AlphaGo’s novel approach used two deep neural networks called policy network (for sampling actions) and value network (for evaluating positions), which were used in a Monte Carlo Tree Search program (for traversal) to determine best moves.</p>
 
 <ol>
-<li>It uses a deep neural network, called the &ldquo;policy network&rdquo;, to <em>predict</em> the next set of moves which are likely to win (thereby reducing the branching factor)</li>
-<li>It uses a deep neural network, called the &ldquo;value network&rdquo;, to <em>estimate</em> the outcome (win/loss) of a board position without actually traversing till the end (thereby reducing the depth)</li>
-<li>It uses Monte Carlo tree search (MCTS) which makes use of (1) and (2) to determine the best move given a board state</li>
-</ol>
-
-<p>The best way to start understanding AlphaGo&rsquo;s algorithm is to understand what MCTS is and what problem it solves. Once that is understood, it becomes easy to understand how <em>Policy networks</em> and <em>Value networks</em> fit in.</p>
-
-<h4 id="monte-carlo-tree-search">Monte Carlo Tree Search</h4>
-
-<p>The usual approach to solving a game problem is to create a search tree and apply one of the many search algorithms to find the next move. However, Go&rsquo;s search space being enormous, this approach would fall dramatically short in performance.</p>
-
-<p>MCTS is a technique to search huge (game) trees with arbitrary branching factor. It also allows you to time limit your search so that you come out with the best move that was possible to find within the given time (usually needed in competitive games).</p>
-
-<p><img src="/post_imgs/04-mcts.png" alt="MCTS" />
-Steps in MCTS <em>Source: researchgate.net</em></p>
-
-<p>The intuition behind MCTS is that:</p>
+<li><p>The policy network was used to predict the next set of moves which are likely to win probabilistically from a given board position - thereby reducing the branching factor.</p>
 
 <ul>
-<li>When you are at a certain state, you have knowledge of the tree only to a certain depth beyond which you haven&rsquo;t expanded the tree yet. (Remember, this is an enormous tree.)</li>
-<li><strong>Selection</strong>: When you are at a state (node) in the tree, you try to select an action to traverse to the next state, which has high probability of winning. But which one will you select? This is given by the policy function. The policy function takes in a state and gives back an action which has high probability of winning. That&rsquo;s where the policy network comes into picture. You keep selecting subsequent actions until you come to a leaf state (this is not leaf of the <em>actual</em> tree, this is leaf of the <em>known</em> tree)</li>
-<li><strong>Expansion</strong>: Once you have reached a leaf state, it might have many different possibilities. It is possible that at this state, there are very many possible actions to take to reach various states. You randomly take a few actions to create a few different child states.<br /></li>
-<li><strong>Simulation</strong>: In this step, take the child states created above and simulate a game by taking actions choosen based on a policy. This is called a rollout policy. A simple policy can be the random policy. Each of these simulations will eventually converge to a win or lose state.</li>
-<li><strong>Back Propagation</strong>: In this state, the win or lose evaluation is propagated up through the path up to root. The statistics of various wins or loses due to such simulations is recorded in each node. Eventually, a winning path emerges.</li>
+<li>This was achieved by training the policy network on 30 million moves from past games played by expert humans, using supervised learning.</li>
+<li>Then it was made to play itself thousands of times, using reinforcement learning. This enabled the network to know what the winning moves are and also develop it’s own intuitions on the winning moves.</li>
+<li>Once trained, the policy network produced a policy function which gives out the probability distribution of game actions given a game state.</li>
+<li>The policy network had 13 layers and had an accuracy of 57% on test dataset (which is impressive)</li>
+</ul></li>
+
+<li><p>The value network was used to estimate the outcome (win/loss) of a board position without actually traversing till the end of the tree (thereby reducing the depth)</p>
+
+<ul>
+<li>The value network produced a value function which predicts the outcome of a board position played using a particular policy function (The strongest policy function was choosen from (1)).</li>
+<li>The value networks were trained using the policy functions via reinforcement learning by self play. This resulted in generalisation of the approach.</li>
+</ul></li>
+
+<li><p>Finally, it used Monte Carlo Tree Search (MCTS) which made use of (1) and (2) to determine the best move given a board state.</p>
+
+<ul>
+<li>The best move is determined by simulating game play.</li>
+<li>The crux of MCTS algorithm is in a loop which has four main steps. (Note that when you are at a certain board state, you have knowledge of the game tree only to a certain depth beyond which you haven’t expanded the tree yet. Remember, this is an enormous tree.)</li>
+</ul></li>
+</ol>
+
+<p><img src="/post_imgs/04-mcts.png" alt="MCTS" /></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Selection</strong>: When you are at a state (node) in the tree, you try to select a winning action to traverse to the next state. But how do you know which are the winning actions? This is given by the policy function. The policy function takes in a state and gives back an action which has high probability of winning. (That’s how the policy network is used). You keep selecting subsequent actions and traverse down the tree until you come to a leaf state (this is not leaf of the actual tree, this is leaf of the known tree)</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Expansion</strong>: Once you have reached a leaf state, it has to be expanded to reveal potential winning moves. It is possible that at this state, there are very many possible actions to take to reach various winning states. The policy function is invoked to generate probability distribution of actions for possible child states.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Simulation</strong>: In this step, first the value function is used to estimate the outcome of each action (win/lose) revealed in expansion step. Then the potentially winning child states are taken and games are simulated by taking actions choosen based on a policy. This is called a rollout policy. A simple policy can be the random policy, where actions are choosen at random. AlphaGo used a fast rollout policy. Each of these simulations will eventually converge to a win or lose terminal state.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Back Propagation</strong>: In this step, the outcome of the terminal state is propagated up through the path to the root. This information is then propagated up the tree and the statistics (action value, visit count and prior  probability) of all the nodes in the path to root are updated.</p>
+
+<ul>
+<li>With enough simulation, the stats tend to favor the strongest moves and their score goes up.</li>
+<li>The strongest of them is then selected as the next move.</li>
+<li>The simulation happens as many times as possible within the cutoff time for a move.</li>
 </ul>
 
-<h4 id="the-policy-network">The Policy Network</h4>
+<p>AlphaGo also used Computer Vision to ingest the board position as a 19x19 image and used convolution networks to construct a representation of the position.</p>
 
-<p>As stated earlier, the policy network helps AlphaGo predict the set of next winning moves. The policy network was trained on 30 million moves collected from previously played games by humans. This is a form of supervised learning. Post this the network was made to play itself thousands of times via reinforcement learning. Reinforecement learning helped policy network to discover new strategies apart from what humans have used.</p>
+<h4 id="paper-s-results">Paper’s results</h4>
 
-<h4 id="the-value-network">The Value Network</h4>
+<p>Technically:</p>
 
-<p>The value network is training using the policy network via reinforcement learning.</p>
+<ul>
+<li>The paper introduced a new approach to solving Go, by efficiently integrating Policy networks and Value networks with MCTS</li>
+<li>Made use of Supervised learning along with Reinforcement learning to generate both logic and intuition of the game</li>
+</ul>
 
-<h4 id="so-putting-it-together">So, putting it together</h4>
+<p>Impact wise:</p>
 
-<h4 id="conclusion">Conclusion</h4>
+<ul>
+<li>AlphaGo achieved this feat at a time when the community had estimated another decade for this to be a reality.</li>
+<li>AlphaGo defeated the human European Go champion 5-0, and a 9-dan rank player 4-1.</li>
+<li>AlphaGo defeated all of it’s fellow computer Go players</li>
+</ul>
 
 <p>References:</p>
 
@@ -202,14 +209,9 @@ Steps in MCTS <em>Source: researchgate.net</em></p>
 <li>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#what-did-alphago-achieve">What did AlphaGo achieve?</a></li>
-<li><a href="#how-did-it-achieve-this-feat">How did it achieve this feat?</a>
+<li><a href="#techniques-used">Techniques used</a>
 <ul>
-<li><a href="#monte-carlo-tree-search">Monte Carlo Tree Search</a></li>
-<li><a href="#the-policy-network">The Policy Network</a></li>
-<li><a href="#the-value-network">The Value Network</a></li>
-<li><a href="#so-putting-it-together">So, putting it together</a></li>
-<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#paper-s-results">Paper’s results</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
