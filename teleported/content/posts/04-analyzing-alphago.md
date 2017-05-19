@@ -7,7 +7,7 @@ categories  = [ "artificial intelligence", "game playing" ]
 slug        = "analysing-alphago"
 featuredImage="/post_imgs/04-alphago.jpg"
 +++
-(_I wrote this piece as part of an assignment for Udacity's <a href="https://in.udacity.com/course/artificial-intelligence-nanodegree--nd889/">AI Nanodegree program</a>_)
+(_I wrote this piece as part of an assignment for Udacity's <a href="https://in.udacity.com/course/artificial-intelligence-nanodegree--nd889/">AI Nanodegree program</a>_. The assignment was to summarize the AlphaGo paper in a page)
 
 ### Introduction
 
