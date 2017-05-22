@@ -12,6 +12,9 @@ This is a (living) list of AI/ML Blogs that I visit.
 
 ### Personal Blogs
 * [Andrej Karpathy](http://karpathy.github.io), also his [blog at stanford](http://cs.stanford.edu/people/karpathy/).
+* [Colah's Blog](http://colah.github.io/)
+* [Denny Britz](http://www.wildml.com/)
+
 
 ### Company Blogs
 * [Google Research](https://research.googleblog.com)
@@ -20,3 +23,4 @@ This is a (living) list of AI/ML Blogs that I visit.
 ### Forums
 * [Reddit Machine Learning](https://www.reddit.com/r/MachineLearning/) - Remain upto date with what's happening in Machine Learning
 * [Reddit Artificial Intelligence](https://www.reddit.com/r/artificial/) - Same for AI
+

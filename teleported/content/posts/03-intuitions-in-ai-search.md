@@ -57,6 +57,12 @@ Iterative Deepening Search is a type of Depth Limiting Search where we keep incr
 ### Uniform Cost Search (informed search)
 <img style="float: center" src="/post_imgs/03_ucs_graph_search.gif">
 
+All the above searches only knew about the nodes and the paths to the nodes. They were unaware of any details about the nodes, like the cost of going from one node to another, or the physical location of each node.
+
+UCS is an informed search. It makes use of the extra knowledge about the problem to make informed decisions about it's traversal.
+
+
+
 ### A\* Search (informed search)
 <img style="float: center" src="/post_imgs/03_ass_graph_search.gif">
 
