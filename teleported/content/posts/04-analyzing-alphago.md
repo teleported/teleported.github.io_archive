@@ -67,18 +67,16 @@ Technically:
 
 * The paper introduced a new approach to solving Go, by efficiently integrating Policy networks and Value networks with MCTS
 * Made use of Supervised learning along with Reinforcement learning to generate both logic and intuition of the game
-
+* The final implementation used a distrubuted approach to playing Go - which means the performance of AlphaGo can be scaled up by throwing more computing resource at it. 
 Impact wise:
 
 * AlphaGo achieved this feat at a time when the community had estimated another decade for this to be a reality.
 * AlphaGo defeated the human European Go champion 5-0, and a 9-dan rank player 4-1. 
-* AlphaGo defeated all of it’s fellow computer Go players
+* AlphaGo defeated all of it’s fellow computer Go players and is the incumbent.
 
 References:
 
-
 1. [AlphaGo Paper](https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf)
-2. [TasteHit blog post](https://www.tastehit.com/blog/google-deepmind-alphago-how-it-works/)
-3. [Google blog post](https://research.googleblog.com/2016/01/alphago-mastering-ancient-game-of-go.html)
-4. [Monte Carlo Tree Search](https://en.wikipedia.org/wiki/Monte_Carlo_tree_search)
-5. [StackExchange discussion](https://datascience.stackexchange.com/questions/10932/difference-between-alphagos-policy-network-and-value-network)
+2. [Google blog post](https://research.googleblog.com/2016/01/alphago-mastering-ancient-game-of-go.html)
+3. [Monte Carlo Tree Search](https://en.wikipedia.org/wiki/Monte_Carlo_tree_search)
+4. [StackExchange discussion](https://datascience.stackexchange.com/questions/10932/difference-between-alphagos-policy-network-and-value-network)

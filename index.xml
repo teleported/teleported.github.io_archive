@@ -6,18 +6,18 @@
     <description>Recent content on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 May 2017 02:27:27 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 21 May 2017 11:55:28 +0530</lastBuildDate>
     
 	<atom:link href="http://teleported.in/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Intuition behind Alpha-Beta pruning</title>
-      <link>http://teleported.in/posts/intuition-behind-alpha-beta-pruning/</link>
-      <pubDate>Tue, 16 May 2017 02:27:27 -0400</pubDate>
+      <title>08 removing confusion from confusion matrix</title>
+      <link>http://teleported.in/08-removing-confusion-from-confusion-matrix/</link>
+      <pubDate>Sun, 21 May 2017 11:55:28 +0530</pubDate>
       
-      <guid>http://teleported.in/posts/intuition-behind-alpha-beta-pruning/</guid>
-      <description>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</description>
+      <guid>http://teleported.in/08-removing-confusion-from-confusion-matrix/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       
       <guid>http://teleported.in/posts/ai-ml-readings/</guid>
       <description> This is a (living) list of AI/ML Blogs that I visit.
-Personal Blogs  Andrej Karpathy, also his blog at stanford.  Company Blogs  Google Research TasteHit - Full of intuitions and the big picture.  Forums  Reddit Machine Learning - Remain upto date with what&amp;rsquo;s happening in Machine Learning Reddit Artificial Intelligence - Same for AI  </description>
+Personal Blogs  Andrej Karpathy, also his blog at stanford. Colah&amp;rsquo;s Blog Denny Britz  Company Blogs  Google Research TasteHit - Full of intuitions and the big picture.  Forums  Reddit Machine Learning - Remain upto date with what&amp;rsquo;s happening in Machine Learning Reddit Artificial Intelligence - Same for AI  </description>
     </item>
     
     <item>
