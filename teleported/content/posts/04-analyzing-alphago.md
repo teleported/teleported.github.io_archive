@@ -68,6 +68,7 @@ Technically:
 * The paper introduced a new approach to solving Go, by efficiently integrating Policy networks and Value networks with MCTS
 * Made use of Supervised learning along with Reinforcement learning to generate both logic and intuition of the game
 * The final implementation used a distrubuted approach to playing Go - which means the performance of AlphaGo can be scaled up by throwing more computing resource at it. 
+
 Impact wise:
 
 * AlphaGo achieved this feat at a time when the community had estimated another decade for this to be a reality.

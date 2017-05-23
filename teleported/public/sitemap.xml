@@ -2,11 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://teleported.in/08-removing-confusion-from-confusion-matrix/</loc>
-    <lastmod>2017-05-21T11:55:28+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>http://teleported.in/posts/ai-ml-readings/</loc>
     <lastmod>2017-05-15T01:27:27-04:00</lastmod>
   </url>
@@ -136,7 +131,7 @@
   
   <url>
     <loc>http://teleported.in/</loc>
-    <lastmod>2017-05-21T11:55:28+05:30</lastmod>
+    <lastmod>2017-05-15T01:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
