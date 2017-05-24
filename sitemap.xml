@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://teleported.in/posts/simulated-annealing-metaphor/</loc>
+    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://teleported.in/posts/ai-ml-readings/</loc>
     <lastmod>2017-05-15T01:27:27-04:00</lastmod>
   </url>
@@ -29,7 +34,7 @@
   
   <url>
     <loc>http://teleported.in/tags/ai/</loc>
-    <lastmod>2017-05-15T01:27:27-04:00</lastmod>
+    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -41,7 +46,7 @@
   
   <url>
     <loc>http://teleported.in/categories/artificial-intelligence/</loc>
-    <lastmod>2017-05-15T01:27:27-04:00</lastmod>
+    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -53,7 +58,7 @@
   
   <url>
     <loc>http://teleported.in/categories/</loc>
-    <lastmod>2017-05-15T01:27:27-04:00</lastmod>
+    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -77,7 +82,7 @@
   
   <url>
     <loc>http://teleported.in/tags/intuitions/</loc>
-    <lastmod>2017-05-12T23:27:27-04:00</lastmod>
+    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -89,13 +94,13 @@
   
   <url>
     <loc>http://teleported.in/tags/ml/</loc>
-    <lastmod>2017-05-15T01:27:27-04:00</lastmod>
+    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://teleported.in/posts/</loc>
-    <lastmod>2017-05-15T01:27:27-04:00</lastmod>
+    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -118,8 +123,20 @@
   </url>
   
   <url>
+    <loc>http://teleported.in/tags/simulated-annealing/</loc>
+    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://teleported.in/categories/simulated-annealing/</loc>
+    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://teleported.in/tags/</loc>
-    <lastmod>2017-05-15T01:27:27-04:00</lastmod>
+    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -131,7 +148,7 @@
   
   <url>
     <loc>http://teleported.in/</loc>
-    <lastmod>2017-05-15T01:27:27-04:00</lastmod>
+    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
