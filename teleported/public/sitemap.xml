@@ -7,11 +7,6 @@
   </url>
   
   <url>
-    <loc>http://teleported.in/posts/ai-ml-readings/</loc>
-    <lastmod>2017-05-15T01:27:27-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://teleported.in/posts/analysing-alphago/</loc>
     <lastmod>2017-05-12T23:27:27-04:00</lastmod>
   </url>
@@ -51,12 +46,6 @@
   </url>
   
   <url>
-    <loc>http://teleported.in/tags/blogs/</loc>
-    <lastmod>2017-05-15T01:27:27-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://teleported.in/categories/</loc>
     <lastmod>2017-05-24T00:27:27-04:00</lastmod>
     <priority>0</priority>
@@ -83,12 +72,6 @@
   <url>
     <loc>http://teleported.in/tags/intuitions/</loc>
     <lastmod>2017-05-24T00:27:27-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://teleported.in/categories/machine-learning/</loc>
-    <lastmod>2017-05-15T01:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   

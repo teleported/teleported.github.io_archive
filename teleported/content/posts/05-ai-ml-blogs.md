@@ -6,6 +6,7 @@ tags        = ["ai", "ml", "blogs"]
 categories  = [ "artificial intelligence", "machine learning" ]
 slug        = "ai-ml-readings"
 featuredImage="/post_imgs/05-bw-blog-icon.png"
+draft       = true
 +++
 
 This is a (living) list of AI/ML Blogs that I visit.
