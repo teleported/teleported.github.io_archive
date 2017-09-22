@@ -1,6 +1,6 @@
 +++
 date        = "2017-05-24T00:27:27-04:00"
-title       = "Simulated Annealing without technical terms"
+title       = "Simulated Annealing simply explained"
 description = "Simulated Annealing Metaphor without technical terms"
 tags        = ["intuitions", "ml", "ai", "simulated annealing"]
 categories  = [ "artificial intelligence", "simulated annealing" ]
