@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on teleported.in</title>
+    <link>http://teleported.in/categories/</link>
+    <description>Recent content in Categories on teleported.in</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 May 2017 00:27:27 -0400</lastBuildDate>
+    
+	<atom:link href="http://teleported.in/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Artificial Intelligence</title>
+      <link>http://teleported.in/categories/artificial-intelligence/</link>
+      <pubDate>Wed, 24 May 2017 00:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/categories/artificial-intelligence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Game Playing</title>
+      <link>http://teleported.in/categories/game-playing/</link>
+      <pubDate>Fri, 12 May 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/categories/game-playing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>http://teleported.in/categories/machine-learning/</link>
+      <pubDate>Mon, 15 May 2017 01:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/categories/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>http://teleported.in/categories/search/</link>
+      <pubDate>Fri, 05 May 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/categories/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simulated Annealing</title>
+      <link>http://teleported.in/categories/simulated-annealing/</link>
+      <pubDate>Wed, 24 May 2017 00:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/categories/simulated-annealing/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

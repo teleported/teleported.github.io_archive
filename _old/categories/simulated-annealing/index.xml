@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simulated Annealing on teleported.in</title>
+    <link>http://teleported.in/categories/simulated-annealing/</link>
+    <description>Recent content in Simulated Annealing on teleported.in</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 May 2017 00:27:27 -0400</lastBuildDate>
+    
+	<atom:link href="http://teleported.in/categories/simulated-annealing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simulated Annealing without technical terms</title>
+      <link>http://teleported.in/posts/simulated-annealing-metaphor/</link>
+      <pubDate>Wed, 24 May 2017 00:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/simulated-annealing-metaphor/</guid>
+      <description>(I had explained Simulated Annealing to someone on Udacity forum. Here was the conversation.)
+Can someone please explain simulated annealing to me with an example not using schedule(t) or Temperature? The video and book aren&#39;t too great at the explanation.
+Image Source: Wikipedia
+Let me give it a shot.
+If I have to explain it without using technical terms, I will describe it like this:
+Imagine that you are a dot on a 2D graph of maximas and minimas (peaks and valleys).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Visualising AI Search Algorithms // teleported.in</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:title" content="Teleported.in" />
+<meta property="og:description" content="A blog where I share my intuitions about artificial intelligence, machine learning, deep learning." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="http://teleported.in/posts/ai-search-algorithms/" />
+
+
+
+    <link href="" rel="alternate" type="application/rss+xml" title="teleported.in" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico">
+
+    <link href="http://teleported.in/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://teleported.in/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://teleported.in/css/style.css">
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <meta name="description" content="A blog where I share my intuitions about artificial intelligence, machine learning, deep learning.">
+    <meta name="keywords" content="ai ml artificial intelligence programming c++ python intuitions papers">
+    <meta name="author" content="Anand Saha <anandsaha gmail com">
+
+    <meta name="generator" content="Hugo 0.20.6" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="http://teleported.in/">teleported.in</a>
+            <nav id="main-nav">
+                
+                <a class="main-nav-link" href="/about/about">About</a>
+                
+                <a class="main-nav-link" href="/posts/">Posts</a>
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+        <div style="margin-top:-10px; padding-bottom:5px">
+        <label style="font-family: Arial, Georgia;color:#555555">
+            My notes on AI and ML. Mostly intuitions and concepts.</label>
+        </div>
+    </div>
+</header>
+
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Visualising AI Search Algorithms</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/posts/ai-search-algorithms/" class="article-date">
+                <time datetime='2017-05-05T23:27:27.000-04:00' itemprop="datePublished">2017-05-05</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://teleported.in//categories/artificial-intelligence">artificial intelligence</a>
+                    
+                    
+                    <span>|</span>
+                    
+                    <a class="article-category-link" href="http://teleported.in//categories/search">search</a>
+                    
+                </div>
+            </div>
+            
+            
+            
+            <div class="article-comment-link-wrap">
+                <a href="/posts/ai-search-algorithms/#disqus_thread" class="article-comment-link">Comments</a>
+            </div>
+            
+        </div>
+        <div style="color:#999999;">
+        By <a style="text-decoration: none;color:#999999; border-bottom: 1px dotted #000;" href="/about/about">Anand Saha</a>
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            
+
+<p>Search algorithms help find the correct sequence of actions in a search space, to reach a goal state. The sequence of actions might be:</p>
+
+<ul>
+<li>Sequence in which cities are to be visited to travel from a source to a destination under a given cost function (shortest path, cheapest fare etc.)</li>
+<li>Sequence in which an agent should play moves in a game (chess, tic tac toe, pacman etc.) to win a board game</li>
+<li>Sequence in which a robot arm should solder components on a PCB under a given cost function (e.g. shortest time)</li>
+</ul>
+
+<p>They are mostly implemented as graphs, where the node once visited is not expanded again if revisited during traversal (as against tree, where there is a possibility of a node getting expanded repeatedly if revisited during traversal - leading to recursion). This blog post explores the intuitions behind how these algorithms work.</p>
+
+<p>There are two broad categories of search algorithms:</p>
+
+<ul>
+<li><strong>Uninformed</strong>: In which the algorithm does not have any additional information about the search space other than what has been provided in the problem statement (e.g. start node, end node, nodes and edges of the graph, weights etc.)</li>
+<li><strong>Informed</strong>: In which the algorithm has additional information other than the problem statement (e.g. euclidean distance between any node and the destination node)</li>
+</ul>
+
+<p><img style="float: center" src="/post_imgs/03-search-algorithms.png"></p>
+
+<p><em>Fig 1. Various search algorithms</em></p>
+
+<p>In the demonstrations below, we attempt to find the best route from Arad to a destination city in Romania. It is adapted from the map featured in AIMA book.</p>
+
+<p>Acknowledgement: I have made use of the <a href="https://github.com/aimacode/aima-python">aima python code</a>, with <a href="https://github.com/anandsaha/ai-ml-algorithms/blob/master/notebooks/aima-book/Problem%20Solving.ipynb">some enhancements of my own</a>.</p>
+
+<h3 id="breadth-first-search">Breadth First Search</h3>
+
+<p><img style="float: center" src="/post_imgs/03_bfs_graph_search.gif"></p>
+
+<p>Here we attempt to find a path from Arad to Neamt.</p>
+
+<p>In this approach, the root node is expanded first (ofcourse), then all it&rsquo;s successors are expanded, then all the successor&rsquo;s successors are expanded and so on. In the above animation, once Arad is expanded, we visit Timisoari, Zerind and Sibiu, which are the direct successors of Arad. The search frontier then expands one depth at a time. It takes time to reach Neamt, since all the depth levels are scanned before we reach the destination.</p>
+
+<h3 id="depth-first-search">Depth First Search</h3>
+
+<p><img style="float: center" src="/post_imgs/03_dfs_graph_search.gif"></p>
+
+<p>Here we attempt to find a path from Arad to Neamt.</p>
+
+<p>Depth First Search can be a hit or a miss. DFS always expands the deepest path first. Everytime a node is expanded, it&rsquo;s first successor is expanded first, then the first successor&rsquo;s first successor is expanded and so on. As can be seen from the animation, the algorithm keep expanding the first node it gets at any depth. When we reach Urziceni, Hirsova got expanded next which leads us to the wrong path, but then the algorithm explores the next sibling, which is Vaslui, which takes us to our destination.</p>
+
+<h3 id="depth-limiting-search">Depth Limiting Search</h3>
+
+<p><img style="float: center" src="/post_imgs/03_dls_graph_search.gif"></p>
+
+<p>DFS can go horribly wrong if the state space is infinite. It is also non-optimal, in that it goes to depth of the graph even if the destination happens to be near to the root but in a path which is expanded <em>later</em>. Depth limit search allows us to instruct DFS to search only till a certain depth. It can be applied to cases where we are confident of the depth at which a solution can be found.</p>
+
+<p>In the above animation, we instructed the algorithm to go to a depth of 4, and abort if the destination is not found with this range.</p>
+
+<h3 id="iterative-deepening-search">Iterative Deepening Search</h3>
+
+<p><img style="float: center" src="/post_imgs/03_ids_graph_search.gif"></p>
+
+<p>Iterative Deepening Search is a type of Depth Limiting Search where we keep increasing the depth iteratively. This is helpful in situations where we are time bound. In this case, we first search for the solution to a depth of 1, then we start over again and search for a solution to a depth of 2 and so on. We keep doing this till we have time. This is useful when the search has a timeout associated - this allows us to find the best possible move within the given time.</p>
+
+<h3 id="uniform-cost-search-informed-search">Uniform Cost Search (informed search)</h3>
+
+<p><img style="float: center" src="/post_imgs/03_ucs_graph_search.gif"></p>
+
+<p>All the above searches only knew about the nodes and the paths to the nodes. They were unaware of any details about the nodes, like the cost of going from one node to another, or the physical location of each node.</p>
+
+<p>UCS is an informed search. It makes use of the extra knowledge about the problem to make informed decisions about it&rsquo;s traversal.</p>
+
+<h3 id="a-search-informed-search">A* Search (informed search)</h3>
+
+<p><img style="float: center" src="/post_imgs/03_ass_graph_search.gif"></p>
+
+        </div>
+
+        
+        
+        <div class="article-toc" style="display:none;">
+            <h3>Contents</h3>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#breadth-first-search">Breadth First Search</a></li>
+<li><a href="#depth-first-search">Depth First Search</a></li>
+<li><a href="#depth-limiting-search">Depth Limiting Search</a></li>
+<li><a href="#iterative-deepening-search">Iterative Deepening Search</a></li>
+<li><a href="#uniform-cost-search-informed-search">Uniform Cost Search (informed search)</a></li>
+<li><a href="#a-search-informed-search">A* Search (informed search)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+        
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script>
+            (function() {
+                var $toc = $('#TableOfContents');
+                if ($toc.length > 0) {
+                    var $window = $(window);
+
+                    function onScroll(){
+                        var currentScroll = $window.scrollTop();
+                        var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+                        var id = "";
+                        h.each(function (i, e) {
+                            e = $(e);
+                            if (e.offset().top - 10 <= currentScroll) {
+                                id = e.attr('id');
+                            }
+                        });
+                        var active = $toc.find('a.active');
+                        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                        active.each(function (i, e) {
+                            $(e).removeClass('active').siblings('ul').hide();
+                        });
+                        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                            $(e).children('a').addClass('active').siblings('ul').show();
+                        });
+                    }
+
+                    $window.on('scroll', onScroll);
+                    $(document).ready(function() {
+                        $toc.find('a').parent('li').find('ul').hide();
+                        onScroll();
+                        document.getElementsByClassName('article-toc')[0].style.display = '';
+                    });
+                }
+            })();
+        </script>
+        
+
+
+        
+        <footer class="article-footer">
+            <ul class="article-tag-list">
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/intuitions">intuitions
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/visualising">visualising
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/ai">ai
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/search">search
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/posts/analysing-alphago/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            Analysing AlphaGo
+        </div>
+    </a>
+    
+    
+    <a href="/about/about/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">About&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'teleported-in';
+    var disqus_identifier = 'http:\/\/teleported.in\/posts\/ai-search-algorithms\/';
+    var disqus_title = 'Visualising AI Search Algorithms';
+    var disqus_url = 'http:\/\/teleported.in\/posts\/ai-search-algorithms\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            
+            &copy; 2017 <a href="https://www.linkedin.com/in/anandsaha/">Anand Saha</a> &nbsp; 
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos">Minos</a>
+        </div>
+    </div>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-98287631-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+
+</div>
+</body>
+</html>

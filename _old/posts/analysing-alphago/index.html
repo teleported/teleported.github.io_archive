@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Analysing AlphaGo // teleported.in</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:title" content="Teleported.in" />
+<meta property="og:description" content="A blog where I share my intuitions about artificial intelligence, machine learning, deep learning." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="http://teleported.in/posts/analysing-alphago/" />
+
+
+
+    <link href="" rel="alternate" type="application/rss+xml" title="teleported.in" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico">
+
+    <link href="http://teleported.in/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://teleported.in/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://teleported.in/css/style.css">
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <meta name="description" content="A blog where I share my intuitions about artificial intelligence, machine learning, deep learning.">
+    <meta name="keywords" content="ai ml artificial intelligence programming c++ python intuitions papers">
+    <meta name="author" content="Anand Saha <anandsaha gmail com">
+
+    <meta name="generator" content="Hugo 0.20.6" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="http://teleported.in/">teleported.in</a>
+            <nav id="main-nav">
+                
+                <a class="main-nav-link" href="/about/about">About</a>
+                
+                <a class="main-nav-link" href="/posts/">Posts</a>
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+        <div style="margin-top:-10px; padding-bottom:5px">
+        <label style="font-family: Arial, Georgia;color:#555555">
+            My notes on AI and ML. Mostly intuitions and concepts.</label>
+        </div>
+    </div>
+</header>
+
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Analysing AlphaGo</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/posts/analysing-alphago/" class="article-date">
+                <time datetime='2017-05-12T23:27:27.000-04:00' itemprop="datePublished">2017-05-12</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://teleported.in//categories/artificial-intelligence">artificial intelligence</a>
+                    
+                    
+                    <span>|</span>
+                    
+                    <a class="article-category-link" href="http://teleported.in//categories/game-playing">game playing</a>
+                    
+                </div>
+            </div>
+            
+            
+            
+            <div class="article-comment-link-wrap">
+                <a href="/posts/analysing-alphago/#disqus_thread" class="article-comment-link">Comments</a>
+            </div>
+            
+        </div>
+        <div style="color:#999999;">
+        By <a style="text-decoration: none;color:#999999; border-bottom: 1px dotted #000;" href="/about/about">Anand Saha</a>
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            
+
+<p>(<em>I wrote this piece as part of an assignment for Udacity&rsquo;s <a href="https://in.udacity.com/course/artificial-intelligence-nanodegree--nd889/">AI Nanodegree program</a></em>. The assignment was to summarize the <a href="https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf">AlphaGo paper</a> in a page)</p>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>Go is a two player, turn taking, deterministic game of perfect information.
+<img style="width: 300px; padding:10px 30px 10px 10px" src="/post_imgs/04-alphago.jpg">
+Two main factors make Go very complex to solve:</p>
+
+<ul>
+<li>Go has an average branching factor ‘b’ of ~250 options per node (chess ~35)</li>
+<li>Go has an average depth ‘d’ of ~150 moves (chess ~80)</li>
+</ul>
+
+<p>These factos make the state space of Go (b<sup>d</sup>) enormous to search end to end using traditional techniques.</p>
+
+<p>AlphaGo&rsquo;s goal was to create a computer Go program to beat world class Go professional players, without any handicaps on a 19x19 board, given that:
+* The search space of Go is just enormous
+* The evaluation of board positions and moves is challenging
+* Go combines game playing with human intuition, which is challening to imitate by a computer program</p>
+
+<h3 id="techniques-used">Techniques used</h3>
+
+<p>AlphaGo’s novel approach used two deep neural networks called policy network (for sampling actions) and value network (for evaluating positions), which were used in a Monte Carlo Tree Search program (for traversal) to determine best moves.</p>
+
+<ol>
+<li><p>The policy network was used to predict the next set of moves which are likely to win probabilistically from a given board position - thereby reducing the branching factor.</p>
+
+<ul>
+<li>This was achieved by training the policy network on 30 million moves from past games played by expert humans, using supervised learning.</li>
+<li>Then it was made to play itself thousands of times, using reinforcement learning. This enabled the network to know what the winning moves are and also develop it’s own intuitions on the winning moves.</li>
+<li>Once trained, the policy network produced a policy function which gives out the probability distribution of game actions given a game state.</li>
+<li>The policy network had 13 layers and had an accuracy of 57% on test dataset (which is impressive)</li>
+</ul></li>
+
+<li><p>The value network was used to estimate the outcome (win/loss) of a board position without actually traversing till the end of the tree (thereby reducing the depth)</p>
+
+<ul>
+<li>The value network produced a value function which predicts the outcome of a board position played using a particular policy function (The strongest policy function was choosen from (1)).</li>
+<li>The value networks were trained using the policy functions via reinforcement learning by self play. This resulted in generalisation of the approach.</li>
+</ul></li>
+
+<li><p>Finally, it used Monte Carlo Tree Search (MCTS) which made use of (1) and (2) to determine the best move given a board state.</p>
+
+<ul>
+<li>The best move is determined by simulating game play.</li>
+<li>The crux of MCTS algorithm is in a loop which has four main steps. (Note that when you are at a certain board state, you have knowledge of the game tree only to a certain depth beyond which you haven’t expanded the tree yet. Remember, this is an enormous tree.)</li>
+</ul></li>
+</ol>
+
+<p><img src="/post_imgs/04-mcts.png" alt="MCTS" /></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Selection</strong>: When you are at a state (node) in the tree, you try to select a winning action to traverse to the next state. But how do you know which are the winning actions? This is given by the policy function. The policy function takes in a state and gives back an action which has high probability of winning. (That’s how the policy network is used). You keep selecting subsequent actions and traverse down the tree until you come to a leaf state (this is not leaf of the actual tree, this is leaf of the known tree)</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Expansion</strong>: Once you have reached a leaf state, it has to be expanded to reveal potential winning moves. It is possible that at this state, there are very many possible actions to take to reach various winning states. The policy function is invoked to generate probability distribution of actions for possible child states.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Simulation</strong>: In this step, first the value function is used to estimate the outcome of each action (win/lose) revealed in expansion step. Then the potentially winning child states are taken and games are simulated by taking actions choosen based on a policy. This is called a rollout policy. A simple policy can be the random policy, where actions are choosen at random. AlphaGo used a fast rollout policy. Each of these simulations will eventually converge to a win or lose terminal state.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Back Propagation</strong>: In this step, the outcome of the terminal state is propagated up through the path to the root. This information is then propagated up the tree and the statistics (action value, visit count and prior  probability) of all the nodes in the path to root are updated.</p>
+
+<ul>
+<li>With enough simulation, the stats tend to favor the strongest moves and their score goes up.</li>
+<li>The strongest of them is then selected as the next move.</li>
+<li>The simulation happens as many times as possible within the cutoff time for a move.</li>
+</ul>
+
+<p>AlphaGo also used Computer Vision to ingest the board position as a 19x19 image and used convolution networks to construct a representation of the position.</p>
+
+<h4 id="paper-s-results">Paper’s results</h4>
+
+<p>Technically:</p>
+
+<ul>
+<li>The paper introduced a new approach to solving Go, by efficiently integrating Policy networks and Value networks with MCTS</li>
+<li>Made use of Supervised learning along with Reinforcement learning to generate both logic and intuition of the game</li>
+<li>The final implementation used a distrubuted approach to playing Go - which means the performance of AlphaGo can be scaled up by throwing more computing resource at it.</li>
+</ul>
+
+<p>Impact wise:</p>
+
+<ul>
+<li>AlphaGo achieved this feat at a time when the community had estimated another decade for this to be a reality.</li>
+<li>AlphaGo defeated the human European Go champion 5-0, and a 9-dan rank player 4-1.</li>
+<li>AlphaGo defeated all of it’s fellow computer Go players and is the incumbent.</li>
+</ul>
+
+<p>References:</p>
+
+<ol>
+<li><a href="https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf">AlphaGo Paper</a></li>
+<li><a href="https://research.googleblog.com/2016/01/alphago-mastering-ancient-game-of-go.html">Google blog post</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Monte_Carlo_tree_search">Monte Carlo Tree Search</a></li>
+<li><a href="https://datascience.stackexchange.com/questions/10932/difference-between-alphagos-policy-network-and-value-network">StackExchange discussion</a></li>
+</ol>
+
+        </div>
+
+        
+        
+        <div class="article-toc" style="display:none;">
+            <h3>Contents</h3>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#techniques-used">Techniques used</a>
+<ul>
+<li><a href="#paper-s-results">Paper’s results</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+        
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script>
+            (function() {
+                var $toc = $('#TableOfContents');
+                if ($toc.length > 0) {
+                    var $window = $(window);
+
+                    function onScroll(){
+                        var currentScroll = $window.scrollTop();
+                        var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+                        var id = "";
+                        h.each(function (i, e) {
+                            e = $(e);
+                            if (e.offset().top - 10 <= currentScroll) {
+                                id = e.attr('id');
+                            }
+                        });
+                        var active = $toc.find('a.active');
+                        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                        active.each(function (i, e) {
+                            $(e).removeClass('active').siblings('ul').hide();
+                        });
+                        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                            $(e).children('a').addClass('active').siblings('ul').show();
+                        });
+                    }
+
+                    $window.on('scroll', onScroll);
+                    $(document).ready(function() {
+                        $toc.find('a').parent('li').find('ul').hide();
+                        onScroll();
+                        document.getElementsByClassName('article-toc')[0].style.display = '';
+                    });
+                }
+            })();
+        </script>
+        
+
+
+        
+        <footer class="article-footer">
+            <ul class="article-tag-list">
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/intuitions">intuitions
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/alphago">alphago
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/ai">ai
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/research">research
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/google">google
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/go">go
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/posts/ai-ml-readings/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            AI/ML Readings (living doc)
+        </div>
+    </a>
+    
+    
+    <a href="/posts/ai-search-algorithms/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Visualising AI Search Algorithms&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'teleported-in';
+    var disqus_identifier = 'http:\/\/teleported.in\/posts\/analysing-alphago\/';
+    var disqus_title = 'Analysing AlphaGo';
+    var disqus_url = 'http:\/\/teleported.in\/posts\/analysing-alphago\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            
+            &copy; 2017 <a href="https://www.linkedin.com/in/anandsaha/">Anand Saha</a> &nbsp; 
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos">Minos</a>
+        </div>
+    </div>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-98287631-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+
+</div>
+</body>
+</html>
