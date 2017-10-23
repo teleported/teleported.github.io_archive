@@ -12,6 +12,12 @@ SectionPagesMenu = "main"
     identifier = "about"
     url = "/about/about"
 
+[[menu.main]]
+    name = "Projects"
+    weight = -110
+    identifier = "projects"
+    url = "/projects/projects"
+
 [params]
     smartToc = true
     disqusShortname = "teleported-in"

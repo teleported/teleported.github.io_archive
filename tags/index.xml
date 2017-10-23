@@ -6,7 +6,7 @@
     <description>Recent content in Tags on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 May 2017 00:27:27 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 02 Oct 2017 23:27:27 -0400</lastBuildDate>
     
 	<atom:link href="http://teleported.in/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Ai</title>
       <link>http://teleported.in/tags/ai/</link>
-      <pubDate>Wed, 24 May 2017 00:27:27 -0400</pubDate>
+      <pubDate>Mon, 02 Oct 2017 23:27:27 -0400</pubDate>
       
       <guid>http://teleported.in/tags/ai/</guid>
       <description></description>
@@ -26,6 +26,15 @@
       <pubDate>Fri, 12 May 2017 23:27:27 -0400</pubDate>
       
       <guid>http://teleported.in/tags/alphago/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>http://teleported.in/tags/deep-learning/</link>
+      <pubDate>Mon, 02 Oct 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/tags/deep-learning/</guid>
       <description></description>
     </item>
     
@@ -89,6 +98,15 @@
       <pubDate>Wed, 24 May 2017 00:27:27 -0400</pubDate>
       
       <guid>http://teleported.in/tags/simulated-annealing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Techniques</title>
+      <link>http://teleported.in/tags/techniques/</link>
+      <pubDate>Mon, 02 Oct 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/tags/techniques/</guid>
       <description></description>
     </item>
     

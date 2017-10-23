@@ -5,4 +5,5 @@ description = ""
 tags        = [ "visualising", "ai", "search"]
 categories  = [ "artificial intelligence" ]
 slug        = "visualising-ai-search-algorithms"
+featuredImage="/post_imgs/03-icon.png"
 +++

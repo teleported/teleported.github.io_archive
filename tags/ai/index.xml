@@ -6,10 +6,19 @@
     <description>Recent content in Ai on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 May 2017 00:27:27 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 02 Oct 2017 23:27:27 -0400</lastBuildDate>
     
 	<atom:link href="http://teleported.in/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>An intuitive explaination of Batch Normalization</title>
+      <link>http://teleported.in/posts/batch-normalization-explained/</link>
+      <pubDate>Mon, 02 Oct 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/batch-normalization-explained/</guid>
+      <description>Test.</description>
+    </item>
     
     <item>
       <title>Simulated Annealing simply explained</title>
