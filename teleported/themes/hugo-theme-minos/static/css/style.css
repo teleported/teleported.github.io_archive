@@ -289,7 +289,7 @@ a.article-title:hover,
 #header {
   font-size: 14px;
   position: relative;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #ccc;
   background-color: #eee;
 }
 #header.mobile-on #main-nav,

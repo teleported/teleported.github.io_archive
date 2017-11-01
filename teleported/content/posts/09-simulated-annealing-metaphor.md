@@ -6,6 +6,7 @@ tags        = ["intuitions", "ml", "ai", "simulated annealing"]
 categories  = [ "artificial intelligence", "simulated annealing" ]
 slug        = "simulated-annealing-metaphor"
 featuredImage="/post_imgs/09-sa.gif"
+draft      = true
 +++
 
 (_I had explained Simulated Annealing to someone on Udacity forum. Here was the conversation._)
