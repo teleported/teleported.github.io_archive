@@ -6,18 +6,20 @@
     <description>Recent content in Deep Learning on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Oct 2017 23:27:27 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 20 Oct 2017 23:27:27 -0400</lastBuildDate>
     
 	<atom:link href="http://teleported.in/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>An intuitive explaination of Batch Normalization</title>
-      <link>http://teleported.in/posts/batch-normalization-explained/</link>
-      <pubDate>Mon, 02 Oct 2017 23:27:27 -0400</pubDate>
+      <title>Network In Network: The begining of Inception</title>
+      <link>http://teleported.in/posts/network-in-network/</link>
+      <pubDate>Fri, 20 Oct 2017 23:27:27 -0400</pubDate>
       
-      <guid>http://teleported.in/posts/batch-normalization-explained/</guid>
-      <description>Test.</description>
+      <guid>http://teleported.in/posts/network-in-network/</guid>
+      <description>Anyone getting introduced to convolutional networks first come acrss
+This paper had a new take on how the convolution filters are designed and how we map extracted features to class scores. This formed the basis of the Inception architure. Two new concepts were introduced in this CNN architecture design:
+Fig. Layers in a typical CovNet (image credit: cs231n.stanford.edu) Fig. Feature visualization of CovNets (image credit: Zeiler &amp; Fergus 2013)  MLPconv: Replaced linear filters with non linear MLPs to extract better features within the receipt field.</description>
     </item>
     
   </channel>

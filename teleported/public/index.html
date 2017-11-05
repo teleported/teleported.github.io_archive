@@ -20,6 +20,7 @@
     <link href="http://teleported.in/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="http://teleported.in/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <link href="http://gmpg.org/xfn/11" rel="profile">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -40,12 +41,12 @@
     <div id="header-outer" class="outer">
         <div id="header-inner" class="inner">
             <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
-            <a id="logo" class="logo-text" href="http://teleported.in/">teleported.in</a>
+            <a id="logo" class="logo-text" style="font-family: 'Open Sans', sans-serif;" href="http://teleported.in/">teleported.in</a>
             <nav id="main-nav">
                 
-                <a class="main-nav-link" href="/about/about">About</a>
+                <a style="font-family: 'Open Sans', sans-serif;" class="main-nav-link" href="/about/about">About</a>
                 
-                <a class="main-nav-link" href="/projects/">Projects</a>
+                <a style="font-family: 'Open Sans', sans-serif;" class="main-nav-link" href="/posts/">Posts</a>
                 
             </nav>
             <nav id="sub-nav">
@@ -54,13 +55,240 @@
             </nav>
         </div>
         <div style="margin-top:-10px; padding-bottom:5px">
-        <label style="font-family: Arial, Georgia;color:#555555">
-            My notes on deep learning and computer vision. Mostly intuitions and concepts.</label>
+        <label style="font-family: 'Open Sans', sans-serif;color:#555555">
+            Deep learning concepts. Tools and techniques.</label>
         </div>
     </div>
 </header>
 
     <section id="main" class="outer">
+        
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-inner">
+                
+                
+                <header class="article-header">
+                    <h1 itemprop="name"><a class="article-title" href="/posts/network-in-network/">Network In Network: The begining of Inception</a></h1>
+                </header>
+                
+                <div class="article-meta">
+                    <a href="/posts/network-in-network/" class="article-date">
+                        <time datetime='2017-10-20T23:27:27.000-04:00' itemprop="datePublished">2017-10-20</time>
+                    </a>
+                    
+                    
+                    <div class="post-categories">
+                        <div class="article-category">
+                            
+                            
+                            <a class="article-category-link" href="http://teleported.in//categories/deep-learning">deep learning</a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="article-comment-link-wrap">
+                        <a href="/posts/network-in-network/#disqus_thread" class="article-comment-link">Comments</a>
+                    </div>
+                    
+                </div>
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        <img style="float:left; padding: 25px 10px 0px 0px; width:100px" src="/post_imgs/11-Network_In_Network_img2.png"><br>
+                    Anyone getting introduced to convolutional networks first come acrss
+This paper had a new take on how the convolution filters are designed and how we map extracted features to class scores. This formed the basis of the Inception architure. Two new concepts were introduced in this CNN architecture design:
+Fig. Layers in a typical CovNet (image credit: cs231n.stanford.edu) Fig. Feature visualization of CovNets (image credit: Zeiler & Fergus 2013)  MLPconv: Replaced linear filters with non linear MLPs to extract better features within the receipt field.
+                    </p>
+                    <p class="article-more-link">
+                        <a href="/posts/network-in-network/">Read More</a>
+                    </p>
+                </div>
+
+                
+                <footer class="article-footer">
+                    <ul class="article-tag-list">
+                        
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link" href="http://teleported.in//tags/deep-learning">deep learning
+                            </a>
+                        </li>
+                        
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link" href="http://teleported.in//tags/architecture">architecture
+                            </a>
+                        </li>
+                        
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link" href="http://teleported.in//tags/inception">inception
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </footer>
+                
+            </div>
+        </article>
+        
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-inner">
+                
+                
+                <header class="article-header">
+                    <h1 itemprop="name"><a class="article-title" href="/posts/analysing-alphago/">Analysing AlphaGo</a></h1>
+                </header>
+                
+                <div class="article-meta">
+                    <a href="/posts/analysing-alphago/" class="article-date">
+                        <time datetime='2017-05-12T23:27:27.000-04:00' itemprop="datePublished">2017-05-12</time>
+                    </a>
+                    
+                    
+                    <div class="post-categories">
+                        <div class="article-category">
+                            
+                            
+                            <a class="article-category-link" href="http://teleported.in//categories/artificial-intelligence">artificial intelligence</a>
+                            
+                            
+                            <span>|</span>
+                            
+                            <a class="article-category-link" href="http://teleported.in//categories/game-playing">game playing</a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="article-comment-link-wrap">
+                        <a href="/posts/analysing-alphago/#disqus_thread" class="article-comment-link">Comments</a>
+                    </div>
+                    
+                </div>
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        <img style="float:left; padding: 25px 10px 0px 0px; width:100px" src="/post_imgs/04-alphago.jpg"><br>
+                    (I wrote this piece as part of an assignment for Udacity&rsquo;s AI Nanodegree program. The assignment was to summarize the AlphaGo paper in a page)
+Introduction Go is a two player, turn taking, deterministic game of perfect information. Two main factors make Go very complex to solve:
+ Go has an average branching factor ‘b’ of ~250 options per node (chess ~35) Go has an average depth ‘d’ of ~150 moves (chess ~80)  These factos make the state space of Go (bd) enormous to search end to end using traditional techniques.
+                    </p>
+                    <p class="article-more-link">
+                        <a href="/posts/analysing-alphago/">Read More</a>
+                    </p>
+                </div>
+
+                
+                <footer class="article-footer">
+                    <ul class="article-tag-list">
+                        
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link" href="http://teleported.in//tags/intuitions">intuitions
+                            </a>
+                        </li>
+                        
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link" href="http://teleported.in//tags/alphago">alphago
+                            </a>
+                        </li>
+                        
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link" href="http://teleported.in//tags/ai">ai
+                            </a>
+                        </li>
+                        
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link" href="http://teleported.in//tags/research">research
+                            </a>
+                        </li>
+                        
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link" href="http://teleported.in//tags/google">google
+                            </a>
+                        </li>
+                        
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link" href="http://teleported.in//tags/go">go
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </footer>
+                
+            </div>
+        </article>
+        
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-inner">
+                
+                
+                <header class="article-header">
+                    <h1 itemprop="name"><a class="article-title" href="/posts/ai-search-algorithms/">Visualising AI Search Algorithms</a></h1>
+                </header>
+                
+                <div class="article-meta">
+                    <a href="/posts/ai-search-algorithms/" class="article-date">
+                        <time datetime='2017-05-05T23:27:27.000-04:00' itemprop="datePublished">2017-05-05</time>
+                    </a>
+                    
+                    
+                    <div class="post-categories">
+                        <div class="article-category">
+                            
+                            
+                            <a class="article-category-link" href="http://teleported.in//categories/artificial-intelligence">artificial intelligence</a>
+                            
+                            
+                            <span>|</span>
+                            
+                            <a class="article-category-link" href="http://teleported.in//categories/search">search</a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="article-comment-link-wrap">
+                        <a href="/posts/ai-search-algorithms/#disqus_thread" class="article-comment-link">Comments</a>
+                    </div>
+                    
+                </div>
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        <img style="float:left; padding: 25px 10px 0px 0px; width:100px" src="/post_imgs/03-icon.png"><br>
+                    Search algorithms help find the correct sequence of actions in a search space, to reach a goal state. The sequence of actions might be:
+ Sequence in which cities are to be visited to travel from a source to a destination under a given cost function (shortest path, cheapest fare etc.) Sequence in which an agent should play moves in a game (chess, tic tac toe, pacman etc.) to win a board game Sequence in which a robot arm should solder components on a PCB under a given cost function (e.
+                    </p>
+                    <p class="article-more-link">
+                        <a href="/posts/ai-search-algorithms/">Read More</a>
+                    </p>
+                </div>
+
+                
+                <footer class="article-footer">
+                    <ul class="article-tag-list">
+                        
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link" href="http://teleported.in//tags/intuitions">intuitions
+                            </a>
+                        </li>
+                        
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link" href="http://teleported.in//tags/visualising">visualising
+                            </a>
+                        </li>
+                        
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link" href="http://teleported.in//tags/ai">ai
+                            </a>
+                        </li>
+                        
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link" href="http://teleported.in//tags/search">search
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </footer>
+                
+            </div>
+        </article>
         
         <article class="article article-type-post" itemscope itemprop="blogPost">
             <div class="article-inner">
@@ -91,53 +319,6 @@ I am this person. (Github, Twitter)
                     </p>
                     <p class="article-more-link">
                         <a href="/about/about/">Read More</a>
-                    </p>
-                </div>
-
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/projects/projects/">Projects</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/projects/projects/" class="article-date">
-                        <time datetime='2017-04-30T01:49:36.000&#43;05:30' itemprop="datePublished">2017-04-30</time>
-                    </a>
-                    
-                    
-                    
-                    <div class="article-comment-link-wrap">
-                        <a href="/projects/projects/#disqus_thread" class="article-comment-link">Comments</a>
-                    </div>
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        <img style="float:left; padding: 25px 10px 0px 0px; width:100px" src="/letter-t.jpg"><br>
-                    Second internship placeholder
-Fast.ai International Fellowship
-TinyNN: A small footprint neural network library
-Blogging: www.teleported.in
-YoloV2 implementation in PyTorch, from scratch
-Faster RCNN implementation in PyTorch, from scratch
-Kaggle
-cs231n Assignments
-RNN project: Generate Movie dialogs
-Deep Learning workstation build and benchmarking
-Internship at Flytbase Inc.
-Capstone project for ML Nanodegree: Training a Robotic Arm using Reinforcement Learning
-Udacity ML Nanodegree projects
-Udacity AI Nanodegree projects
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/projects/projects/">Read More</a>
                     </p>
                 </div>
 

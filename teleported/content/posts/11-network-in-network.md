@@ -6,6 +6,7 @@ tags        = [ "deep learning", "architecture", "inception"]
 categories  = [ "deep learning" ]
 slug        = "network-in-network"
 featuredImage="/post_imgs/11-Network_In_Network_img2.png"
+draft       = true
 +++
 Anyone getting introduced to convolutional networks first come acrss
 

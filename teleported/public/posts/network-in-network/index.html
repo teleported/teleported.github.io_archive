@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>About // teleported.in</title>
+    <title>Network In Network: The begining of Inception // teleported.in</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:title" content="Teleported.in" />
 <meta property="og:description" content="A blog where I share my intuitions about artificial intelligence, machine learning, deep learning." />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:url" content="http://teleported.in/about/about/" />
+<meta property="og:url" content="http://teleported.in/posts/network-in-network/" />
 
 
 
@@ -67,18 +67,28 @@
     <div class="article-inner">
         
         <header class="article-header">
-            <h1 class="article-title" itemprop="name">About</h1>
+            <h1 class="article-title" itemprop="name">Network In Network: The begining of Inception</h1>
         </header>
         
         <div class="article-meta">
-            <a href="/about/about/" class="article-date">
-                <time datetime='2017-04-30T01:49:36.000&#43;05:30' itemprop="datePublished">2017-04-30</time>
+            <a href="/posts/network-in-network/" class="article-date">
+                <time datetime='2017-10-20T23:27:27.000-04:00' itemprop="datePublished">2017-10-20</time>
             </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://teleported.in//categories/deep-learning">deep learning</a>
+                    
+                </div>
+            </div>
             
             
             
             <div class="article-comment-link-wrap">
-                <a href="/about/about/#disqus_thread" class="article-comment-link">Comments</a>
+                <a href="/posts/network-in-network/#disqus_thread" class="article-comment-link">Comments</a>
             </div>
             
         </div>
@@ -86,19 +96,90 @@
         By <a style="text-decoration: none;color:#999999; border-bottom: 1px dotted #000;" href="/about/about">Anand Saha</a>
         </div>
         <div class="article-entry" itemprop="articleBody">
-            <p><img style="float: left;width: 200px; padding:10px 10px 10px 10px" src="/letter-t.jpg"></p>
+            
 
-<p>I mostly blog about intuition and concepts in AI and Machine Learning and subjects associated with them (statistics, programming etc.).</p>
+<p>Anyone getting introduced to convolutional networks first come acrss</p>
 
-<p>I am on a journey to explore these topics. I find them fascinating. I take notes as I read, listen, learn. These blog posts are extensions of my notes. These are mostly for me to read later. You may find them helpful as well.</p>
+<p>This paper had a new take on how the convolution filters are designed and how we map extracted features to class scores. This formed the basis of the Inception architure. Two new concepts were introduced in this CNN architecture design:</p>
 
-<p>I am <a href="https://www.linkedin.com/in/anandsaha/">this</a> person. (<a href="https://github.com/anandsaha">Github</a>, <a href="https://twitter.com/anandsaha">Twitter</a>)</p>
+<p align="center">
+  <img src="/post_imgs/11-convnet.jpeg">
+  <br>Fig. Layers in a typical CovNet (image credit: cs231n.stanford.edu)
+</p>
 
-<p>Email: <a href="http://www.google.com/recaptcha/mailhide/d?k=01XkIwjoh68Z_DqbpwypIUXQ==&amp;c=80_sCo8E8OKhVn5wBIyCTzYM7u1cxVfLSoZaoapEOY0=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01XkIwjoh68Z_DqbpwypIUXQ\x3d\x3d\x26c\x3d80_sCo8E8OKhVn5wBIyCTzYM7u1cxVfLSoZaoapEOY0\x3d', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">a&hellip;</a>@gmail.com</p>
+<p align="center">
+  <img src="/post_imgs/11-zeiler-fertus.jpg">
+  <br>Fig. Feature visualization of CovNets (image credit: Zeiler & Fergus 2013)
+</p>
+
+<ul>
+<li><strong>MLPconv</strong>: Replaced linear filters with non linear MLPs to extract better features within the receipt field. This helped in better abstraction and accuracy.</li>
+<li><strong>Global Average Pooling</strong>: Got rid of the fully connected layers (reducing parameters and complexity) by creating as many activation maps in the last layer as there are classes. This was followed by averaging these maps to arrive at final scores, which is passed to softmax. This is performant and more intuitive.</li>
+</ul>
+
+<h3 id="mlpconv">MLPConv</h3>
+
+<p>Traditional CNN architectures use linear filters to do the convolution and extract features out of images. The early layers try to extract primitive features like lines, edges and corners, while the later layers build on early layers and extract higher level features like eyes, ears, nose etc. These are called latent features. Now, there can be variations in each of those features - there can be many different variations in eyes alone. A linear filter tries to draw straight lines to discriminate these features. Thus conventional CNN implicitly makes the assumption that the latent concepts are linearly separable. But a straight line may not always fit. Using a richer non linear function approximator can serve as a better feature extractor.</p>
+
+<p align="center">
+  <img src="/post_imgs/11-Network_In_Network_img1.png">
+  <br>Fig. Conventional linear convolution layer
+</p>
+
+<p>This paper introduced the concept of having a neural network itself in place of a convolution filter. The input to this mini network would be the convolution, and the output would be the value of a neuron in the activation. Hence it does not alter the input/output characteristics of traditional filters. This mini network, called MLPconv,can then convolved over the input. The benifit of having such an arrangement are two fold:</p>
+
+<ul>
+<li>It is compatible with the backpropagation logic of neural nets, thus this fits well into existing architectures of CNNs</li>
+<li>It can itself be a deep model leading to rich separation between latent features</li>
+</ul>
+
+<p align="center">
+  <img  src="/post_imgs/11-Network_In_Network_img2.png">
+  <br>Fig. MLPconv layer
+</p>
+### Global Average Pooling
+
+In traditional CNN architectures, the feature maps of the last convolution layer are flattened and passed on to one or more fully connected layers, which are then passed on to softmax logistics layer for spitting out class probabilities. The issue with this approach is that it is hard to decode how the usual fully connected layers seen at the end of CNN architectures map to class probabilities. They are blackboxes between the convolution layers and the classifier. They are also prone to overfitting and come with lots of parameters to train. Can we do better?
+
+<p align="center">
+  <img  src="/post_imgs/11-Network_In_Network_img3.png">
+  <br>Fig. Global Average Pooling
+</p>
+
+<p>In the approach proposed by the paper, the last  MLPconv layer produces as many activation maps as the number of classes being predicted. Then, each map is averaged giving rise to the raw scores of the classes. These are then fed to a SoftMax layer to produce the probabilities.</p>
+
+<p>The advantages of this approach are:</p>
+
+<ul>
+<li>The mapping between the extracted features and the class scores is more intuitive and direct. The feature can be treated as category confidence.</li>
+<li>An implicit advantage is that there are no new parameters to train (unlike the FC layers), leading to less overfitting.</li>
+<li>Global average pooling sums out the spatial information, thus it is more robust to spatial translations of the input.</li>
+</ul>
+
+<p>References:</p>
+
+<ul>
+<li><a href="https://openreview.net/forum?id=ylE6yojDR5yqX">https://openreview.net/forum?id=ylE6yojDR5yqX</a></li>
+</ul>
 
         </div>
 
         
+        
+        <div class="article-toc" style="display:none;">
+            <h3>Contents</h3>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#mlpconv">MLPConv</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
         
         
 
@@ -144,15 +225,34 @@
 
 
         
+        <footer class="article-footer">
+            <ul class="article-tag-list">
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/deep-learning">deep learning
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/architecture">architecture
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/inception">inception
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
     </div>
     <nav id="article-nav">
     
-    <a href="/posts/ai-search-algorithms/" id="article-nav-newer" class="article-nav-link-wrap">
-        <div class="article-nav-title"><span>&lt;</span>&nbsp;
-            Visualising AI Search Algorithms
-        </div>
-    </a>
     
+    <a href="/posts/analysing-alphago/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Analysing AlphaGo&nbsp;<span>&gt;</span></div>
+    </a>
     
 </nav>
 </article>
@@ -161,9 +261,9 @@
             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'teleported-in';
-    var disqus_identifier = 'http:\/\/teleported.in\/about\/about\/';
-    var disqus_title = 'About';
-    var disqus_url = 'http:\/\/teleported.in\/about\/about\/';
+    var disqus_identifier = 'http:\/\/teleported.in\/posts\/network-in-network\/';
+    var disqus_title = 'Network In Network: The begining of Inception';
+    var disqus_url = 'http:\/\/teleported.in\/posts\/network-in-network\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

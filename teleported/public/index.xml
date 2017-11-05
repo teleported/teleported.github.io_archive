@@ -6,10 +6,42 @@
     <description>Recent content on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Apr 2017 01:49:36 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 20 Oct 2017 23:27:27 -0400</lastBuildDate>
     
 	<atom:link href="http://teleported.in/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Network In Network: The begining of Inception</title>
+      <link>http://teleported.in/posts/network-in-network/</link>
+      <pubDate>Fri, 20 Oct 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/network-in-network/</guid>
+      <description>Anyone getting introduced to convolutional networks first come acrss
+This paper had a new take on how the convolution filters are designed and how we map extracted features to class scores. This formed the basis of the Inception architure. Two new concepts were introduced in this CNN architecture design:
+Fig. Layers in a typical CovNet (image credit: cs231n.stanford.edu) Fig. Feature visualization of CovNets (image credit: Zeiler &amp; Fergus 2013)  MLPconv: Replaced linear filters with non linear MLPs to extract better features within the receipt field.</description>
+    </item>
+    
+    <item>
+      <title>Analysing AlphaGo</title>
+      <link>http://teleported.in/posts/analysing-alphago/</link>
+      <pubDate>Fri, 12 May 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/analysing-alphago/</guid>
+      <description>(I wrote this piece as part of an assignment for Udacity&amp;rsquo;s AI Nanodegree program. The assignment was to summarize the AlphaGo paper in a page)
+Introduction Go is a two player, turn taking, deterministic game of perfect information. Two main factors make Go very complex to solve:
+ Go has an average branching factor ‘b’ of ~250 options per node (chess ~35) Go has an average depth ‘d’ of ~150 moves (chess ~80)  These factos make the state space of Go (bd) enormous to search end to end using traditional techniques.</description>
+    </item>
+    
+    <item>
+      <title>Visualising AI Search Algorithms</title>
+      <link>http://teleported.in/posts/ai-search-algorithms/</link>
+      <pubDate>Fri, 05 May 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/ai-search-algorithms/</guid>
+      <description>Search algorithms help find the correct sequence of actions in a search space, to reach a goal state. The sequence of actions might be:
+ Sequence in which cities are to be visited to travel from a source to a destination under a given cost function (shortest path, cheapest fare etc.) Sequence in which an agent should play moves in a game (chess, tic tac toe, pacman etc.) to win a board game Sequence in which a robot arm should solder components on a PCB under a given cost function (e.</description>
+    </item>
     
     <item>
       <title>About</title>
@@ -20,28 +52,6 @@
       <description>I mostly blog about intuition and concepts in AI and Machine Learning and subjects associated with them (statistics, programming etc.).
 I am on a journey to explore these topics. I find them fascinating. I take notes as I read, listen, learn. These blog posts are extensions of my notes. These are mostly for me to read later. You may find them helpful as well.
 I am this person. (Github, Twitter)</description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>http://teleported.in/projects/projects/</link>
-      <pubDate>Sun, 30 Apr 2017 01:49:36 +0530</pubDate>
-      
-      <guid>http://teleported.in/projects/projects/</guid>
-      <description>Second internship placeholder
-Fast.ai International Fellowship
-TinyNN: A small footprint neural network library
-Blogging: www.teleported.in
-YoloV2 implementation in PyTorch, from scratch
-Faster RCNN implementation in PyTorch, from scratch
-Kaggle
-cs231n Assignments
-RNN project: Generate Movie dialogs
-Deep Learning workstation build and benchmarking
-Internship at Flytbase Inc.
-Capstone project for ML Nanodegree: Training a Robotic Arm using Reinforcement Learning
-Udacity ML Nanodegree projects
-Udacity AI Nanodegree projects</description>
     </item>
     
   </channel>

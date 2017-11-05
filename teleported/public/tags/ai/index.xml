@@ -6,33 +6,10 @@
     <description>Recent content in Ai on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Oct 2017 23:27:27 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 12 May 2017 23:27:27 -0400</lastBuildDate>
     
 	<atom:link href="http://teleported.in/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>An intuitive explaination of Batch Normalization</title>
-      <link>http://teleported.in/posts/batch-normalization-explained/</link>
-      <pubDate>Mon, 02 Oct 2017 23:27:27 -0400</pubDate>
-      
-      <guid>http://teleported.in/posts/batch-normalization-explained/</guid>
-      <description>Test.</description>
-    </item>
-    
-    <item>
-      <title>Simulated Annealing simply explained</title>
-      <link>http://teleported.in/posts/simulated-annealing-metaphor/</link>
-      <pubDate>Wed, 24 May 2017 00:27:27 -0400</pubDate>
-      
-      <guid>http://teleported.in/posts/simulated-annealing-metaphor/</guid>
-      <description>(I had explained Simulated Annealing to someone on Udacity forum. Here was the conversation.)
-Can someone please explain simulated annealing to me with an example not using schedule(t) or Temperature? The video and book aren&#39;t too great at the explanation.
-Image Source: Wikipedia
-Let me give it a shot.
-If I have to explain it without using technical terms, I will describe it like this:
-Imagine that you are a dot on a 2D graph of maximas and minimas (peaks and valleys).</description>
-    </item>
     
     <item>
       <title>Analysing AlphaGo</title>
