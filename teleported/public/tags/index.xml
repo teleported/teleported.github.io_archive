@@ -32,7 +32,7 @@
     <item>
       <title>Architecture</title>
       <link>http://teleported.in/tags/architecture/</link>
-      <pubDate>Fri, 20 Oct 2017 23:27:27 -0400</pubDate>
+      <pubDate>Thu, 02 Nov 2017 23:27:27 -0400</pubDate>
       
       <guid>http://teleported.in/tags/architecture/</guid>
       <description></description>
@@ -41,7 +41,7 @@
     <item>
       <title>Deep Learning</title>
       <link>http://teleported.in/tags/deep-learning/</link>
-      <pubDate>Fri, 20 Oct 2017 23:27:27 -0400</pubDate>
+      <pubDate>Thu, 02 Nov 2017 23:27:27 -0400</pubDate>
       
       <guid>http://teleported.in/tags/deep-learning/</guid>
       <description></description>
@@ -66,15 +66,6 @@
     </item>
     
     <item>
-      <title>Inception</title>
-      <link>http://teleported.in/tags/inception/</link>
-      <pubDate>Fri, 20 Oct 2017 23:27:27 -0400</pubDate>
-      
-      <guid>http://teleported.in/tags/inception/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Intuitions</title>
       <link>http://teleported.in/tags/intuitions/</link>
       <pubDate>Fri, 12 May 2017 23:27:27 -0400</pubDate>
@@ -89,6 +80,15 @@
       <pubDate>Fri, 12 May 2017 23:27:27 -0400</pubDate>
       
       <guid>http://teleported.in/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resnet</title>
+      <link>http://teleported.in/tags/resnet/</link>
+      <pubDate>Thu, 02 Nov 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/tags/resnet/</guid>
       <description></description>
     </item>
     

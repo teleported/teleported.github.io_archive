@@ -17,7 +17,20 @@
       <pubDate>Sun, 30 Apr 2017 01:49:36 +0530</pubDate>
       
       <guid>http://teleported.in/projects/projects/</guid>
-      <description>These are my projects.</description>
+      <description>Second internship placeholder
+Fast.ai International Fellowship
+TinyNN: A small footprint neural network library
+Blogging: www.teleported.in
+YoloV2 implementation in PyTorch, from scratch
+Faster RCNN implementation in PyTorch, from scratch
+Kaggle
+cs231n Assignments
+RNN project: Generate Movie dialogs
+Deep Learning workstation build and benchmarking
+Internship at Flytbase Inc.
+Capstone project for ML Nanodegree: Training a Robotic Arm using Reinforcement Learning
+Udacity ML Nanodegree projects
+Udacity AI Nanodegree projects</description>
     </item>
     
   </channel>

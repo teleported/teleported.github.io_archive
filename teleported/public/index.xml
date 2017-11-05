@@ -6,20 +6,19 @@
     <description>Recent content on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Oct 2017 23:27:27 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 02 Nov 2017 23:27:27 -0400</lastBuildDate>
     
 	<atom:link href="http://teleported.in/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Network In Network: The begining of Inception</title>
-      <link>http://teleported.in/posts/network-in-network/</link>
-      <pubDate>Fri, 20 Oct 2017 23:27:27 -0400</pubDate>
+      <title>Decoding the ResNet architecture</title>
+      <link>http://teleported.in/posts/decoding-resnet-architecture/</link>
+      <pubDate>Thu, 02 Nov 2017 23:27:27 -0400</pubDate>
       
-      <guid>http://teleported.in/posts/network-in-network/</guid>
-      <description>Anyone getting introduced to convolutional networks first come acrss
-This paper had a new take on how the convolution filters are designed and how we map extracted features to class scores. This formed the basis of the Inception architure. Two new concepts were introduced in this CNN architecture design:
-Fig. Layers in a typical CovNet (image credit: cs231n.stanford.edu) Fig. Feature visualization of CovNets (image credit: Zeiler &amp; Fergus 2013)  MLPconv: Replaced linear filters with non linear MLPs to extract better features within the receipt field.</description>
+      <guid>http://teleported.in/posts/decoding-resnet-architecture/</guid>
+      <description>Introduction Fast.ai&amp;rsquo;s 2017 batch kicked off on 30th Oct and introduced us participants to the ResNet model in the first lecture itself. I had used this model earlier in the passing but got curious to dig into its architecture this time. (In fact in one of my earlier client projects I had used Faster RCNN, which uses a ResNet variant under the hood.)
+ResNet was unleashed in 2015 by Kaiming He.</description>
     </item>
     
     <item>

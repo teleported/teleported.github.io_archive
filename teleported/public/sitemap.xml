@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://teleported.in/posts/network-in-network/</loc>
-    <lastmod>2017-10-20T23:27:27-04:00</lastmod>
+    <loc>http://teleported.in/posts/decoding-resnet-architecture/</loc>
+    <lastmod>2017-11-02T23:27:27-04:00</lastmod>
   </url>
   
   <url>
@@ -41,7 +41,7 @@
   
   <url>
     <loc>http://teleported.in/tags/architecture/</loc>
-    <lastmod>2017-10-20T23:27:27-04:00</lastmod>
+    <lastmod>2017-11-02T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -59,13 +59,13 @@
   
   <url>
     <loc>http://teleported.in/tags/deep-learning/</loc>
-    <lastmod>2017-10-20T23:27:27-04:00</lastmod>
+    <lastmod>2017-11-02T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://teleported.in/categories/deep-learning/</loc>
-    <lastmod>2017-10-20T23:27:27-04:00</lastmod>
+    <lastmod>2017-11-02T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -88,12 +88,6 @@
   </url>
   
   <url>
-    <loc>http://teleported.in/tags/inception/</loc>
-    <lastmod>2017-10-20T23:27:27-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://teleported.in/tags/intuitions/</loc>
     <lastmod>2017-05-12T23:27:27-04:00</lastmod>
     <priority>0</priority>
@@ -101,13 +95,19 @@
   
   <url>
     <loc>http://teleported.in/posts/</loc>
-    <lastmod>2017-10-20T23:27:27-04:00</lastmod>
+    <lastmod>2017-11-02T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://teleported.in/tags/research/</loc>
     <lastmod>2017-05-12T23:27:27-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://teleported.in/tags/resnet/</loc>
+    <lastmod>2017-11-02T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -137,7 +137,7 @@
   
   <url>
     <loc>http://teleported.in/</loc>
-    <lastmod>2017-10-20T23:27:27-04:00</lastmod>
+    <lastmod>2017-11-02T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   

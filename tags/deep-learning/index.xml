@@ -6,18 +6,19 @@
     <description>Recent content in Deep Learning on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Oct 2017 23:27:27 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 02 Nov 2017 23:27:27 -0400</lastBuildDate>
     
 	<atom:link href="http://teleported.in/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>An intuitive explaination of Batch Normalization</title>
-      <link>http://teleported.in/posts/batch-normalization-explained/</link>
-      <pubDate>Mon, 02 Oct 2017 23:27:27 -0400</pubDate>
+      <title>Decoding the ResNet architecture</title>
+      <link>http://teleported.in/posts/decoding-resnet-architecture/</link>
+      <pubDate>Thu, 02 Nov 2017 23:27:27 -0400</pubDate>
       
-      <guid>http://teleported.in/posts/batch-normalization-explained/</guid>
-      <description>Test.</description>
+      <guid>http://teleported.in/posts/decoding-resnet-architecture/</guid>
+      <description>Introduction Fast.ai&amp;rsquo;s 2017 batch kicked off on 30th Oct and introduced us participants to the ResNet model in the first lecture itself. I had used this model earlier in the passing but got curious to dig into its architecture this time. (In fact in one of my earlier client projects I had used Faster RCNN, which uses a ResNet variant under the hood.)
+ResNet was unleashed in 2015 by Kaiming He.</description>
     </item>
     
   </channel>

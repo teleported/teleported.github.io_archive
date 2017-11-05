@@ -2,13 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://teleported.in/posts/batch-normalization-explained/</loc>
-    <lastmod>2017-10-02T23:27:27-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://teleported.in/posts/simulated-annealing-metaphor/</loc>
-    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
+    <loc>http://teleported.in/posts/decoding-resnet-architecture/</loc>
+    <lastmod>2017-11-02T23:27:27-04:00</lastmod>
   </url>
   
   <url>
@@ -27,11 +22,6 @@
   </url>
   
   <url>
-    <loc>http://teleported.in/projects/projects/</loc>
-    <lastmod>2017-04-30T01:49:36+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>http://teleported.in/about/</loc>
     <lastmod>2017-04-30T01:49:36+05:30</lastmod>
     <priority>0</priority>
@@ -39,7 +29,7 @@
   
   <url>
     <loc>http://teleported.in/tags/ai/</loc>
-    <lastmod>2017-10-02T23:27:27-04:00</lastmod>
+    <lastmod>2017-05-12T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -50,26 +40,32 @@
   </url>
   
   <url>
+    <loc>http://teleported.in/tags/architecture/</loc>
+    <lastmod>2017-11-02T23:27:27-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://teleported.in/categories/artificial-intelligence/</loc>
-    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
+    <lastmod>2017-05-12T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://teleported.in/categories/</loc>
-    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
+    <lastmod>2017-05-12T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://teleported.in/tags/deep-learning/</loc>
-    <lastmod>2017-10-02T23:27:27-04:00</lastmod>
+    <lastmod>2017-11-02T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://teleported.in/categories/deep-learning/</loc>
-    <lastmod>2017-10-02T23:27:27-04:00</lastmod>
+    <lastmod>2017-11-02T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -93,31 +89,25 @@
   
   <url>
     <loc>http://teleported.in/tags/intuitions/</loc>
-    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://teleported.in/tags/ml/</loc>
-    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
+    <lastmod>2017-05-12T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://teleported.in/posts/</loc>
-    <lastmod>2017-10-02T23:27:27-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://teleported.in/projects/</loc>
-    <lastmod>2017-04-30T01:49:36+05:30</lastmod>
+    <lastmod>2017-11-02T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://teleported.in/tags/research/</loc>
     <lastmod>2017-05-12T23:27:27-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://teleported.in/tags/resnet/</loc>
+    <lastmod>2017-11-02T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -134,26 +124,8 @@
   </url>
   
   <url>
-    <loc>http://teleported.in/tags/simulated-annealing/</loc>
-    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://teleported.in/categories/simulated-annealing/</loc>
-    <lastmod>2017-05-24T00:27:27-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://teleported.in/tags/</loc>
-    <lastmod>2017-10-02T23:27:27-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://teleported.in/tags/techniques/</loc>
-    <lastmod>2017-10-02T23:27:27-04:00</lastmod>
+    <lastmod>2017-05-12T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -165,7 +137,7 @@
   
   <url>
     <loc>http://teleported.in/</loc>
-    <lastmod>2017-10-02T23:27:27-04:00</lastmod>
+    <lastmod>2017-11-02T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   

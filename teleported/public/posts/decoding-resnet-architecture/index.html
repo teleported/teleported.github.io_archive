@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Decoding the ResNet architecture // teleported.in</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:title" content="Teleported.in" />
+<meta property="og:description" content="A blog where I share my intuitions about artificial intelligence, machine learning, deep learning." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="http://teleported.in/posts/decoding-resnet-architecture/" />
+
+
+
+    <link href="" rel="alternate" type="application/rss+xml" title="teleported.in" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico">
+
+    <link href="http://teleported.in/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://teleported.in/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://teleported.in/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <meta name="description" content="A blog where I share my intuitions about artificial intelligence, machine learning, deep learning.">
+    <meta name="keywords" content="ai ml artificial intelligence programming c++ python intuitions papers">
+    <meta name="author" content="Anand Saha <anandsaha gmail com">
+
+    <meta name="generator" content="Hugo 0.20.6" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" style="font-family: 'Open Sans', sans-serif;" href="http://teleported.in/">teleported.in</a>
+            <nav id="main-nav">
+                
+                <a style="font-family: 'Open Sans', sans-serif;" class="main-nav-link" href="/about/about">About</a>
+                
+                <a style="font-family: 'Open Sans', sans-serif;" class="main-nav-link" href="/posts/">Posts</a>
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+        <div style="margin-top:-10px; padding-bottom:5px">
+        <label style="font-family: 'Open Sans', sans-serif;color:#555555">
+            Deep learning concepts. Tools and techniques.</label>
+        </div>
+    </div>
+</header>
+
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Decoding the ResNet architecture</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/posts/decoding-resnet-architecture/" class="article-date">
+                <time datetime='2017-11-02T23:27:27.000-04:00' itemprop="datePublished">2017-11-02</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://teleported.in//categories/deep-learning">deep learning</a>
+                    
+                </div>
+            </div>
+            
+            
+            
+            <div class="article-comment-link-wrap">
+                <a href="/posts/decoding-resnet-architecture/#disqus_thread" class="article-comment-link">Comments</a>
+            </div>
+            
+        </div>
+        <div style="color:#999999;">
+        By <a style="text-decoration: none;color:#999999; border-bottom: 1px dotted #000;" href="/about/about">Anand Saha</a>
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            
+
+<h3 id="introduction">Introduction</h3>
+
+<p>Fast.ai&rsquo;s 2017 batch kicked off on 30th Oct and introduced us participants to the ResNet model in the first lecture itself. I had used this model earlier in the passing but got curious to dig into its architecture this time. <em>(In fact in one of my <a href="https://www.suasnews.com/2017/10/flytbase-releases-ai-platform-drones/">earlier client projects</a> I had used Faster RCNN, which uses a ResNet variant under the hood.)</em></p>
+
+<p>ResNet was unleashed in 2015 by Kaiming He. et.al. through their paper <a href="https://arxiv.org/abs/1512.03385">Deep Residual Learning for Image Recognition</a> and bagged all the <a href="http://www.image-net.org/">ImageNet challenges</a> including classification, detection, and localization.</p>
+
+<p>ResNet has been trained with 34, 50, 101 and 152 layers. And if that was not enough, with <a href="https://github.com/KaimingHe/resnet-1k-layers">1000 layers</a> too!</p>
+
+<h3 id="the-challenges-with-deeper-networks">The Challenges with Deeper Networks</h3>
+
+<p>This is what <a href="http://cs231n.github.io/neural-networks-1/#arch">cs231n</a> suggests regarding network size:</p>
+
+<p><code>The takeaway is that you should not be using smaller networks because you are afraid of overfitting. Instead, you should use as big of a neural network as your computational budget allows, and use other regularization techniques to control overfitting</code></p>
+
+<p>With this guidance, you should be adding more nodes to your layers and more layers to your model as permitted by your hardware to train it on. That should see you though.</p>
+
+<p>In fact, that has been happening with ImageNet winning models since 2012. A starking trend has been to make the layers deeper, with VGG taking it to 19, and GoogLeNet taking it to 22 layers in 2014. (Note that making layers wider by adding more nodes is not preferred since it has been seen to overfit.)</p>
+
+<p><img src="/post_imgs/12-revolution-of-depth.png" alt="Depth of ImageNet winning models" />
+<center><em>Fig:Trend of increasing depth (Img Credit: <a href="http://kaiminghe.com/">Kaiming He</a>)</em></center></p>
+
+<p>However in practice when the depth is pushed to extremes, we see some anomalies:</p>
+
+<p><img src="/post_imgs/12-deepnet-errors.png" alt="Training and Test Error with deep networks" />
+<em>Fig.: Training error (left) and test error (right) on CIFAR-10 with 20-layers and 50-layers &lsquo;plain&rsquo; networks. The deeper network has higher training error, thus test error. (Img credit: <a href="https://arxiv.org/abs/1512.03385">https://arxiv.org/abs/1512.03385</a>)</em></p>
+
+<p>Researchers behind the ResNet architectures noticed that by increasing the depth of a plain network, training and test errors were actually worse than their shallow counterparts.</p>
+
+<p>It is well known that increasing the depth leads to exploding or vanishing gradients problem if weights are not properly initialized. However, that can be countered by techniques like batch normalization.</p>
+
+<p>In spite of that, deeper networks (like the 50-layer one in above image) experience degradation in convergence - with accuracy getting saturated and errors remaining higher than the shallower ones.</p>
+
+<p>We need a change of approach to counter challenges deeper network poses.</p>
+
+<h3 id="intuition-behind-residual-networks">Intuition behind Residual Networks</h3>
+
+<p>There are a couple of intuitions that we should understand before getting into the mechanics of ResNets.</p>
+
+<p><strong>Make it deep, but remain shallow</strong></p>
+
+<p>Given a shallower network - how can we take it, add extra layers and make it deeper - without losing accuracy or increasing error? It&rsquo;s tricky to do but one insight is that if the <em>extra</em> layers added to the deeper network are identity mappings, they become equivalent to the shallower network. And hence, they should produce no higher training error than it&rsquo;s shallower counterpart. This is called a <em>solution by construction</em> by the authors.</p>
+
+<p><img src="/post_imgs/12-shallow-deep.png" alt="Shallow and Deep Networks" />
+<center><em>Fig: A Shallow network (left) and a deeper network (right) constructed by taking the layers of the shallow network and adding identity layers between them. Img Credit: <a href="http://kaiminghe.com/">Kaiming He</a>.</em></center></p>
+
+<p><strong>Understanding residual</strong></p>
+
+<p>Let us revisit the mathematical concept of a <a href="https://en.wikipedia.org/wiki/Residual_(numerical_analysis)">Residual</a>.</p>
+
+<p><em>A residual is the error in a result.</em></p>
+
+<p>Let&rsquo;s say, you are asked to predict the age of a person, just by looking at her. If her actual age is <code>20</code>, and you predict <code>18</code>, you are off by <code>2</code>. <code>2</code> is our residual here. If you had predicted <code>21</code>, you would have been off by <code>-1</code>, our residual in this case. In essence, residual is what you should have added to your prediction to match the actual.</p>
+
+<p>What is important to understand here is that, if the residual is <code>0</code>, we are not supposed to do anything to the prediction. We are to remain silent since the prediction already matched the actual.</p>
+
+<p>This can be put into a nice little diagram.</p>
+
+<p><img src="/post_imgs/12-residual3.png" alt="residual" /></p>
+
+<p>In the diagram, <code>x</code> is our prediction and we want it to be equal to the <code>Actual</code>. However, if is it off by a margin, our residual function <code>residual()</code> will kick in and produce the residual of the operation so as to correct our prediction to match the actual. If <code>x == Actual</code>, <code>residual(x)</code> will be <code>0</code>. The <code>Identity</code> function just copies <code>x</code>.</p>
+
+<h3 id="the-residual-network">The Residual Network</h3>
+
+<p>We can now weave the above two intuitions together to come to the logical conclusion of a ResNet.</p>
+
+<p>So we want a deeper network where:</p>
+
+<ul>
+<li>We want to go deeper without degradation in accuracy and error rate. We can do this via injecting identity mappings.</li>
+<li>We want to be able to learn the residuals so that our predictions are close to the actuals.</li>
+</ul>
+
+<p>That&rsquo;s what the Residual Network does. This is realized by feedforward neural network with <em>shortcut connections</em>. As the paper says:</p>
+
+<p><code>Shortcut connections are those skipping one or more layers. In our case, the shortcut connections simply perform identity mapping, and their outputs are added to the outputs of the stacked layers. Identity shortcut connections add neither extra parameter nor computational complexity. The entire network can still be trained end-to-end by SGD with backpropagation, and can be easily implemented using common libraries without modifying the solvers.</code></p>
+
+<p><img src="/post_imgs/12-residual-net.png" alt="ResNet" />
+<center>Fig.: The reusable residual network. (Img credit: <a href="https://arxiv.org/abs/1512.03385">https://arxiv.org/abs/1512.03385</a>)</center></p>
+
+<p>The network can be mathematically depicted as:</p>
+
+<p><center><code>H(x) = F(x) + x</code>, where <code>F(x) = W2*relu(W1*x+b1)+b2</code></center></p>
+
+<p>During training period, the residual network learns the weights of its layers such that if the identity mapping were optimal, all the weights get set to 0, in effect <code>F(x)</code> become 0. And if there is a deviation from optimal identity mapping, weights and biases are learned to adjust for it. Think of <code>F(x)</code> as learning how to adjust our predictions to match the actuals.</p>
+
+<p>These networks are stacked together to arrive at a deep network architecture. For e.g., bellow is a ResNet arch with 34 layers.</p>
+
+<p><img src="/post_imgs/12-resnet-vgg.png" alt="34 layer resnet" />
+<center>Fig.: A 34 layer ResNet with VGG 19 side by side (Img credit: <a href="https://arxiv.org/abs/1512.03385">https://arxiv.org/abs/1512.03385</a>)</center></p>
+
+<p>So that&rsquo;s that, our ResNet architecture!</p>
+
+<h3 id="what-s-next">What&rsquo;s next?</h3>
+
+<p>Kaiming He in one of his presentations does a comparison between ResNet and an Inception model (GoogLeNet), which is another state of the art architecture as of now. The Inception model, according to him, is characterized by 3 properties.</p>
+
+<ul>
+<li>Bottleneck</li>
+<li>Multiple Branches</li>
+<li>Shortcuts</li>
+</ul>
+
+<p>ResNet has two of the above properties, lacking multiple branches. That lead to the development of ResNeXt, which I will tackle in another post.</p>
+
+<p><strong>References</strong></p>
+
+<ul>
+<li><a href="https://arxiv.org/pdf/1512.03385.pdf">https://arxiv.org/pdf/1512.03385.pdf</a></li>
+</ul>
+
+        </div>
+
+        
+        
+        <div class="article-toc" style="display:none;">
+            <h3>Contents</h3>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#the-challenges-with-deeper-networks">The Challenges with Deeper Networks</a></li>
+<li><a href="#intuition-behind-residual-networks">Intuition behind Residual Networks</a></li>
+<li><a href="#the-residual-network">The Residual Network</a></li>
+<li><a href="#what-s-next">What&rsquo;s next?</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+        
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script>
+            (function() {
+                var $toc = $('#TableOfContents');
+                if ($toc.length > 0) {
+                    var $window = $(window);
+
+                    function onScroll(){
+                        var currentScroll = $window.scrollTop();
+                        var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+                        var id = "";
+                        h.each(function (i, e) {
+                            e = $(e);
+                            if (e.offset().top - 10 <= currentScroll) {
+                                id = e.attr('id');
+                            }
+                        });
+                        var active = $toc.find('a.active');
+                        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                        active.each(function (i, e) {
+                            $(e).removeClass('active').siblings('ul').hide();
+                        });
+                        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                            $(e).children('a').addClass('active').siblings('ul').show();
+                        });
+                    }
+
+                    $window.on('scroll', onScroll);
+                    $(document).ready(function() {
+                        $toc.find('a').parent('li').find('ul').hide();
+                        onScroll();
+                        document.getElementsByClassName('article-toc')[0].style.display = '';
+                    });
+                }
+            })();
+        </script>
+        
+
+
+        
+        <footer class="article-footer">
+            <ul class="article-tag-list">
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/deep-learning">deep learning
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/architecture">architecture
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/resnet">resnet
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
+    </div>
+    <nav id="article-nav">
+    
+    
+    <a href="/posts/analysing-alphago/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Analysing AlphaGo&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'teleported-in';
+    var disqus_identifier = 'http:\/\/teleported.in\/posts\/decoding-resnet-architecture\/';
+    var disqus_title = 'Decoding the ResNet architecture';
+    var disqus_url = 'http:\/\/teleported.in\/posts\/decoding-resnet-architecture\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            
+            &copy; 2017 <a href="https://www.linkedin.com/in/anandsaha/">Anand Saha</a> &nbsp; 
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos">Minos</a>
+        </div>
+    </div>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-98287631-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+
+</div>
+</body>
+</html>

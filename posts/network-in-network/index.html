@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Network In Network: The begining of Inception // teleported.in</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:title" content="Teleported.in" />
+<meta property="og:description" content="A blog where I share my intuitions about artificial intelligence, machine learning, deep learning." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="http://teleported.in/posts/network-in-network/" />
+
+
+
+    <link href="" rel="alternate" type="application/rss+xml" title="teleported.in" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico">
+
+    <link href="http://teleported.in/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://teleported.in/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://teleported.in/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <meta name="description" content="A blog where I share my intuitions about artificial intelligence, machine learning, deep learning.">
+    <meta name="keywords" content="ai ml artificial intelligence programming c++ python intuitions papers">
+    <meta name="author" content="Anand Saha <anandsaha gmail com">
+
+    <meta name="generator" content="Hugo 0.20.6" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" style="font-family: 'Open Sans', sans-serif;" href="http://teleported.in/">teleported.in</a>
+            <nav id="main-nav">
+                
+                <a style="font-family: 'Open Sans', sans-serif;" class="main-nav-link" href="/about/about">About</a>
+                
+                <a style="font-family: 'Open Sans', sans-serif;" class="main-nav-link" href="/posts/">Posts</a>
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+        <div style="margin-top:-10px; padding-bottom:5px">
+        <label style="font-family: 'Open Sans', sans-serif;color:#555555">
+            Deep learning concepts. Tools and techniques.</label>
+        </div>
+    </div>
+</header>
+
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Network In Network: The begining of Inception</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/posts/network-in-network/" class="article-date">
+                <time datetime='2017-10-20T23:27:27.000-04:00' itemprop="datePublished">2017-10-20</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://teleported.in//categories/deep-learning">deep learning</a>
+                    
+                </div>
+            </div>
+            
+            
+            
+            <div class="article-comment-link-wrap">
+                <a href="/posts/network-in-network/#disqus_thread" class="article-comment-link">Comments</a>
+            </div>
+            
+        </div>
+        <div style="color:#999999;">
+        By <a style="text-decoration: none;color:#999999; border-bottom: 1px dotted #000;" href="/about/about">Anand Saha</a>
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            
+
+<p>Anyone getting introduced to convolutional networks first come acrss</p>
+
+<p>This paper had a new take on how the convolution filters are designed and how we map extracted features to class scores. This formed the basis of the Inception architure. Two new concepts were introduced in this CNN architecture design:</p>
+
+<p align="center">
+  <img src="/post_imgs/11-convnet.jpeg">
+  <br>Fig. Layers in a typical CovNet (image credit: cs231n.stanford.edu)
+</p>
+
+<p align="center">
+  <img src="/post_imgs/11-zeiler-fertus.jpg">
+  <br>Fig. Feature visualization of CovNets (image credit: Zeiler & Fergus 2013)
+</p>
+
+<ul>
+<li><strong>MLPconv</strong>: Replaced linear filters with non linear MLPs to extract better features within the receipt field. This helped in better abstraction and accuracy.</li>
+<li><strong>Global Average Pooling</strong>: Got rid of the fully connected layers (reducing parameters and complexity) by creating as many activation maps in the last layer as there are classes. This was followed by averaging these maps to arrive at final scores, which is passed to softmax. This is performant and more intuitive.</li>
+</ul>
+
+<h3 id="mlpconv">MLPConv</h3>
+
+<p>Traditional CNN architectures use linear filters to do the convolution and extract features out of images. The early layers try to extract primitive features like lines, edges and corners, while the later layers build on early layers and extract higher level features like eyes, ears, nose etc. These are called latent features. Now, there can be variations in each of those features - there can be many different variations in eyes alone. A linear filter tries to draw straight lines to discriminate these features. Thus conventional CNN implicitly makes the assumption that the latent concepts are linearly separable. But a straight line may not always fit. Using a richer non linear function approximator can serve as a better feature extractor.</p>
+
+<p align="center">
+  <img src="/post_imgs/11-Network_In_Network_img1.png">
+  <br>Fig. Conventional linear convolution layer
+</p>
+
+<p>This paper introduced the concept of having a neural network itself in place of a convolution filter. The input to this mini network would be the convolution, and the output would be the value of a neuron in the activation. Hence it does not alter the input/output characteristics of traditional filters. This mini network, called MLPconv,can then convolved over the input. The benifit of having such an arrangement are two fold:</p>
+
+<ul>
+<li>It is compatible with the backpropagation logic of neural nets, thus this fits well into existing architectures of CNNs</li>
+<li>It can itself be a deep model leading to rich separation between latent features</li>
+</ul>
+
+<p align="center">
+  <img  src="/post_imgs/11-Network_In_Network_img2.png">
+  <br>Fig. MLPconv layer
+</p>
+### Global Average Pooling
+
+In traditional CNN architectures, the feature maps of the last convolution layer are flattened and passed on to one or more fully connected layers, which are then passed on to softmax logistics layer for spitting out class probabilities. The issue with this approach is that it is hard to decode how the usual fully connected layers seen at the end of CNN architectures map to class probabilities. They are blackboxes between the convolution layers and the classifier. They are also prone to overfitting and come with lots of parameters to train. Can we do better?
+
+<p align="center">
+  <img  src="/post_imgs/11-Network_In_Network_img3.png">
+  <br>Fig. Global Average Pooling
+</p>
+
+<p>In the approach proposed by the paper, the last  MLPconv layer produces as many activation maps as the number of classes being predicted. Then, each map is averaged giving rise to the raw scores of the classes. These are then fed to a SoftMax layer to produce the probabilities.</p>
+
+<p>The advantages of this approach are:</p>
+
+<ul>
+<li>The mapping between the extracted features and the class scores is more intuitive and direct. The feature can be treated as category confidence.</li>
+<li>An implicit advantage is that there are no new parameters to train (unlike the FC layers), leading to less overfitting.</li>
+<li>Global average pooling sums out the spatial information, thus it is more robust to spatial translations of the input.</li>
+</ul>
+
+<p>References:</p>
+
+<ul>
+<li><a href="https://openreview.net/forum?id=ylE6yojDR5yqX">https://openreview.net/forum?id=ylE6yojDR5yqX</a></li>
+</ul>
+
+        </div>
+
+        
+        
+        <div class="article-toc" style="display:none;">
+            <h3>Contents</h3>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#mlpconv">MLPConv</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+        
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script>
+            (function() {
+                var $toc = $('#TableOfContents');
+                if ($toc.length > 0) {
+                    var $window = $(window);
+
+                    function onScroll(){
+                        var currentScroll = $window.scrollTop();
+                        var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+                        var id = "";
+                        h.each(function (i, e) {
+                            e = $(e);
+                            if (e.offset().top - 10 <= currentScroll) {
+                                id = e.attr('id');
+                            }
+                        });
+                        var active = $toc.find('a.active');
+                        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                        active.each(function (i, e) {
+                            $(e).removeClass('active').siblings('ul').hide();
+                        });
+                        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                            $(e).children('a').addClass('active').siblings('ul').show();
+                        });
+                    }
+
+                    $window.on('scroll', onScroll);
+                    $(document).ready(function() {
+                        $toc.find('a').parent('li').find('ul').hide();
+                        onScroll();
+                        document.getElementsByClassName('article-toc')[0].style.display = '';
+                    });
+                }
+            })();
+        </script>
+        
+
+
+        
+        <footer class="article-footer">
+            <ul class="article-tag-list">
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/deep-learning">deep learning
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/architecture">architecture
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/inception">inception
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
+    </div>
+    <nav id="article-nav">
+    
+    
+    <a href="/posts/analysing-alphago/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Analysing AlphaGo&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'teleported-in';
+    var disqus_identifier = 'http:\/\/teleported.in\/posts\/network-in-network\/';
+    var disqus_title = 'Network In Network: The begining of Inception';
+    var disqus_url = 'http:\/\/teleported.in\/posts\/network-in-network\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            
+            &copy; 2017 <a href="https://www.linkedin.com/in/anandsaha/">Anand Saha</a> &nbsp; 
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos">Minos</a>
+        </div>
+    </div>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-98287631-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+
+</div>
+</body>
+</html>
