@@ -186,12 +186,14 @@
 
 <p><center><code>H(x) = F(x) + x</code>, where <code>F(x) = W2*relu(W1*x+b1)+b2</code></center></p>
 
-<p>During training period, the residual network learns the weights of its layers such that if the identity mapping were optimal, all the weights get set to 0, in effect <code>F(x)</code> become 0. And if there is a deviation from optimal identity mapping, weights and biases are learned to adjust for it. Think of <code>F(x)</code> as learning how to adjust our predictions to match the actuals.</p>
+<p>During training period, the residual network learns the weights of its layers such that if the identity mapping were optimal, all the weights get set to 0. In effect <code>F(x)</code> become 0, as in <code>x</code> gets directly mapped to <code>H(x)</code> and no corrections need to be made. And if there is a deviation from optimal identity mapping, weights and biases of <code>F(x)</code> are learned to adjust for it. Think of <code>F(x)</code> as learning how to adjust our predictions to match the actuals.</p>
 
 <p>These networks are stacked together to arrive at a deep network architecture. For e.g., bellow is a ResNet arch with 34 layers.</p>
 
 <p><img src="/post_imgs/12-resnet-vgg.png" alt="34 layer resnet" />
 <center>Fig.: A 34 layer ResNet with VGG 19 side by side (Img credit: <a href="https://arxiv.org/abs/1512.03385">https://arxiv.org/abs/1512.03385</a>)</center></p>
+
+<p>Similarly, researchers have stacked more layers as mentioned earlier, to increase the representational space which helped in gaining accuracy.</p>
 
 <p>So that&rsquo;s that, our ResNet architecture!</p>
 
@@ -212,6 +214,8 @@
 <ul>
 <li><a href="https://arxiv.org/pdf/1512.03385.pdf">https://arxiv.org/pdf/1512.03385.pdf</a></li>
 </ul>
+
+<p><code>Please leave a comment below if anything was unclear or can be improved in the post.</code></p>
 
         </div>
 
