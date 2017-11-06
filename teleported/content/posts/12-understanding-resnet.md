@@ -107,9 +107,9 @@ So that's that, our ResNet architecture!
 
 Kaiming He in one of his presentations does a comparison between ResNet and an Inception model (GoogLeNet), which is another state of the art architecture as of now. The Inception model, according to him, is characterized by 3 properties.
 
-* Bottleneck
-* Multiple Branches
-* Shortcuts
+* Bottleneck - reducing dimensions before applying expensive operations
+* Multiple Branches - extracting features of various sizes by using multiple and different filters parallelly
+* Shortcuts - as used in ResNet - to go deep
 
 ResNet has two of the above properties, lacking multiple branches. That lead to the development of ResNeXt, which I will tackle in another post.
 
@@ -120,4 +120,3 @@ ResNet has two of the above properties, lacking multiple branches. That lead to 
 
 
 `Please leave a comment below if anything was unclear or can be improved in the post.`
-
