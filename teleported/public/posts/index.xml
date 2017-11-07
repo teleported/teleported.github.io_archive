@@ -17,8 +17,20 @@
       <pubDate>Thu, 02 Nov 2017 23:27:27 -0400</pubDate>
       
       <guid>http://teleported.in/posts/decoding-resnet-architecture/</guid>
-      <description>Introduction Fast.ai&amp;rsquo;s 2017 batch kicked off on 30th Oct and introduced us participants to the ResNet model in the first lecture itself. I had used this model earlier in the passing but got curious to dig into its architecture this time. (In fact in one of my earlier client projects I had used Faster RCNN, which uses a ResNet variant under the hood.)
+      <description>Introduction Fast.ai&amp;rsquo;s 2017 batch kicked off on 30th Oct and Jeremy Howard introduced us participants to the ResNet model in the first lecture itself. I had used this model earlier in the passing but got curious to dig into its architecture this time. (In fact in one of my earlier client projects I had used Faster RCNN, which uses a ResNet variant under the hood.)
 ResNet was unleashed in 2015 by Kaiming He.</description>
+    </item>
+    
+    <item>
+      <title>The Batch Normalization Technique</title>
+      <link>http://teleported.in/posts/batch-normalization-explained/</link>
+      <pubDate>Mon, 02 Oct 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/batch-normalization-explained/</guid>
+      <description>The Batch Normalization technique was proposed by researchers Sergey Ioffe, Christian Szegedy in a 2015 paper called Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift. Since then, it has become an integral part of any deep network architecture.
+It has been one of the most exiting innovations in recent times, having impacted
+The paper claims the following:
+ It makes higher learning rates possible It makes proper weights initialization less critical Acts as a regularizer, in some cases eliminating the need for dropouts  We will be hashing each of this claims in this post.</description>
     </item>
     
     <item>

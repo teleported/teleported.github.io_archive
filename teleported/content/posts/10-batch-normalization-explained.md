@@ -6,7 +6,7 @@ tags          = [ "deep learning", "techniques"]
 categories    = [ "deep learning" ]
 slug          = "batch-normalization-explained"
 featuredImage = "/post_imgs/10-bnalgorithm.png"
-draft         = true
+draft         = false
 +++
 
 The Batch Normalization technique was proposed by researchers Sergey Ioffe, Christian Szegedy in a 2015 paper called [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167). Since then, it has become an integral part of any deep network architecture.
@@ -41,9 +41,21 @@ A few concepts need to be pinned down before talking about batch normalization. 
 
 ### Batch Normalization
 
+
+
+After linear transform and before the non-linearity: makes scales of the weights normalized out.
+
+
 ### Whitening
 
 
 
 ![training with batch normalization](/post_imgs/10-batchnormgraphs.png)
+
+
+**References**
+
+* https://arxiv.org/abs/1502.03167
+* http://cs231n.github.io/neural-networks-2/#batchnorm
+
 

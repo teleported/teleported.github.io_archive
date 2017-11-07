@@ -17,7 +17,7 @@
       <pubDate>Thu, 02 Nov 2017 23:27:27 -0400</pubDate>
       
       <guid>http://teleported.in/posts/decoding-resnet-architecture/</guid>
-      <description>Introduction Fast.ai&amp;rsquo;s 2017 batch kicked off on 30th Oct and introduced us participants to the ResNet model in the first lecture itself. I had used this model earlier in the passing but got curious to dig into its architecture this time. (In fact in one of my earlier client projects I had used Faster RCNN, which uses a ResNet variant under the hood.)
+      <description>Introduction Fast.ai&amp;rsquo;s 2017 batch kicked off on 30th Oct and Jeremy Howard introduced us participants to the ResNet model in the first lecture itself. I had used this model earlier in the passing but got curious to dig into its architecture this time. (In fact in one of my earlier client projects I had used Faster RCNN, which uses a ResNet variant under the hood.)
 ResNet was unleashed in 2015 by Kaiming He.</description>
     </item>
     

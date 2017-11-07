@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>An intuitive explaination of Batch Normalization // teleported.in</title>
+    <title>The Batch Normalization Technique // teleported.in</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:title" content="Teleported.in" />
@@ -20,6 +20,12 @@
     <link href="http://teleported.in/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="http://teleported.in/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
 
     <link href="http://gmpg.org/xfn/11" rel="profile">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -41,14 +47,12 @@
     <div id="header-outer" class="outer">
         <div id="header-inner" class="inner">
             <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
-            <a id="logo" class="logo-text" href="http://teleported.in/">teleported.in</a>
+            <a id="logo" class="logo-text" style="font-family: 'Open Sans', sans-serif;" href="http://teleported.in/">teleported.in</a>
             <nav id="main-nav">
                 
-                <a class="main-nav-link" href="/about/about">About</a>
+                <a style="font-family: 'Open Sans', sans-serif;" class="main-nav-link" href="/about/about">About</a>
                 
-                <a class="main-nav-link" href="/projects/projects">Projects</a>
-                
-                <a class="main-nav-link" href="/posts/">Posts</a>
+                <a style="font-family: 'Open Sans', sans-serif;" class="main-nav-link" href="/posts/">Posts</a>
                 
             </nav>
             <nav id="sub-nav">
@@ -57,8 +61,8 @@
             </nav>
         </div>
         <div style="margin-top:-10px; padding-bottom:5px">
-        <label style="font-family: Arial, Georgia;color:#555555">
-            My notes on AI and ML. Mostly intuitions and concepts.</label>
+        <label style="font-family: 'Open Sans', sans-serif;color:#555555">
+            Deep learning concepts. Tools and techniques.</label>
         </div>
     </div>
 </header>
@@ -68,7 +72,7 @@
     <div class="article-inner">
         
         <header class="article-header">
-            <h1 class="article-title" itemprop="name">An intuitive explaination of Batch Normalization</h1>
+            <h1 class="article-title" itemprop="name">The Batch Normalization Technique</h1>
         </header>
         
         <div class="article-meta">
@@ -97,11 +101,75 @@
         By <a style="text-decoration: none;color:#999999; border-bottom: 1px dotted #000;" href="/about/about">Anand Saha</a>
         </div>
         <div class="article-entry" itemprop="articleBody">
-            <p>Test.</p>
+            
+
+<p>The Batch Normalization technique was proposed by researchers Sergey Ioffe, Christian Szegedy in a 2015 paper called <a href="https://arxiv.org/abs/1502.03167">Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift</a>. Since then, it has become an integral part of any deep network architecture.</p>
+
+<p>It has been one of the most exiting innovations in recent times, having impacted</p>
+
+<p>The paper claims the following:</p>
+
+<ul>
+<li>It makes higher learning rates possible</li>
+<li>It makes proper weights initialization less critical</li>
+<li>Acts as a regularizer, in some cases eliminating the need for dropouts</li>
+</ul>
+
+<p>We will be hashing each of this claims in this post.</p>
+
+<p>Assignment 2 of the <a href="http://cs231n.github.io/assignments2016/assignment2/">cs231n course</a> made us <a href="https://github.com/anandsaha/cs231n.assignments/blob/master/2016winter/assignment2/BatchNormalization.ipynb">implement</a> the forward and backward pass of this strategy, which prompted me to write about it here.</p>
+
+<p>A few concepts need to be pinned down before talking about batch normalization. Before that, we start with an intuition.</p>
+
+<h3 id="the-intuition">The Intuition</h3>
+
+<h3 id="concepts">Concepts</h3>
+
+<p><strong>Vanishing and Exploding gradients</strong></p>
+
+<p><strong>Variance in data</strong></p>
+
+<p><strong>Depth of network</strong></p>
+
+<h3 id="how-we-update-weights">How we update weights</h3>
+
+<h3 id="batch-normalization">Batch Normalization</h3>
+
+<p>After linear transform and before the non-linearity: makes scales of the weights normalized out.</p>
+
+<h3 id="whitening">Whitening</h3>
+
+<p><img src="/post_imgs/10-batchnormgraphs.png" alt="training with batch normalization" /></p>
+
+<p><strong>References</strong></p>
+
+<ul>
+<li><a href="https://arxiv.org/abs/1502.03167">https://arxiv.org/abs/1502.03167</a></li>
+<li><a href="http://cs231n.github.io/neural-networks-2/#batchnorm">http://cs231n.github.io/neural-networks-2/#batchnorm</a></li>
+</ul>
 
         </div>
 
         
+        
+        <div class="article-toc" style="display:none;">
+            <h3>Contents</h3>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#the-intuition">The Intuition</a></li>
+<li><a href="#concepts">Concepts</a></li>
+<li><a href="#how-we-update-weights">How we update weights</a></li>
+<li><a href="#batch-normalization">Batch Normalization</a></li>
+<li><a href="#whitening">Whitening</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
         
         
 
@@ -156,11 +224,6 @@
                 </li>
                 
                 <li class="article-tag-list-item">
-                    <a class="article-tag-list-link" href="http://teleported.in//tags/ai">ai
-                    </a>
-                </li>
-                
-                <li class="article-tag-list-item">
                     <a class="article-tag-list-link" href="http://teleported.in//tags/techniques">techniques
                     </a>
                 </li>
@@ -171,9 +234,15 @@
     </div>
     <nav id="article-nav">
     
+    <a href="/posts/decoding-resnet-architecture/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            Decoding the ResNet architecture
+        </div>
+    </a>
     
-    <a href="/posts/simulated-annealing-metaphor/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">Simulated Annealing simply explained&nbsp;<span>&gt;</span></div>
+    
+    <a href="/posts/analysing-alphago/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Analysing AlphaGo&nbsp;<span>&gt;</span></div>
     </a>
     
 </nav>
@@ -184,7 +253,7 @@
 <script type="text/javascript">
     var disqus_shortname = 'teleported-in';
     var disqus_identifier = 'http:\/\/teleported.in\/posts\/batch-normalization-explained\/';
-    var disqus_title = 'An intuitive explaination of Batch Normalization';
+    var disqus_title = 'The Batch Normalization Technique';
     var disqus_url = 'http:\/\/teleported.in\/posts\/batch-normalization-explained\/';
 
     (function() {
