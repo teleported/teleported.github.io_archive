@@ -10,7 +10,7 @@ featuredImage="/post_imgs/12-resnet2.png"
 
 ### Introduction
 
-Fast.ai's 2017 batch kicked off on 30th Oct and [Jeremy Howard](https://twitter.com/jeremyphoward) introduced us participants to the ResNet model in the first lecture itself. I had used this model earlier in the passing but got curious to dig into its architecture this time. _(In fact in one of my [earlier client projects](https://www.suasnews.com/2017/10/flytbase-releases-ai-platform-drones/) I had used Faster RCNN, which uses a ResNet variant under the hood.)_
+[Fast.ai's](http://www.fast.ai) 2017 batch kicked off on 30th Oct and [Jeremy Howard](https://twitter.com/jeremyphoward) introduced us participants to the ResNet model in the first lecture itself. I had used this model earlier in the passing but got curious to dig into its architecture this time. _(In fact in one of my [earlier client projects](https://www.suasnews.com/2017/10/flytbase-releases-ai-platform-drones/) I had used Faster RCNN, which uses a ResNet variant under the hood.)_
 
 ResNet was unleashed in 2015 by Kaiming He. et.al. through their paper [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385) and bagged all the [ImageNet challenges](http://www.image-net.org/) including classification, detection, and localization.
 
