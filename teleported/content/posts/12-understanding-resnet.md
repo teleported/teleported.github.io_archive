@@ -41,7 +41,7 @@ It is well known that increasing the depth leads to exploding or vanishing gradi
 
 In spite of that, deeper networks (like the 50-layer one in above image) experience degradation in convergence - with accuracy getting saturated and errors remaining higher than the shallower ones.
 
-We need a change of approach to counter challenges deeper network poses.
+We needed a change of approach to counter challenges deeper network poses.
 
 ### Intuition behind Residual Networks
 
