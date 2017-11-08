@@ -92,7 +92,7 @@ The network can be mathematically depicted as:
 
 <center>`H(x) = F(x) + x`, where `F(x) = W2*relu(W1*x+b1)+b2`</center>
 
-During training period, the residual network learns the weights of its layers such that if the identity mapping were optimal, all the weights get set to 0. In effect `F(x)` become 0, as in `x` gets directly mapped to `H(x)` and no corrections need to be made. And if there is a deviation from optimal identity mapping, weights and biases of `F(x)` are learned to adjust for it. Think of `F(x)` as learning how to adjust our predictions to match the actuals.
+During training period, the residual network learns the weights of its layers such that if the identity mapping were optimal, all the weights get set to 0. In effect `F(x)` become 0, as in `x` gets directly mapped to `H(x)` and no corrections need to be made. Hence these become your identity mappings which help grow the network deep. And if there is a deviation from optimal identity mapping, weights and biases of `F(x)` are learned to adjust for it. Think of `F(x)` as learning how to adjust our predictions to match the actuals.
 
 These networks are stacked together to arrive at a deep network architecture. For e.g., bellow is a ResNet arch with 34 layers.
 
