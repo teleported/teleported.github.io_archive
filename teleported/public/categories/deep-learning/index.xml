@@ -21,5 +21,16 @@
 ResNet was unleashed in 2015 by Kaiming He.</description>
     </item>
     
+    <item>
+      <title>Network In Network architecture: The beginning of Inception</title>
+      <link>http://teleported.in/posts/network-in-network/</link>
+      <pubDate>Fri, 20 Oct 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/network-in-network/</guid>
+      <description>Introduction In this post, I explain the Network In Network paper by Min Lin, Qiang Chen, Shuicheng Yan (2013). This paper was quite influential in that it had a new take on convolutional filter design, which inspired the Inception line of deep architectures from Google.
+Motivation Anyone getting introduced to convolutional networks first come across this familiar arrangement of neurons designed by Yann LeCun decades ago:
+Fig. LeNet-5</description>
+    </item>
+    
   </channel>
 </rss>
