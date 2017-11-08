@@ -6,7 +6,7 @@ tags          = [ "deep learning", "techniques"]
 categories    = [ "deep learning" ]
 slug          = "batch-normalization-explained"
 featuredImage = "/post_imgs/10-bnalgorithm.png"
-draft         = false
+draft         = true
 +++
 
 The Batch Normalization technique was proposed by researchers Sergey Ioffe, Christian Szegedy in a 2015 paper called [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167). Since then, it has become an integral part of any deep network architecture.

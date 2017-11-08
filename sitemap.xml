@@ -7,11 +7,6 @@
   </url>
   
   <url>
-    <loc>http://teleported.in/posts/batch-normalization-explained/</loc>
-    <lastmod>2017-10-02T23:27:27-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://teleported.in/posts/analysing-alphago/</loc>
     <lastmod>2017-05-12T23:27:27-04:00</lastmod>
   </url>
@@ -131,12 +126,6 @@
   <url>
     <loc>http://teleported.in/tags/</loc>
     <lastmod>2017-05-12T23:27:27-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://teleported.in/tags/techniques/</loc>
-    <lastmod>2017-10-02T23:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
