@@ -6,6 +6,7 @@ tags        = [ "deep learning", "architecture", "training"]
 categories  = [ "deep learning" ]
 slug        = "transfer-learning-concepts-techniques"
 featuredImage="/post_imgs/13-transfer-learning.svg.png"
+draft       = true
 +++
 
 ### Introduction
@@ -132,8 +133,11 @@ Now, why are these useful to you?
 Training any model on these datasets take days and weeks to converge, using tens of GPU's and computing and network resources - something that might not be available to every individual and every company.
 
 
-### Data
+### About data
 
+### Loss function
+
+### Measure of accuracy
 
 ### Optimizer
 
@@ -142,3 +146,14 @@ _Note 1: The training of the  model is the responsibility of what are called opt
 
 _Note 2: Optimizers are agnostic of the type of neural network you are training: simple ones, CNN's or RNN's. They are like a bull, with the sole aim to reduce the loss by adjusting parameters_
 
+### Fine tuning
+
+
+#### Model tuning
+
+
+#### Data augmentation
+
+#### Optimizer tuning
+
+#### Learning rate tuning
