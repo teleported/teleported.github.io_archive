@@ -1,7 +1,7 @@
 +++
 date        = "2017-11-12T23:27:27-04:00"
-title       = "The Cycling Learning Rate technique"
-description = "This is a tutorial on the cycling learning rate technique"
+title       = "The Cyclical Learning Rate technique"
+description = "This is a tutorial on the cyclical learning rate technique"
 tags        = [ "deep learning", "architecture", "training"]
 categories  = [ "deep learning" ]
 slug        = "cyclic-learning-rate"
@@ -19,7 +19,7 @@ Learning rate (LR) is one of the most important hyperparameters to be tuned and 
 
 The step is simple. But as research has shown, there is so much that can be done to improve this step alone which has a profound influence on the training.
 
-In this post, I explain [Cyclic Learning Rate](https://arxiv.org/abs/1506.01186) (CLR), a very novel and simple idea to set and control the LR during training. It was explained by [@jeremyphoward](https://twitter.com/jeremyphoward) in this year's [fast.ai course](http://www.fast.ai) and was discussed at length in the [forum](http://forums.fast.ai). It is one of those techniques which probably did not get its due recognition among practitioners. Hence this is an attempt to spread the word!
+In this post, I explain [Cyclical Learning Rate](https://arxiv.org/abs/1506.01186) (CLR), a very novel and simple idea to set and control the LR during training. It was explained by [@jeremyphoward](https://twitter.com/jeremyphoward) in this year's [fast.ai course](http://www.fast.ai) and was discussed at length in the [forum](http://forums.fast.ai). It is one of those techniques which probably did not get its due recognition among practitioners. Hence this is an attempt to spread the word!
 
 Note that CLR is very similar to [Stochastic Gradient Descent with Warm Restarts](https://arxiv.org/abs/1608.03983) (SGDR), which says, "_CLR is closely-related to our approach in its spirit and formulation but does not focus on restarts_." The [fastai library](https://github.com/fastai/fastai) uses SGDR as the annealing schedule (with the idea of an LR finder from CLR).
 

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>The Cycling Learning Rate technique // teleported.in</title>
+    <title>The Cyclical Learning Rate technique // teleported.in</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:title" content="Teleported.in" />
@@ -72,7 +72,7 @@
     <div class="article-inner">
         
         <header class="article-header">
-            <h1 class="article-title" itemprop="name">The Cycling Learning Rate technique</h1>
+            <h1 class="article-title" itemprop="name">The Cyclical Learning Rate technique</h1>
         </header>
         
         <div class="article-meta">
@@ -115,7 +115,7 @@
 
 <p>The step is simple. But as research has shown, there is so much that can be done to improve this step alone which has a profound influence on the training.</p>
 
-<p>In this post, I explain <a href="https://arxiv.org/abs/1506.01186">Cyclic Learning Rate</a> (CLR), a very novel and simple idea to set and control the LR during training. It was explained by <a href="https://twitter.com/jeremyphoward">@jeremyphoward</a> in this year&rsquo;s <a href="http://www.fast.ai">fast.ai course</a> and was discussed at length in the <a href="http://forums.fast.ai">forum</a>. It is one of those techniques which probably did not get its due recognition among practitioners. Hence this is an attempt to spread the word!</p>
+<p>In this post, I explain <a href="https://arxiv.org/abs/1506.01186">Cyclical Learning Rate</a> (CLR), a very novel and simple idea to set and control the LR during training. It was explained by <a href="https://twitter.com/jeremyphoward">@jeremyphoward</a> in this year&rsquo;s <a href="http://www.fast.ai">fast.ai course</a> and was discussed at length in the <a href="http://forums.fast.ai">forum</a>. It is one of those techniques which probably did not get its due recognition among practitioners. Hence this is an attempt to spread the word!</p>
 
 <p>Note that CLR is very similar to <a href="https://arxiv.org/abs/1608.03983">Stochastic Gradient Descent with Warm Restarts</a> (SGDR), which says, &ldquo;<em>CLR is closely-related to our approach in its spirit and formulation but does not focus on restarts</em>.&rdquo; The <a href="https://github.com/fastai/fastai">fastai library</a> uses SGDR as the annealing schedule (with the idea of an LR finder from CLR).</p>
 
@@ -412,7 +412,7 @@ plt.plot(lr_trend)
 <script type="text/javascript">
     var disqus_shortname = 'teleported-in';
     var disqus_identifier = 'http:\/\/teleported.in\/posts\/cyclic-learning-rate\/';
-    var disqus_title = 'The Cycling Learning Rate technique';
+    var disqus_title = 'The Cyclical Learning Rate technique';
     var disqus_url = 'http:\/\/teleported.in\/posts\/cyclic-learning-rate\/';
 
     (function() {
