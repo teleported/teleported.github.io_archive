@@ -177,7 +177,7 @@ _Fig: Graph showing the variation of lr with iteration for the triangular2 appro
 _Fig: Graph showing the variation of lr with iteration for the exp-range approach (Img Credit: [Brad Kenstler](https://github.com/bckenstler/CLR))_
 </center>
 
-These showed improvements in comparison with fixed learning rate and exponentially decaying learning rate respectively in the paper.
+The amplitude is adjusted either at the end of each mini batch, or at the end of a cycle[5]. These showed improvements in comparison with fixed learning rate and exponentially decaying learning rate respectively in the paper.
 
 
 ### Results
