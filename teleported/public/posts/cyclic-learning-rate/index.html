@@ -115,7 +115,7 @@
 
 <p>The step is simple. But as research has shown, there is so much that can be done to improve this step alone which has a profound influence on the training.</p>
 
-<p>In this post, I explain <a href="https://arxiv.org/abs/1506.01186">Cyclical Learning Rate</a> (CLR), a very novel and simple idea to set and control the LR during training. It was explained by <a href="https://twitter.com/jeremyphoward">@jeremyphoward</a> in this year&rsquo;s <a href="http://www.fast.ai">fast.ai course</a> and was discussed at length in the <a href="http://forums.fast.ai">forum</a>. It is one of those techniques which probably did not get its due recognition among practitioners. Hence this is an attempt to spread the word!</p>
+<p>In this post, I explain <a href="https://arxiv.org/abs/1506.01186">Cyclical Learning Rate</a> (CLR), a very novel and simple idea to set and control the LR during training. It was covered by <a href="https://twitter.com/jeremyphoward">@jeremyphoward</a> in this year&rsquo;s <a href="http://www.fast.ai">fast.ai course</a>.</p>
 
 <p>Note that CLR is very similar to <a href="https://arxiv.org/abs/1608.03983">Stochastic Gradient Descent with Warm Restarts</a> (SGDR), which says, &ldquo;<em>CLR is closely-related to our approach in its spirit and formulation but does not focus on restarts</em>.&rdquo; The <a href="https://github.com/fastai/fastai">fastai library</a> uses SGDR as the annealing schedule (with the idea of an LR finder from CLR).</p>
 
