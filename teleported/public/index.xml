@@ -6,10 +6,21 @@
     <description>Recent content on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Nov 2017 23:27:27 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 12 Nov 2017 23:27:27 -0400</lastBuildDate>
     
 	<atom:link href="http://teleported.in/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Cycling Learning Rate technique</title>
+      <link>http://teleported.in/posts/cyclic-learning-rate/</link>
+      <pubDate>Sun, 12 Nov 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/cyclic-learning-rate/</guid>
+      <description>Introduction Learning rate (LR) is one of the most important hyperparameters to be tuned and holds key to faster and effective training of neural networks. Simply put, LR decides how much of the loss gradient is to be applied to our current weights to move them in the direction of lower loss.
+ new_weight = existing_weight - learning_rate * gradient 
+The step is simple. But as research has shown, there is so much that can be done to improve this step alone which has a profound influence on the training.</description>
+    </item>
     
     <item>
       <title>Decoding the ResNet architecture</title>
