@@ -39,6 +39,15 @@
     </item>
     
     <item>
+      <title>Capstone</title>
+      <link>http://teleported.in/tags/capstone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://teleported.in/tags/capstone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Classical</title>
       <link>http://teleported.in/tags/classical/</link>
       <pubDate>Thu, 12 Oct 2017 20:27:27 -0400</pubDate>
@@ -107,6 +116,15 @@
       <pubDate>Fri, 12 May 2017 23:27:27 -0400</pubDate>
       
       <guid>http://teleported.in/tags/intuitions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning</title>
+      <link>http://teleported.in/tags/reinforcement-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://teleported.in/tags/reinforcement-learning/</guid>
       <description></description>
     </item>
     

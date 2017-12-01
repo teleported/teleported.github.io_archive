@@ -87,5 +87,16 @@ I am on a journey to explore these topics. I find them fascinating. I take notes
 Currently I am attending the fast.ai course (2017 cohort) via their international fellowship program.</description>
     </item>
     
+    <item>
+      <title>Udacity ML Nanodegree Capstone: Train a robotic arm</title>
+      <link>http://teleported.in/posts/mlnd-capstone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://teleported.in/posts/mlnd-capstone/</guid>
+      <description>As part of Udacity Machine Learning Nanaodgree program, I did my capstone in reinforcement learning. I conceptualized, designed and executed the project.
+I simulated an environment in V-REP framework wherein I setup a robotic arm tasked with picking up an object and putting it in a bin. I trained it to learn the same using Q-Learning technique.
+The repository with project report and source code is here. You can see it training here in this video:</description>
+    </item>
+    
   </channel>
 </rss>
