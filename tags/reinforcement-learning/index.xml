@@ -6,6 +6,7 @@
     <description>Recent content in Reinforcement Learning on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 12 Sep 2017 20:27:27 -0400</lastBuildDate>
     
 	<atom:link href="http://teleported.in/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +14,7 @@
     <item>
       <title>Udacity ML Nanodegree Capstone: Train a robotic arm</title>
       <link>http://teleported.in/posts/mlnd-capstone/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 12 Sep 2017 20:27:27 -0400</pubDate>
       
       <guid>http://teleported.in/posts/mlnd-capstone/</guid>
       <description>As part of Udacity Machine Learning Nanaodgree program, I did my capstone in reinforcement learning. I conceptualized, designed and executed the project.

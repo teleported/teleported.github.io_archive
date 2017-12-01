@@ -1,5 +1,5 @@
 +++
-date        = "2017-09-11Ti10:27:27-04:00"
+date        = "2017-09-12T20:27:27-04:00"
 title       = "Udacity ML Nanodegree Capstone: Train a robotic arm"
 description = "Udacity ML Nanodegree Capstone: Train a robotic arm"
 tags        = [ "reinforcement learning", "capstone"]
