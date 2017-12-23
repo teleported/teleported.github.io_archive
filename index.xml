@@ -98,5 +98,14 @@ I am on a journey to explore these topics. I find them fascinating. I take notes
 Currently I am attending the fast.ai course (2017 cohort) via their international fellowship program.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>http://teleported.in/posts/17-optimization-algorithms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://teleported.in/posts/17-optimization-algorithms/</guid>
+      <description>gradient descent, simulated annealing, and genetic algorithms</description>
+    </item>
+    
   </channel>
 </rss>
