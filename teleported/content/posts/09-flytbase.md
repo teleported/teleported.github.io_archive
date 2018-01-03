@@ -10,7 +10,7 @@ draft       = false
 +++
 
 
-![Oryx](09-arabian-Oryx-detection.png)
+![Oryx](/post_imgs/09-arabian-Oryx-detection.png)
 
 
 You can read more about this project via my writings here:
