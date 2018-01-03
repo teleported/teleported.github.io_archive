@@ -21,7 +21,26 @@ Let us revisit the purpose of the learning rate. It defines the step size to mov
 `new_weight = existing_weight - learning_rate * gradient`
 </center>
 
+The central idea of the paper is that of coin betting/gambling.
 
+* You (the optimizer) starts with an initial amount of money _epsilon_.
+* At every time instant (iteration) and for each parameter, the optimizer makes a bet as to what that gradient would be in terms of magnitude and sign in the next iteration. This is denoted by the term _wi_. A sign of -ve would indicate _tails_, and +ve would indicate _heads_.
+* The optimizer has to make do with the amount of money that was given to it initially. It cannot borrow any more money.
+* In the next iteration when the actual results come: if he loses, he loses the betted amount; if he wins, he gets the betted amount back and in addition to that, he gets the same amount as a reward. The advantage of wining is that his corpus of money increases and he can bet more for the next iteration.
+* A couple of terms are introduced: _Wealth_ and _Reward_
+
+<center>
+![wealth](/post_imgs/19-cocob-wealth-reward.png)
+</center>
+
+Wealth increases if wi (the bet) and gi (the actual gradient) are both either positive or negative - which indicates correct prediction. The reward obtained is all the wealth minus the initial corpus of money.
+
+With these, the optimizer can make a bet for the next iteration like so:
+<center>
+![wealth](/post_imgs/19-cocob-bet.png)
+</center>
+
+Where the beta term denotes the percentage of current wealth the optimizer is willing to bet for the next iteration. It's sign of +ve or -ve will determine if it is calling heads (+ve gradient) or tails (-ve gradient). It is drawn from [-1, 1].
 
 
 <center>

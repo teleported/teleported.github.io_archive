@@ -115,6 +115,29 @@
 <code>new_weight = existing_weight - learning_rate * gradient</code>
 </center></p>
 
+<p>The central idea of the paper is that of coin betting/gambling.</p>
+
+<ul>
+<li>You (the optimizer) starts with an initial amount of money <em>epsilon</em>.</li>
+<li>At every time instant (iteration) and for each parameter, the optimizer makes a bet as to what that gradient would be in terms of magnitude and sign in the next iteration. This is denoted by the term <em>wi</em>. A sign of -ve would indicate <em>tails</em>, and +ve would indicate <em>heads</em>.</li>
+<li>The optimizer has to make do with the amount of money that was given to it initially. It cannot borrow any more money.</li>
+<li>In the next iteration when the actual results come: if he loses, he loses the betted amount; if he wins, he gets the betted amount back and in addition to that, he gets the same amount as a reward. The advantage of wining is that his corpus of money increases and he can bet more for the next iteration.</li>
+<li>A couple of terms are introduced: <em>Wealth</em> and <em>Reward</em></li>
+</ul>
+
+<p><center>
+<img src="/post_imgs/19-cocob-wealth-reward.png" alt="wealth" />
+</center></p>
+
+<p>Wealth increases if wi (the bet) and gi (the actual gradient) are both either positive or negative - which indicates correct prediction. The reward obtained is all the wealth minus the initial corpus of money.</p>
+
+<p>With these, the optimizer can make a bet for the next iteration like so:
+<center>
+<img src="/post_imgs/19-cocob-bet.png" alt="wealth" />
+</center></p>
+
+<p>Where the beta term denotes the percentage of current wealth the optimizer is willing to bet for the next iteration. It&rsquo;s sign of +ve or -ve will determine if it is calling heads (+ve gradient) or tails (-ve gradient). It is drawn from [-1, 1].</p>
+
 <p><center>
 <img src="/post_imgs/19-cocob-backprop.png" alt="cocob-backprop" />
 <em>Fig: The COCOB-Backprop algorithm</em>
