@@ -56,6 +56,15 @@ Lecture 1: Introduction  Course Purpose: Build systems that can do image underst
     </item>
     
     <item>
+      <title>Detecting and counting objects in high-res aerial images</title>
+      <link>http://teleported.in/posts/object-detection/</link>
+      <pubDate>Sun, 01 Oct 2017 20:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/object-detection/</guid>
+      <description>Test</description>
+    </item>
+    
+    <item>
       <title>Udacity ML Nanodegree Capstone: Train a robotic arm</title>
       <link>http://teleported.in/posts/mlnd-capstone/</link>
       <pubDate>Tue, 12 Sep 2017 20:27:27 -0400</pubDate>

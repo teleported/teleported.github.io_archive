@@ -6,7 +6,7 @@ tags        = [ "deel learning", "concepts", "attention"]
 categories  = [ "deep learning" ]
 slug        = "attention"
 featuredImage="/post_imgs/18-attention.png"
-draft       = false
+draft       = true
 +++
 
 
