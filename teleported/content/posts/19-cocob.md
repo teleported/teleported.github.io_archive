@@ -4,7 +4,7 @@ title       = "COCOB: An optimizer with a learning rate"
 description = "COCOB: An optimizer with a learning rate"
 tags        = [ "deel learning", "optimization"]
 categories  = [ "deep learning" ]
-slug        = "attention"
+slug        = "cocob"
 featuredImage="/post_imgs/19-cocob-mnist-cnn-square.png"
 draft       = false
 +++
