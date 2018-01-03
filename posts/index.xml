@@ -6,10 +6,21 @@
     <description>Recent content in Posts on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Nov 2017 23:27:27 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 28 Dec 2017 20:27:27 -0400</lastBuildDate>
     
 	<atom:link href="http://teleported.in/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>COCOB: An optimizer with a learning rate</title>
+      <link>http://teleported.in/posts/attention/</link>
+      <pubDate>Thu, 28 Dec 2017 20:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/attention/</guid>
+      <description>At the nurture.ai&amp;rsquo;s NIPS paper implementation challenge, I implemented and validate the paper &amp;lsquo;Training Deep Networks without Learning Rates Through Coin Betting&amp;rsquo;.
+ 
+More details at my github repo: https://github.com/anandsaha/nips.cocob.pytorch</description>
+    </item>
     
     <item>
       <title>The Cyclical Learning Rate technique</title>

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://teleported.in/posts/attention/</loc>
+    <lastmod>2017-12-28T20:27:27-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://teleported.in/posts/cyclic-learning-rate/</loc>
     <lastmod>2017-11-12T23:27:27-04:00</lastmod>
   </url>
@@ -118,7 +123,7 @@
   
   <url>
     <loc>http://teleported.in/tags/deel-learning/</loc>
-    <lastmod>2017-10-01T20:27:27-04:00</lastmod>
+    <lastmod>2017-12-28T20:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -130,7 +135,7 @@
   
   <url>
     <loc>http://teleported.in/categories/deep-learning/</loc>
-    <lastmod>2017-11-12T23:27:27-04:00</lastmod>
+    <lastmod>2017-12-28T20:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -171,8 +176,14 @@
   </url>
   
   <url>
+    <loc>http://teleported.in/tags/optimization/</loc>
+    <lastmod>2017-12-28T20:27:27-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://teleported.in/posts/</loc>
-    <lastmod>2017-11-12T23:27:27-04:00</lastmod>
+    <lastmod>2017-12-28T20:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -232,7 +243,7 @@
   
   <url>
     <loc>http://teleported.in/</loc>
-    <lastmod>2017-11-12T23:27:27-04:00</lastmod>
+    <lastmod>2017-12-28T20:27:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Detecting and counting objects in high-res aerial images // teleported.in</title>
+    <title>COCOB: An optimizer with a learning rate // teleported.in</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:title" content="Teleported.in" />
 <meta property="og:description" content="A blog where I share my intuitions about artificial intelligence, machine learning, deep learning." />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:url" content="http://teleported.in/posts/object-detection/" />
+<meta property="og:url" content="http://teleported.in/posts/attention/" />
 
 
 
@@ -72,12 +72,12 @@
     <div class="article-inner">
         
         <header class="article-header">
-            <h1 class="article-title" itemprop="name">Detecting and counting objects in high-res aerial images</h1>
+            <h1 class="article-title" itemprop="name">COCOB: An optimizer with a learning rate</h1>
         </header>
         
         <div class="article-meta">
-            <a href="/posts/object-detection/" class="article-date">
-                <time datetime='2017-10-01T20:27:27.000-04:00' itemprop="datePublished">2017-10-01</time>
+            <a href="/posts/attention/" class="article-date">
+                <time datetime='2017-12-28T20:27:27.000-04:00' itemprop="datePublished">2017-12-28</time>
             </a>
             
             
@@ -93,7 +93,7 @@
             
             
             <div class="article-comment-link-wrap">
-                <a href="/posts/object-detection/#disqus_thread" class="article-comment-link">Comments</a>
+                <a href="/posts/attention/#disqus_thread" class="article-comment-link">Comments</a>
             </div>
             
         </div>
@@ -103,33 +103,13 @@
 
 
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/post_imgs/09-arabian-Oryx-detection.png" alt="Oryx" /></p>
+            <p>At the nurture.ai&rsquo;s NIPS paper implementation challenge, I implemented and validate the paper <a href="https://arxiv.org/abs/1705.07795">&lsquo;Training Deep Networks without Learning Rates Through Coin Betting&rsquo;</a>.</p>
 
-<p>Recently I spent 4 months at <a href="https://flytbase.com/">Flytbase</a> on an interesting problem: detection and counting of Oryxes, an endangered animal in the middle east, in very high resolution aerial images.</p>
+<p><center>
+<img src="/post_imgs/19-cocob-mnist-cnn.png" alt="img" />
+</center></p>
 
-<p>Using high resolution aerial images to train computer vision models poses unique challenges:</p>
-
-<ul>
-<li><p>Lack of sufficient training data: There are plenty of open training datasets out there, but almost all of them have images taken from human eye level. What makes aerial images unique is their top-down view of the objects. Moreover, for custom object detection, customers don’t often have enough images to train the model on, wherein we have to make do with limited set of images.</p></li>
-
-<li><p>Very high resolution of the images: Computer vision models can process images of limited resolution at a time. For high-resolution images, we need to crop the images into sizable chunks and run inference on them one at a time. This can lead to double counting or misses.</p></li>
-
-<li><p>Shallow features of objects: When looked down from the top, objects can have very generic shapes which a) can be hard to detect and b) can appear to be similar to other objects.</p></li>
-</ul>
-
-<p>These challenges were mitigated via various techniques, including data augmentation, cropping with different offsets for hi-res images, and training models on similar looking objects for better differentiation.</p>
-
-<p>I built a pipeline using Tensorflow&rsquo;s Object Detection API and used Faster-RCNN for the purpose of detection.</p>
-
-<p>This also marked the launch of Flytbase&rsquo;s AI platform, their capabilities to provide intelligent applications on top of their drone platform.</p>
-
-<p>You can read more about this project via my writings here:</p>
-
-<ul>
-<li><a href="https://www.suasnews.com/2017/10/flytbase-releases-ai-platform-drones/">Press release</a></li>
-<li><a href="https://blogs.flytbase.com/ai-drones/">Blog post 1</a></li>
-<li><a href="https://blogs.flytbase.com/arabian-oryx-detection-counting/">Blog post 2</a></li>
-</ul>
+<p>More details at my github repo: <a href="https://github.com/anandsaha/nips.cocob.pytorch">https://github.com/anandsaha/nips.cocob.pytorch</a></p>
 
         </div>
 
@@ -188,7 +168,7 @@
                 </li>
                 
                 <li class="article-tag-list-item">
-                    <a class="article-tag-list-link" href="http://teleported.in//tags/object-detection">object detection
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/optimization">optimization
                     </a>
                 </li>
                 
@@ -198,15 +178,9 @@
     </div>
     <nav id="article-nav">
     
-    <a href="/posts/intro-to-computer-vision/" id="article-nav-newer" class="article-nav-link-wrap">
-        <div class="article-nav-title"><span>&lt;</span>&nbsp;
-            Class Notes: Computer Vision (Georgia Tech)
-        </div>
-    </a>
     
-    
-    <a href="/posts/mlnd-capstone/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">Udacity ML Nanodegree Capstone: Train a robotic arm&nbsp;<span>&gt;</span></div>
+    <a href="/posts/cyclic-learning-rate/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">The Cyclical Learning Rate technique&nbsp;<span>&gt;</span></div>
     </a>
     
 </nav>
@@ -216,9 +190,9 @@
             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'teleported-in';
-    var disqus_identifier = 'http:\/\/teleported.in\/posts\/object-detection\/';
-    var disqus_title = 'Detecting and counting objects in high-res aerial images';
-    var disqus_url = 'http:\/\/teleported.in\/posts\/object-detection\/';
+    var disqus_identifier = 'http:\/\/teleported.in\/posts\/attention\/';
+    var disqus_title = 'COCOB: An optimizer with a learning rate';
+    var disqus_url = 'http:\/\/teleported.in\/posts\/attention\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

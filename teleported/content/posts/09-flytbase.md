@@ -26,6 +26,8 @@ These challenges were mitigated via various techniques, including data augmentat
 
 I built a pipeline using Tensorflow's Object Detection API and used Faster-RCNN for the purpose of detection.
 
+This also marked the launch of Flytbase's AI platform, their capabilities to provide intelligent applications on top of their drone platform.
+
 You can read more about this project via my writings here:
 
 * [Press release](https://www.suasnews.com/2017/10/flytbase-releases-ai-platform-drones/)
