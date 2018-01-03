@@ -44,6 +44,7 @@ With these, the optimizer can make a bet for the next iteration like so:
 
 Where the beta term denotes the percentage of current wealth the optimizer is willing to bet for the next iteration. It's sign of +ve or -ve will determine if it is calling heads (+ve gradient) or tails (-ve gradient). It is drawn from [-1, 1].
 
+Below is the algorithm which was used to report the outcomes.
 
 <center>
 ![cocob-backprop](/post_imgs/19-cocob-backprop.png)
