@@ -18,8 +18,8 @@
       
       <guid>http://teleported.in/posts/attention/</guid>
       <description>At the nurture.ai&amp;rsquo;s NIPS paper implementation challenge, I implemented and validate the paper &amp;lsquo;Training Deep Networks without Learning Rates Through Coin Betting&amp;rsquo;.
- 
-More details at my github repo: https://github.com/anandsaha/nips.cocob.pytorch</description>
+This paper caught my attention due to it&amp;rsquo;s promise to get rid of the learning rate hyper-parameter during model training.
+The paper says: In this paper, we propose a new stochastic gradient descent procedure for deep networks that does not require any learning rate setting. Contrary to previous methods, we do not adapt the learning rates nor we make use of the assumed curvature of the objective function.</description>
     </item>
     
     <item>
