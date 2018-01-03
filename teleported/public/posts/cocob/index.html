@@ -103,7 +103,7 @@
 
 
         <div class="article-entry" itemprop="articleBody">
-            <p>At the nurture.ai&rsquo;s NIPS paper implementation challenge, I implemented and validate the paper <a href="https://arxiv.org/abs/1705.07795">&lsquo;Training Deep Networks without Learning Rates Through Coin Betting&rsquo;</a>.</p>
+            <p>At the <a href="https://nurture.ai/nips-challenge/">nurture.ai&rsquo;s NIPS paper implementation challenge</a>, I implemented and validate the paper <a href="https://arxiv.org/abs/1705.07795">&lsquo;Training Deep Networks without Learning Rates Through Coin Betting&rsquo;</a>.</p>
 
 <p>This paper caught my attention due to it&rsquo;s promise to get rid of the learning rate hyper-parameter during model training.</p>
 
@@ -114,6 +114,8 @@
 <p><center>
 <code>new_weight = existing_weight - learning_rate * gradient</code>
 </center></p>
+
+<p>In the absense of a learning rate, the optimizer bets on the direction of the gradient, and it&rsquo;s magnitude. If is is correct in it&rsquo;s prediction, it is rewarded. If it is wrong, it is penalized and compeled to self correct.</p>
 
 <p>The central idea of the paper is that of coin betting/gambling.</p>
 

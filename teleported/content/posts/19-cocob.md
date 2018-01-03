@@ -9,7 +9,7 @@ featuredImage="/post_imgs/19-cocob-mnist-cnn-square.png"
 draft       = false
 +++
 
-At the nurture.ai's NIPS paper implementation challenge, I implemented and validate the paper ['Training Deep Networks without Learning Rates Through Coin Betting'](https://arxiv.org/abs/1705.07795).
+At the [nurture.ai's NIPS paper implementation challenge](https://nurture.ai/nips-challenge/), I implemented and validate the paper ['Training Deep Networks without Learning Rates Through Coin Betting'](https://arxiv.org/abs/1705.07795).
 
 This paper caught my attention due to it's promise to get rid of the learning rate hyper-parameter during model training.
 
@@ -20,6 +20,8 @@ Let us revisit the purpose of the learning rate. It defines the step size to mov
 <center>
 `new_weight = existing_weight - learning_rate * gradient`
 </center>
+
+In the absense of a learning rate, the optimizer bets on the direction of the gradient, and it's magnitude. If is is correct in it's prediction, it is rewarded. If it is wrong, it is penalized and compeled to self correct.
 
 The central idea of the paper is that of coin betting/gambling.
 
