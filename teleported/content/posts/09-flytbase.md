@@ -10,7 +10,12 @@ draft       = false
 +++
 
 
-Test
+![Oryx](09-arabian-Oryx-detection.png)
 
+
+You can read more about this project via my writings here:
+* [Press release](ttps://www.suasnews.com/2017/10/flytbase-releases-ai-platform-drones/)
+* [Blog post 1](https://blogs.flytbase.com/ai-drones/)
+* [Blog post 2](https://blogs.flytbase.com/arabian-oryx-detection-counting/)
 
 
