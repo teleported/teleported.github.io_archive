@@ -105,10 +105,29 @@
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/post_imgs/09-arabian-Oryx-detection.png" alt="Oryx" /></p>
 
-<p>You can read more about this project via my writings here:
-* <a href="ttps://www.suasnews.com/2017/10/flytbase-releases-ai-platform-drones/">Press release</a>
-* <a href="https://blogs.flytbase.com/ai-drones/">Blog post 1</a>
-* <a href="https://blogs.flytbase.com/arabian-oryx-detection-counting/">Blog post 2</a></p>
+<p>Recently I spent 4 months at <a href="https://flytbase.com/">Flytbase</a> on an interesting problem: detection and counting of Oryxes, an endangered animal in the middle east, in very high resolution aerial images.</p>
+
+<p>Using high resolution aerial images to train computer vision models poses unique challenges:</p>
+
+<ul>
+<li><p>Lack of sufficient training data: There are plenty of open training datasets out there, but almost all of them have images taken from human eye level. What makes aerial images unique is their top-down view of the objects. Moreover, for custom object detection, customers don’t often have enough images to train the model on, wherein we have to make do with limited set of images.</p></li>
+
+<li><p>Very high resolution of the images: Computer vision models can process images of limited resolution at a time. For high-resolution images, we need to crop the images into sizable chunks and run inference on them one at a time. This can lead to double counting or misses.</p></li>
+
+<li><p>Shallow features of objects: When looked down from the top, objects can have very generic shapes which a) can be hard to detect and b) can appear to be similar to other objects.</p></li>
+</ul>
+
+<p>These challenges were mitigated via various techniques, including data augmentation, cropping with different offsets for hi-res images, and training models on similar looking objects for better differentiation.</p>
+
+<p>I built a pipeline using Tensorflow&rsquo;s Object Detection API and used Faster-RCNN for the purpose of detection.</p>
+
+<p>You can read more about this project via my writings here:</p>
+
+<ul>
+<li><a href="https://www.suasnews.com/2017/10/flytbase-releases-ai-platform-drones/">Press release</a></li>
+<li><a href="https://blogs.flytbase.com/ai-drones/">Blog post 1</a></li>
+<li><a href="https://blogs.flytbase.com/arabian-oryx-detection-counting/">Blog post 2</a></li>
+</ul>
 
         </div>
 
