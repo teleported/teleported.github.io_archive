@@ -15,7 +15,19 @@ This paper caught my attention due to it's promise to get rid of the learning ra
 
 The paper says: _In this paper, we propose a new stochastic gradient descent procedure for deep networks that does not require any learning rate setting. Contrary to previous methods, we do not adapt the learning rates nor we make use of the assumed curvature of the objective function. Instead, we reduce the optimization process to a game of betting on a coin and propose a learning-rate-free optimal algorithm for this scenario._
 
+Let us revisit the purpose of the learning rate. It defines the step size to move towards the direction of lower gradient.
 
+<center>
+`new_weight = existing_weight - learning_rate * gradient`
+</center>
+
+
+
+
+<center>
+![cocob-backprop](/post_imgs/19-cocob-backprop.png)
+_Fig: The COCOB-Backprop algorithm_
+</center>
 
 <center>
 ![img](/post_imgs/19-cocob-mnist-cnn.png)
