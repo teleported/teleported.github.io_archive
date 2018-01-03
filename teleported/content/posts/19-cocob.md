@@ -48,6 +48,8 @@ Where the beta term denotes the percentage of current wealth the optimizer is wi
 _Fig: The COCOB-Backprop algorithm_
 </center>
 
+Here is a result of using this optimizer for mnist task:
+
 <center>
 ![img](/post_imgs/19-cocob-mnist-cnn.png)
 </center>
