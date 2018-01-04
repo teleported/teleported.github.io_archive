@@ -1,7 +1,7 @@
 +++
 date        = "2017-12-28T20:27:27-04:00"
-title       = "COCOB: An optimizer with a learning rate"
-description = "COCOB: An optimizer with a learning rate"
+title       = "COCOB: An optimizer without a learning rate"
+description = "COCOB: An optimizer without a learning rate"
 tags        = [ "deel learning", "optimization"]
 categories  = [ "deep learning" ]
 slug        = "cocob"
