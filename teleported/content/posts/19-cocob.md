@@ -9,7 +9,7 @@ featuredImage="/post_imgs/19-cocob-mnist-cnn-square.png"
 draft       = false
 +++
 
-At the [nurture.ai's NIPS paper implementation challenge](https://nurture.ai/nips-challenge/), I implemented and validate the paper ['Training Deep Networks without Learning Rates Through Coin Betting'](https://arxiv.org/abs/1705.07795).
+At the [nurture.ai's NIPS paper implementation challenge](https://nurture.ai/nips-challenge/), I implemented and validate the paper ['Training Deep Networks without Learning Rates Through Coin Betting'](https://arxiv.org/abs/1705.07795) using [PyTorch](http://www.pytorch.org). ([github](https://github.com/anandsaha/nips.cocob.pytorch))
 
 This paper caught my attention due to it's promise to get rid of the learning rate hyper-parameter during model training.
 
