@@ -5,7 +5,7 @@ description = "Deep Learning with PyTorch "
 tags        = ["deep learning", "pytorch"]
 categories  = [ "deep learning", "pytorch"]
 slug        = ""
-featuredImage="/post_imgs/20-screenshot.png"
+featuredImage="/post_imgs/20-sceenshot.png"
 draft       = false
 +++
 
