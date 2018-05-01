@@ -6,7 +6,7 @@
     <description>Recent content in Posts on teleported.in</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 May 2018 00:00:00 -0530</lastBuildDate>
+    <lastBuildDate>Mon, 30 Apr 2018 00:00:00 -0530</lastBuildDate>
     
 	<atom:link href="http://teleported.in/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,11 +14,11 @@
     <item>
       <title>Deep Learning with PyTorch (video course)</title>
       <link>http://teleported.in/posts/20-dl-with-pytorch/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 -0530</pubDate>
+      <pubDate>Mon, 30 Apr 2018 00:00:00 -0530</pubDate>
       
       <guid>http://teleported.in/posts/20-dl-with-pytorch/</guid>
       <description>I have been working on a video course with Packt Publications titled Deep Learning with PyTorch
-Glad to announce that it got released today! (1st May 2018).
+Glad to announce that it got released today! (30th April, 2018).
  
 Course video description This video course will get you up-and-running with one of the most cutting-edge deep learning libraries: PyTorch. Written in Python, PyTorch is grabbing the attention of all data science professionals due to its ease of use over other libraries and its use of dynamic computation graphs.</description>
     </item>

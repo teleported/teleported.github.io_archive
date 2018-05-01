@@ -1,5 +1,5 @@
 +++
-date        = "2018-05-01T00:00:00-05:30"
+date        = "2018-04-30T00:00:00-05:30"
 title       = "Deep Learning with PyTorch (video course)"
 description = "Deep Learning with PyTorch "
 tags        = ["deep learning", "pytorch"]
@@ -11,7 +11,7 @@ draft       = false
 
 I have been working on a video course with [Packt Publications](https://www.packtpub.com) titled [Deep Learning with PyTorch](https://www.packtpub.com/big-data-and-business-intelligence/deep-learning-pytorch-video) 
 
-Glad to announce that it got released today! (1st May 2018).
+Glad to announce that it got released today! (30th April, 2018).
 
 
 <center>
