@@ -86,7 +86,7 @@
     <item>
       <title>Deep Learning</title>
       <link>http://teleported.in/tags/deep-learning/</link>
-      <pubDate>Sun, 12 Nov 2017 23:27:27 -0400</pubDate>
+      <pubDate>Tue, 01 May 2018 00:00:00 -0530</pubDate>
       
       <guid>http://teleported.in/tags/deep-learning/</guid>
       <description></description>
@@ -143,6 +143,15 @@
       <pubDate>Thu, 28 Dec 2017 20:27:27 -0400</pubDate>
       
       <guid>http://teleported.in/tags/optimization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pytorch</title>
+      <link>http://teleported.in/tags/pytorch/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 -0530</pubDate>
+      
+      <guid>http://teleported.in/tags/pytorch/</guid>
       <description></description>
     </item>
     
