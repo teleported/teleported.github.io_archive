@@ -6,30 +6,34 @@
         </header>
         {{ end }}
         <div class="article-meta">
-            {{- if not .Params.omitDate }}
             <a href="{{ .RelPermalink }}" class="article-date">
                 <time datetime='{{ .Date.Format "2006-01-02T15:04:05.000-07:00" }}' itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time>
             </a>
-            {{ end -}}
             {{ $Site := .Site }}
             {{ if .Params.categories }}
             <div class="post-categories">
                 <div class="article-category">
                     {{ range $i, $e := .Params.categories }}
                     {{ if gt $i 0 }}
-                    <span>&gt;</span>
+                    <span>|</span>
                     {{ end }}
                     <a class="article-category-link" href="{{ $Site.BaseURL }}/categories/{{ $e | urlize }}">{{ $e }}</a>
                     {{ end }}
                 </div>
             </div>
+            
             {{ end }}
-            {{ if .Site.DisqusShortname }}
+            {{ if .Site.Params.disqusShortname }}
             <div class="article-comment-link-wrap">
                 <a href="{{ .RelPermalink }}#disqus_thread" class="article-comment-link">Comments</a>
             </div>
             {{ end }}
         </div>
+        <div style="color:#999999;">
+        By <a style="text-decoration: none;color:#999999; border-bottom: 1px dotted #000;" href="/about/about">Anand Saha</a>
+        </div>
+
+
         <div class="article-entry" itemprop="articleBody">
             {{ .Content }}
         </div>
@@ -37,7 +41,7 @@
         {{ if not .Params.notoc }}
         {{ if .TableOfContents }}
         <div class="article-toc" {{ if .Site.Params.SmartToc }}style="display:none;"{{ end }}>
-            <h3>{{ T "Contents" }}</h3>
+            <h3>Contents</h3>
             {{ .TableOfContents }}
         </div>
         {{ end }}

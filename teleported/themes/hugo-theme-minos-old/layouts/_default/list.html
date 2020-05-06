@@ -4,14 +4,14 @@
     {{ partial "header.html" . }}
     <section id="main" class="outer">
         <section class="archives-wrap">
-            <div class="archive-tag-wrap">
-                <span class="archive-tag">#{{ .Title | lower }}</span>
+            <div class="archive-category-wrap">
+                <span class="archive-category">{{ .Title }}</span>
             </div>
             <div class="archives">
-                {{ range .Paginator.Pages }}
-                {{ partial "li.html" . }}
+                {{ range .Data.Pages }}
+                    {{ partial "li.html" . }}
                 {{ end }}
-            </div></section>
+        </div></section>
         {{ partial "pagination.html" . }}
     </section>
     {{ partial "footer.html" . }}
