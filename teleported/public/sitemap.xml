@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>http://teleported.in/posts/20-dl-with-pytorch/</loc>
@@ -54,10 +55,6 @@
   <url>
     <loc>http://teleported.in/about/about/</loc>
     <lastmod>2017-04-30T01:49:36+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://teleported.in/17-optimization-algorithms/</loc>
   </url>
   
   <url>

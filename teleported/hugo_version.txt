@@ -1,0 +1,1 @@
+Hugo Static Site Generator v0.40.1 linux/amd64 BuildDate: 2018-04-25T17:16:11Z
