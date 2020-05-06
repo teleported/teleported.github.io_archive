@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on teleported.in</title>
+    <link>http://teleported.in/categories/</link>
+    <description>Recent content in Categories on teleported.in</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 May 2017 23:27:27 -0400</lastBuildDate>
+    
+	<atom:link href="http://teleported.in/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Artificial Intelligence</title>
+      <link>http://teleported.in/categories/artificial-intelligence/</link>
+      <pubDate>Fri, 12 May 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/categories/artificial-intelligence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computer Vision</title>
+      <link>http://teleported.in/categories/computer-vision/</link>
+      <pubDate>Thu, 12 Oct 2017 20:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/categories/computer-vision/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>http://teleported.in/categories/deep-learning/</link>
+      <pubDate>Mon, 30 Apr 2018 00:00:00 -0530</pubDate>
+      
+      <guid>http://teleported.in/categories/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Game Playing</title>
+      <link>http://teleported.in/categories/game-playing/</link>
+      <pubDate>Fri, 12 May 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/categories/game-playing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pytorch</title>
+      <link>http://teleported.in/categories/pytorch/</link>
+      <pubDate>Mon, 30 Apr 2018 00:00:00 -0530</pubDate>
+      
+      <guid>http://teleported.in/categories/pytorch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning</title>
+      <link>http://teleported.in/categories/reinforcement-learning/</link>
+      <pubDate>Tue, 12 Sep 2017 20:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/categories/reinforcement-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>http://teleported.in/categories/search/</link>
+      <pubDate>Fri, 05 May 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/categories/search/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

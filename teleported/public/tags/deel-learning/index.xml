@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deel Learning on teleported.in</title>
+    <link>http://teleported.in/tags/deel-learning/</link>
+    <description>Recent content in Deel Learning on teleported.in</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Dec 2017 20:27:27 -0400</lastBuildDate>
+    
+	<atom:link href="http://teleported.in/tags/deel-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>COCOB: An optimizer without a learning rate</title>
+      <link>http://teleported.in/posts/cocob/</link>
+      <pubDate>Thu, 28 Dec 2017 20:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/cocob/</guid>
+      <description>At the nurture.ai&amp;rsquo;s NIPS paper implementation challenge, I implemented and validate the paper &amp;lsquo;Training Deep Networks without Learning Rates Through Coin Betting&amp;rsquo; using PyTorch. (github)
+This paper caught my attention due to it&amp;rsquo;s promise to get rid of the learning rate hyper-parameter during model training.
+The paper says: In this paper, we propose a new stochastic gradient descent procedure for deep networks that does not require any learning rate setting. Contrary to previous methods, we do not adapt the learning rates nor we make use of the assumed curvature of the objective function.</description>
+    </item>
+    
+    <item>
+      <title>Detecting and counting objects in high-res aerial images</title>
+      <link>http://teleported.in/posts/object-detection/</link>
+      <pubDate>Sun, 01 Oct 2017 20:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/object-detection/</guid>
+      <description>Recently I spent 4 months at Flytbase on an interesting problem: detection and counting of Oryxes, an endangered animal in the middle east, in very high resolution aerial images.
+Using high resolution aerial images to train computer vision models poses unique challenges:
+ Lack of sufficient training data: There are plenty of open training datasets out there, but almost all of them have images taken from human eye level. What makes aerial images unique is their top-down view of the objects.</description>
+    </item>
+    
+  </channel>
+</rss>

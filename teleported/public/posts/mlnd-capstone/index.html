@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Udacity ML Nanodegree Capstone: Train a robotic arm // teleported.in</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:title" content="Teleported.in" />
+<meta property="og:description" content="A blog where I share my intuitions about artificial intelligence, machine learning, deep learning." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="http://teleported.in/posts/mlnd-capstone/" />
+
+
+
+    <link href="" rel="alternate" type="application/rss+xml" title="teleported.in" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico">
+
+    <link href="http://teleported.in/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://teleported.in/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://teleported.in/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <meta name="description" content="A blog where I share my intuitions about artificial intelligence, machine learning, deep learning.">
+    <meta name="keywords" content="ai ml artificial intelligence programming c++ python intuitions papers">
+    <meta name="author" content="Anand Saha <anandsaha gmail com">
+
+    <meta name="generator" content="Hugo 0.40.1" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" style="font-family: 'Open Sans', sans-serif;" href="http://teleported.in/">teleported.in</a>
+            <nav id="main-nav">
+                
+                <a style="font-family: 'Open Sans', sans-serif;" class="main-nav-link" href="/about/about">About</a>
+                
+                <a style="font-family: 'Open Sans', sans-serif;" class="main-nav-link" href="/posts/">Posts</a>
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+        <div style="margin-top:-10px; padding-bottom:5px">
+        <label style="font-family: 'Open Sans', sans-serif;color:#555555">
+            Deep learning concepts. Tools and techniques.</label>
+        </div>
+    </div>
+</header>
+
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Udacity ML Nanodegree Capstone: Train a robotic arm</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/posts/mlnd-capstone/" class="article-date">
+                <time datetime='2017-09-12T20:27:27.000-04:00' itemprop="datePublished">2017-09-12</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://teleported.in//categories/reinforcement-learning">reinforcement learning</a>
+                    
+                </div>
+            </div>
+            
+            
+            
+            <div class="article-comment-link-wrap">
+                <a href="/posts/mlnd-capstone/#disqus_thread" class="article-comment-link">Comments</a>
+            </div>
+            
+        </div>
+        <div style="color:#999999;">
+        By <a style="text-decoration: none;color:#999999; border-bottom: 1px dotted #000;" href="/about/about">Anand Saha</a>
+        </div>
+
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>As part of Udacity Machine Learning Nanaodgree program, I did my capstone in reinforcement learning. I conceptualized, designed and executed the project.</p>
+
+<p>I simulated an environment in V-REP framework wherein I setup a robotic arm tasked with picking up an object and putting it in a bin. I trained it to learn the same using Q-Learning technique.</p>
+
+<p>The repository with project report and source code is <a href="https://github.com/anandsaha/rl.capstone">here</a>. You can see it training here in this video:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yDugh3WH24M?rel=0" frameborder="0" allowfullscreen></iframe> 
+
+        </div>
+
+        
+        
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script>
+            (function() {
+                var $toc = $('#TableOfContents');
+                if ($toc.length > 0) {
+                    var $window = $(window);
+
+                    function onScroll(){
+                        var currentScroll = $window.scrollTop();
+                        var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+                        var id = "";
+                        h.each(function (i, e) {
+                            e = $(e);
+                            if (e.offset().top - 10 <= currentScroll) {
+                                id = e.attr('id');
+                            }
+                        });
+                        var active = $toc.find('a.active');
+                        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                        active.each(function (i, e) {
+                            $(e).removeClass('active').siblings('ul').hide();
+                        });
+                        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                            $(e).children('a').addClass('active').siblings('ul').show();
+                        });
+                    }
+
+                    $window.on('scroll', onScroll);
+                    $(document).ready(function() {
+                        $toc.find('a').parent('li').find('ul').hide();
+                        onScroll();
+                        document.getElementsByClassName('article-toc')[0].style.display = '';
+                    });
+                }
+            })();
+        </script>
+        
+
+
+        
+        <footer class="article-footer">
+            <ul class="article-tag-list">
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/reinforcement-learning">reinforcement learning
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://teleported.in//tags/capstone">capstone
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/posts/object-detection/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            Detecting and counting objects in high-res aerial images
+        </div>
+    </a>
+    
+    
+    <a href="/posts/analysing-alphago/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Analysing AlphaGo&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+            
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            
+            &copy; 2020 <a href="https://www.linkedin.com/in/anandsaha/">Anand Saha</a> &nbsp; 
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos">Minos</a>
+        </div>
+    </div>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+
+</div>
+</body>
+</html>

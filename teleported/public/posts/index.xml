@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on teleported.in</title>
+    <link>http://teleported.in/posts/</link>
+    <description>Recent content in Posts on teleported.in</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Apr 2018 00:00:00 -0530</lastBuildDate>
+    
+	<atom:link href="http://teleported.in/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deep Learning with PyTorch (video course)</title>
+      <link>http://teleported.in/posts/20-dl-with-pytorch/</link>
+      <pubDate>Mon, 30 Apr 2018 00:00:00 -0530</pubDate>
+      
+      <guid>http://teleported.in/posts/20-dl-with-pytorch/</guid>
+      <description>I have been working on a video course with Packt Publications titled Deep Learning with PyTorch
+Glad to announce that it got released today! (30th April, 2018).
+ 
+Course video description This video course will get you up-and-running with one of the most cutting-edge deep learning libraries: PyTorch. Written in Python, PyTorch is grabbing the attention of all data science professionals due to its ease of use over other libraries and its use of dynamic computation graphs.</description>
+    </item>
+    
+    <item>
+      <title>COCOB: An optimizer without a learning rate</title>
+      <link>http://teleported.in/posts/cocob/</link>
+      <pubDate>Thu, 28 Dec 2017 20:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/cocob/</guid>
+      <description>At the nurture.ai&amp;rsquo;s NIPS paper implementation challenge, I implemented and validate the paper &amp;lsquo;Training Deep Networks without Learning Rates Through Coin Betting&amp;rsquo; using PyTorch. (github)
+This paper caught my attention due to it&amp;rsquo;s promise to get rid of the learning rate hyper-parameter during model training.
+The paper says: In this paper, we propose a new stochastic gradient descent procedure for deep networks that does not require any learning rate setting. Contrary to previous methods, we do not adapt the learning rates nor we make use of the assumed curvature of the objective function.</description>
+    </item>
+    
+    <item>
+      <title>The Cyclical Learning Rate technique</title>
+      <link>http://teleported.in/posts/cyclic-learning-rate/</link>
+      <pubDate>Sun, 12 Nov 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/cyclic-learning-rate/</guid>
+      <description>Introduction Learning rate (LR) is one of the most important hyperparameters to be tuned and holds key to faster and effective training of neural networks. Simply put, LR decides how much of the loss gradient is to be applied to our current weights to move them in the direction of lower loss.
+ new_weight = existing_weight - learning_rate * gradient 
+The step is simple. But as research has shown, there is so much that can be done to improve this step alone which has a profound influence on the training.</description>
+    </item>
+    
+    <item>
+      <title>Decoding the ResNet architecture</title>
+      <link>http://teleported.in/posts/decoding-resnet-architecture/</link>
+      <pubDate>Thu, 02 Nov 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/decoding-resnet-architecture/</guid>
+      <description>Introduction Fast.ai&amp;rsquo;s 2017 batch kicked off on 30th Oct and Jeremy Howard introduced us participants to the ResNet model in the first lecture itself. I had used this model earlier in the passing but got curious to dig into its architecture this time. (In fact in one of my earlier client projects I had used Faster RCNN, which uses a ResNet variant under the hood.)
+ResNet was unleashed in 2015 by Kaiming He.</description>
+    </item>
+    
+    <item>
+      <title>Network In Network architecture: The beginning of Inception</title>
+      <link>http://teleported.in/posts/network-in-network/</link>
+      <pubDate>Fri, 20 Oct 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/network-in-network/</guid>
+      <description>Introduction In this post, I explain the Network In Network paper by Min Lin, Qiang Chen, Shuicheng Yan (2013). This paper was quite influential in that it had a new take on convolutional filter design, which inspired the Inception line of deep architectures from Google.
+Motivation Anyone getting introduced to convolutional networks first come across this familiar arrangement of neurons designed by Yann LeCun decades ago:
+Fig. LeNet-5</description>
+    </item>
+    
+    <item>
+      <title>Class Notes: Computer Vision (Georgia Tech)</title>
+      <link>http://teleported.in/posts/intro-to-computer-vision/</link>
+      <pubDate>Thu, 12 Oct 2017 20:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/intro-to-computer-vision/</guid>
+      <description>These are my raw notes of Georgia Tech&amp;rsquo;s Intro to Computer Vision course taught by Aaron Bobick. Putting out mostly for me to refer to easily, but also in case anyone else finds them useful.
+This is a text heavy post.
+ 
+Lecture 1: Introduction  Course Purpose: Build systems that can do image understanding. Computational Photography: About capturing light from scene, record the scene and photograph and such other related artifacts that showcase the scene Image Processing: Support the capture and display of a scene (input: image, output: modified image) Computer Vision: Interpret and analyze the scene (input: image, output: meaning).</description>
+    </item>
+    
+    <item>
+      <title>Detecting and counting objects in high-res aerial images</title>
+      <link>http://teleported.in/posts/object-detection/</link>
+      <pubDate>Sun, 01 Oct 2017 20:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/object-detection/</guid>
+      <description>Recently I spent 4 months at Flytbase on an interesting problem: detection and counting of Oryxes, an endangered animal in the middle east, in very high resolution aerial images.
+Using high resolution aerial images to train computer vision models poses unique challenges:
+ Lack of sufficient training data: There are plenty of open training datasets out there, but almost all of them have images taken from human eye level. What makes aerial images unique is their top-down view of the objects.</description>
+    </item>
+    
+    <item>
+      <title>Udacity ML Nanodegree Capstone: Train a robotic arm</title>
+      <link>http://teleported.in/posts/mlnd-capstone/</link>
+      <pubDate>Tue, 12 Sep 2017 20:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/mlnd-capstone/</guid>
+      <description>As part of Udacity Machine Learning Nanaodgree program, I did my capstone in reinforcement learning. I conceptualized, designed and executed the project.
+I simulated an environment in V-REP framework wherein I setup a robotic arm tasked with picking up an object and putting it in a bin. I trained it to learn the same using Q-Learning technique.
+The repository with project report and source code is here. You can see it training here in this video:</description>
+    </item>
+    
+    <item>
+      <title>Analysing AlphaGo</title>
+      <link>http://teleported.in/posts/analysing-alphago/</link>
+      <pubDate>Fri, 12 May 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/analysing-alphago/</guid>
+      <description>(I wrote this piece as part of an assignment for Udacity&amp;rsquo;s AI Nanodegree program. The assignment was to summarize the AlphaGo paper in a page)
+Introduction Go is a two player, turn taking, deterministic game of perfect information. Two main factors make Go very complex to solve:
+ Go has an average branching factor ‘b’ of ~250 options per node (chess ~35) Go has an average depth ‘d’ of ~150 moves (chess ~80)  These factos make the state space of Go (bd) enormous to search end to end using traditional techniques.</description>
+    </item>
+    
+    <item>
+      <title>Visualising AI Search Algorithms</title>
+      <link>http://teleported.in/posts/ai-search-algorithms/</link>
+      <pubDate>Fri, 05 May 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/ai-search-algorithms/</guid>
+      <description>Search algorithms help find the correct sequence of actions in a search space, to reach a goal state. The sequence of actions might be:
+ Sequence in which cities are to be visited to travel from a source to a destination under a given cost function (shortest path, cheapest fare etc.) Sequence in which an agent should play moves in a game (chess, tic tac toe, pacman etc.) to win a board game Sequence in which a robot arm should solder components on a PCB under a given cost function (e.</description>
+    </item>
+    
+  </channel>
+</rss>

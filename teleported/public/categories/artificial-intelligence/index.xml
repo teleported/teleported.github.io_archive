@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Artificial Intelligence on teleported.in</title>
+    <link>http://teleported.in/categories/artificial-intelligence/</link>
+    <description>Recent content in Artificial Intelligence on teleported.in</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 May 2017 23:27:27 -0400</lastBuildDate>
+    
+	<atom:link href="http://teleported.in/categories/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Analysing AlphaGo</title>
+      <link>http://teleported.in/posts/analysing-alphago/</link>
+      <pubDate>Fri, 12 May 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/analysing-alphago/</guid>
+      <description>(I wrote this piece as part of an assignment for Udacity&amp;rsquo;s AI Nanodegree program. The assignment was to summarize the AlphaGo paper in a page)
+Introduction Go is a two player, turn taking, deterministic game of perfect information. Two main factors make Go very complex to solve:
+ Go has an average branching factor ‘b’ of ~250 options per node (chess ~35) Go has an average depth ‘d’ of ~150 moves (chess ~80)  These factos make the state space of Go (bd) enormous to search end to end using traditional techniques.</description>
+    </item>
+    
+    <item>
+      <title>Visualising AI Search Algorithms</title>
+      <link>http://teleported.in/posts/ai-search-algorithms/</link>
+      <pubDate>Fri, 05 May 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/ai-search-algorithms/</guid>
+      <description>Search algorithms help find the correct sequence of actions in a search space, to reach a goal state. The sequence of actions might be:
+ Sequence in which cities are to be visited to travel from a source to a destination under a given cost function (shortest path, cheapest fare etc.) Sequence in which an agent should play moves in a game (chess, tic tac toe, pacman etc.) to win a board game Sequence in which a robot arm should solder components on a PCB under a given cost function (e.</description>
+    </item>
+    
+  </channel>
+</rss>

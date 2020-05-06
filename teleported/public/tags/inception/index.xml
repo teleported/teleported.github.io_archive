@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inception on teleported.in</title>
+    <link>http://teleported.in/tags/inception/</link>
+    <description>Recent content in Inception on teleported.in</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Oct 2017 23:27:27 -0400</lastBuildDate>
+    
+	<atom:link href="http://teleported.in/tags/inception/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Network In Network architecture: The beginning of Inception</title>
+      <link>http://teleported.in/posts/network-in-network/</link>
+      <pubDate>Fri, 20 Oct 2017 23:27:27 -0400</pubDate>
+      
+      <guid>http://teleported.in/posts/network-in-network/</guid>
+      <description>Introduction In this post, I explain the Network In Network paper by Min Lin, Qiang Chen, Shuicheng Yan (2013). This paper was quite influential in that it had a new take on convolutional filter design, which inspired the Inception line of deep architectures from Google.
+Motivation Anyone getting introduced to convolutional networks first come across this familiar arrangement of neurons designed by Yann LeCun decades ago:
+Fig. LeNet-5</description>
+    </item>
+    
+  </channel>
+</rss>

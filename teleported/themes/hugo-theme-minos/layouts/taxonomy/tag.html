@@ -5,10 +5,10 @@
     <section id="main" class="outer">
         <section class="archives-wrap">
             <div class="archive-tag-wrap">
-                <span class="archive-tag">#{{ .Title | lower }}</span>
+                <span class="archive-tag">#{{ .Title }}</span>
             </div>
             <div class="archives">
-                {{ range .Paginator.Pages }}
+                {{ range .Data.Pages }}
                 {{ partial "li.html" . }}
                 {{ end }}
             </div></section>
